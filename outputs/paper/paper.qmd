@@ -1,0 +1,17 @@
+---
+title: "A Modest Proposal for Developing Better Experience with TTC Subway"
+title-block-banner: true
+abstract: ""
+thanks: "Code and data supporting this analysis are available at: https://github.com/TEJMaster/Student-Replication-For-Money-Illusion.git"
+author: "Terry Tu"
+date: today
+date-format: long
+format: pdf
+toc: true
+toc-depth: 1
+number-sections: true
+bibliography: references.bib
+link-citations: true
+---
+
+## Reference
