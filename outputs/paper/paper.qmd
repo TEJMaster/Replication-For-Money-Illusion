@@ -15,6 +15,7 @@ link-citations: true
 ---
 
 ## Introduction
+
 Money illusion refers to a cognitive bias where individuals tend to assess the value of money solely based on its nominal value. The real value of money is the nominal value of money plus the inlation rate. thereby overlooking the impact of inflation. This bias can lead to various consequences, such as reluctance to sell assets due to perceived nominal losses, misunderstanding wage increases, and more.
 
 The influential 1997 study by Shafir and colleagues[@shafir1997money] has significantly impacted on economic psychology and behavioral economics which introduced the concept of money illusion. The authors argued that money illusion could explain phenomena like inflexible wages and contracts which contrary to traditional economic theories assuming rationality in decision-making.
@@ -28,6 +29,26 @@ Recognizing the importance of testing theories in different contexts for general
 In this paper, our hypothesis are across all four problems: in problem 1, individuals inclined to perceive wage increases significantly in real term even if it is small in nominal terms; In problem 2, individuals will evaluate house deals based on nominal gains rather than real gains; In problem 3, participants will be less likely to purchase new items rather than second hand items when prices increase nominally; In problem 4, individuals might prefer riskier contracts in real terms over safer options presented in nominal terms.
 
 ## Data
+
+The raw dataset for our study, derived from the replication of the "Money Illusion" effect among Brazilian researchers [@Santiago_Feldman_Ferreira_Batistuzzo_Fatori_Seda_Bastos_2023], is archived and accessible through the Open Science Framework (OSF). This dataset encompasses the complete set of responses collected through our online survey, including socio-demographic information, responses to the money illusion problems, and verification question answers. Interested researchers can access the dataset for further analysis or replication studies at the following URL: https://osf.io/48pqu/.
+
+### Dataset Description
+
+The data were collected via an online survey platform and include a range of variables:
+
+**Socio-demographic Information**: Participants provided details about their educational background, area of study (if applicable), average monthly family income, and the number of people living off this income.
+
+**Economic Decision-Making Scenarios**: The core of the dataset revolves around responses to hypothetical scenarios designed to assess susceptibility to the money illusion. These scenarios include decisions about signing contracts under inflation uncertainty, and buying or selling items after an inflation increase, reflecting real-life economic decisions that people might face.
+
+**Temporal and Response Details**: Each record includes timestamps for the start and end of the survey, the type of response, progress through the survey, duration in seconds, and completion status.
+
+**Verification Questions**: To ensure participants understood the scenarios accurately, verification questions were included. These serve as a quality control measure, filtering for data quality and comprehension.
+
+### Data Analysis Tools
+
+The data analysis was performed using R [@r], a powerful open-source statistical programming language. Key packages from the tidyverse collection [@rTidyverse] were employed to streamline data manipulation, visualization, and analysis processes. These packages include ggplot2 [@rGgplot2] for creating advanced graphics, dplyr [@rDplyr] for data manipulation, readr [@rReadr] for its robust data reading functionalities, here [@R-here] is used to avoid file path issue, and knitr [@rKnitr] for dynamic report generation. 
+
+
 
 ## Results
 
