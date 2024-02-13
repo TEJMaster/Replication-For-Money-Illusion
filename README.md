@@ -1,6 +1,6 @@
 # Student Replication For Money Illusion
 
-This repository contains the project "Student Replication For Money Illusion" focusing on 
+This repository contains the project "Student Replication For Money Illusion" focusing on exploring 'gender influences' within a Brazilian sample of 372 participants.
 
 In the creation of this project, OpenAI's ChatGPT was used to enhance the paragraphs, as well as assist in generating the plots. You can check the input/misc/chat_with_chatGPT.txt for a complete conversation of my usage of ChatGPT in this project.
 
@@ -8,7 +8,8 @@ In the creation of this project, OpenAI's ChatGPT was used to enhance the paragr
 
 The repository is organized as follows to ensure easy navigation and accessibility of the project components:
 
-- `inputs/data/`: This directory stores the dataset used in the project. The main dataset, `money-dataset-qualtrics_raw.csv`, sourced from [original project](https://osf.io/48pqu/), is stored here. 
+- `inputs/data/`: This directory stores the dataset used in the project. The main dataset, `money_data_raw.xlsx`, sourced from [original project](https://osf.io/48pqu/), is stored here.
+- `inputs/data/`: This directory stores the original paper that we are tring to reproduce in this study.
 - `inputs/misc/`: This directory stores the miscellaneous components used for project creation. 
 
 - `outputs/`: This folder contains the main outputs of the project:
