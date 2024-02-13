@@ -1,5 +1,5 @@
 ---
-title: "Student Replication for \"Money Illusion\""
+title: "Replicating the \"Money Illusion\" Effect: Exploring Gender Influences within a Brazilian Sample"
 title-block-banner: true
 abstract: "Money illusion as the tendency to overlook the impact of inflation which  focusing on nominal values identified by Shafir, Diamond, and Tversky (1997). This study reproduce four scenarios from research where participants face financial decisions influenced by money illusion in various situations such as earnings, transactions, and contracts,under the background of Brazilian context, where in various situations such as transactions, transactions and earnings that participants face financial decisions influenced by money illusion. The cross-sectional and pre-registered research is based on 372 Brazilian participants in mobile phones or computers by using chi-square tests assessed money illusion. The results indicate that participants' tend to choose financially advantages opportunities which  influenced by the framing of terms (real, nominal, or neutral). After we replicate across all four scenarios, the findings suggest that the money illusion effect  transcend cultural boundaries, supported by replication within a different background of cultural context."
 thanks: "Code and data supporting this analysis are available at https://github.com/TEJMaster/Student-Replication-For-Money-Illusion.git"
@@ -13,6 +13,26 @@ number-sections: true
 bibliography: references.bib
 link-citations: true
 ---
+
+```{r setup, include=FALSE, message=FALSE}
+# Un-comment these lines for missing packages
+# install.packages("lubridate")
+# install.packages("dplyr")
+# install.packages("ggplot2")
+# install.packages("here")
+# install.packages("readr")
+# install.packages("tidyverse")
+# install.packages("readxl")
+
+## Import nessasay libraries
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(here)
+library(readr)
+knitr::opts_chunk$set(echo = FALSE)
+```
 
 ## Introduction
 
@@ -32,6 +52,11 @@ In this paper, our hypothesis are across all four problems: in problem 1, indivi
 
 The raw dataset for our study, derived from the replication of the "Money Illusion" effect among Brazilian researchers [@Santiago_Feldman_Ferreira_Batistuzzo_Fatori_Seda_Bastos_2023], is archived and accessible through the Open Science Framework (OSF). This dataset encompasses the complete set of responses collected through our online survey, including socio-demographic information, responses to the money illusion problems, and verification question answers. Interested researchers can access the dataset for further analysis or replication studies at the following URL: https://osf.io/48pqu/.
 
+```{r include=FALSE, message=FALSE}
+# read the data file and store it in the 'data' variable
+data <- readxl::read_excel(here("inputs", "data", "money_data_raw.xlsx"))
+```
+
 ### Dataset Description
 
 The data were collected via an online survey platform and include a range of variables:
@@ -48,9 +73,25 @@ The data were collected via an online survey platform and include a range of var
 
 The data analysis was performed using R [@r], a powerful open-source statistical programming language. Key packages from the tidyverse collection [@rTidyverse] were employed to streamline data manipulation, visualization, and analysis processes. These packages include ggplot2 [@rGgplot2] for creating advanced graphics, dplyr [@rDplyr] for data manipulation, readr [@rReadr] for its robust data reading functionalities, here [@R-here] is used to avoid file path issue, and knitr [@rKnitr] for dynamic report generation. 
 
+### Data Cleaning
 
+### Data Sample
+
+```{r table1, echo=FALSE}
+knitr::kable(head(data, 6), 
+             caption = "Sample of the Cleaned TTC Subway Delay Data",
+             format = "markdown")
+```
+
+### Measurement
 
 ## Results
+
+### Problem 1: 
+```{r fig-problem1, echo=FALSE, fig.cap=""}
+
+```
+
 
 ## Conclusion
 

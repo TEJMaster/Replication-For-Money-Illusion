@@ -1,0 +1,383 @@
+"ID","gênero","contrato_AB","contrato_CD","contrato_EF","verif_contrato_2","poltrona_venda_reais","poltrona_compra_reai","poltrona_venda_porce","Q30","verif_poltrona","A casa_1","A casa_2","A casa_3","verif_casa","economicam","felicidade","atratividade_trab"
+1,"Mulher",NA,"D",NA,"30%",NA,NA,"Mais suscetível","Igual","Aumentou","3","2","1","1 ano","Carolina",NA,NA
+2,"Mulher",NA,NA,"E","20%",NA,NA,"Mais suscetível","Igual","Aumentou","3","2","1","1 ano","Carolina",NA,NA
+3,"Homem",NA,NA,"F","30%","Igual","Menos suscetível",NA,NA,"Aumentou","3","1","2","1 ano",NA,"Maria",NA
+4,"Mulher","B",NA,NA,"20%",NA,NA,"Menos suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Maria",NA
+5,"Mulher",NA,"C",NA,"30%","Menos suscetível","Mais suscetível",NA,NA,"Aumentou","3","2","1","Não sei",NA,NA,"Maria"
+6,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+7,"Homem",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,"Carolina",NA
+8,"Homem",NA,NA,"F","Não sei","Igual","Mais suscetível",NA,NA,"Permaneceu o mesmo","1","3","2","1 ano","Maria",NA,NA
+9,"Homem",NA,NA,"E","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+10,"Mulher",NA,NA,"E","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","2 anos","Maria",NA,NA
+11,"Mulher",NA,"C",NA,"20%","Igual","Igual",NA,NA,"Aumentou","3","2","1","2 anos",NA,"Maria",NA
+12,"Homem","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","Não sei","Maria",NA,NA
+13,"Homem",NA,"C",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+14,"Mulher",NA,NA,"F","20%","Igual","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano","Maria",NA,NA
+15,"Homem",NA,NA,"F","20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Maria"
+16,"Mulher","B",NA,NA,"Não sei",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","1","2","3","Não sei",NA,"Carolina",NA
+17,"Homem",NA,NA,"F","Não sei","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Carolina"
+18,"Homem","B",NA,NA,"20%","Mais suscetível","Igual",NA,NA,"Permaneceu o mesmo","3","1","2","Não sei","Maria",NA,NA
+19,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","2","1","2 anos","Carolina",NA,NA
+20,"Homem",NA,NA,"F","10%",NA,NA,"Igual","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+21,"Homem",NA,"D",NA,"10%","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+22,"Mulher","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano","Carolina",NA,NA
+23,"Mulher",NA,"D",NA,"10%","Igual","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+24,"Mulher",NA,NA,"F","10%","Igual","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+25,"Mulher","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","2","1","3","1 ano","Carolina",NA,NA
+26,"Mulher",NA,"D",NA,"10%",NA,NA,"Mais suscetível","Igual","Aumentou","1","2","3","1 ano",NA,"Maria",NA
+27,"Mulher",NA,NA,"F","Não sei","Igual","Igual",NA,NA,"Aumentou","2","3","1","6 meses",NA,NA,"Maria"
+28,"Mulher","B",NA,NA,"30%",NA,NA,"Menos suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+29,"Mulher","B",NA,NA,"30%","Menos suscetível","Mais suscetível",NA,NA,"Permaneceu o mesmo","3","1","2","2 anos","Maria",NA,NA
+30,"Mulher",NA,NA,"F","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,"Carolina",NA
+31,"Outro",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano","Carolina",NA,NA
+32,"Mulher",NA,NA,"F","20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Carolina"
+33,"Homem",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Diminuiu","3","2","1","Não sei",NA,NA,"Carolina"
+34,"Mulher","A",NA,NA,"Não sei","Igual","Igual",NA,NA,"Permaneceu o mesmo","2","1","3","1 ano",NA,"Maria",NA
+35,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","3","1","2","1 ano",NA,"Carolina",NA
+36,"Homem",NA,NA,"E","20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","2","1","3","1 ano","Maria",NA,NA
+37,"Homem","B",NA,NA,"Não sei","Menos suscetível","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","Não sei",NA,NA,"Maria"
+38,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","2","1","1 ano","Maria",NA,NA
+39,"Mulher","B",NA,NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Carolina"
+40,"Homem",NA,NA,"F","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,NA,"Carolina"
+41,"Homem",NA,"D",NA,"20%","Igual","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","2 anos","Maria",NA,NA
+42,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano",NA,"Maria",NA
+43,"Outro","B",NA,NA,"20%","Igual","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano","Maria",NA,NA
+44,"Mulher",NA,NA,"E","20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+45,"Mulher","B",NA,NA,"Não sei","Menos suscetível","Menos suscetível",NA,NA,"Não sei","1","2","3","1 ano","Maria",NA,NA
+46,"Mulher",NA,"D",NA,"30%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+47,"Mulher",NA,NA,"F","Não sei",NA,NA,"Mais suscetível","Igual","Aumentou","3","1","2","1 ano",NA,NA,"Maria"
+48,"Homem","B",NA,NA,"20%","Menos suscetível","Menos suscetível",NA,NA,"Aumentou","2","3","1","Não sei",NA,"Carolina",NA
+49,"Homem",NA,NA,"F","30%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Maria"
+53,"Mulher",NA,NA,"E","20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","1","2","3","1 ano",NA,"Carolina",NA
+54,"Homem",NA,"D",NA,"20%","Igual","Menos suscetível",NA,NA,"Aumentou","3","1","2","1 ano",NA,NA,"Maria"
+55,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+56,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+57,"Mulher","B",NA,NA,"30%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","2","3","1","1 ano",NA,NA,"Carolina"
+60,"Homem",NA,"D",NA,"10%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+61,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+63,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+64,"Mulher","B",NA,NA,"30%",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","2","1","3","1 ano",NA,"Maria",NA
+65,"Mulher",NA,"D",NA,"20%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+66,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+67,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+68,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+70,"Mulher","A",NA,NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,"Carolina",NA
+71,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina"
+72,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina"
+73,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","2","3","1","1 ano","Carolina",NA,NA
+74,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+75,"Mulher",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","1","2","1 ano","Maria",NA,NA
+78,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+79,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+80,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+81,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+82,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+83,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+86,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA,NA
+89,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+90,"Mulher",NA,NA,"F","30%","Mais suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","Não sei",NA,"Carolina",NA
+91,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+92,"Mulher",NA,NA,NA,NA,NA,NA,"Igual","Igual","Permaneceu o mesmo","3","1","2","Não sei",NA,"Carolina",NA
+93,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+95,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+96,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+97,"Mulher",NA,"D",NA,"30%","Igual","Menos suscetível",NA,NA,"Aumentou","1","3","2","Não sei","Carolina",NA,NA
+98,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+99,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+100,"Mulher",NA,NA,"E","20%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","2","3","1","Não sei",NA,NA,"Maria"
+101,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+102,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+103,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","2","1","3","1 ano","Maria",NA,NA
+104,"Homem",NA,NA,"E","20%","Mais suscetível","Mais suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,"Carolina",NA
+105,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Carolina"
+106,"Homem",NA,NA,"E","20%",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","1","3","2","Não sei","Maria",NA,NA
+107,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Aumentou","1","3","2","1 ano",NA,NA,"Carolina"
+108,"Mulher",NA,NA,"F","Não sei","Igual","Igual",NA,NA,"Aumentou","3","2","1","Não sei","Carolina",NA,NA
+109,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+111,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina"
+112,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+113,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+114,"Mulher","B",NA,NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,"Carolina",NA
+115,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+116,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+117,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+118,"Mulher","B",NA,NA,"10%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+119,"Mulher",NA,"C",NA,"20%","Menos suscetível","Menos suscetível",NA,NA,"Diminuiu","2","1","3","Não sei",NA,"Maria",NA
+120,"Homem",NA,NA,"E","20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","6 meses",NA,NA,"Carolina"
+121,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","2","1","3","1 ano","Maria",NA,NA
+122,"Mulher",NA,NA,"E","20%","Igual","Menos suscetível",NA,NA,"Aumentou","2","1","3","Não sei",NA,"Maria",NA
+123,"Mulher",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Carolina"
+124,"Mulher",NA,NA,"F","20%","Igual","Menos suscetível",NA,NA,"Aumentou","3","1","2","1 ano",NA,NA,"Maria"
+125,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","1","2","1 ano","Maria",NA,NA
+126,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,"1","2","3","Não sei","Carolina",NA,NA
+127,"Homem",NA,"C",NA,"20%","Mais suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+128,"Homem",NA,NA,"E","20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Maria"
+129,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,"Maria",NA
+130,"Homem",NA,NA,"E","20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","Não sei","Maria",NA,NA
+131,"Mulher",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+132,"Homem",NA,"D",NA,"20%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+133,"Homem","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","2","3","1","1 ano",NA,"Maria",NA
+134,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+136,"Mulher","A",NA,NA,"Não sei",NA,NA,"Menos suscetível","Menos suscetível","Permaneceu o mesmo","3","2","1","1 ano",NA,"Carolina",NA
+138,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+139,"Mulher",NA,NA,"E","20%","Igual","Mais suscetível",NA,NA,"Diminuiu","1","3","2","Não sei",NA,NA,"Carolina"
+140,"Mulher","A",NA,NA,"10%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,"Carolina",NA
+141,"Homem",NA,NA,"F","30%",NA,NA,"Igual","Menos suscetível","Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+142,"Homem","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+143,"Homem",NA,"D",NA,"Não sei","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","1","2","2 anos",NA,NA,"Maria"
+144,"Homem",NA,NA,"E","20%",NA,NA,"Menos suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+145,"Mulher",NA,"D",NA,"Não sei","Igual","Igual",NA,NA,"Aumentou","3","2","1","1 ano","Carolina",NA,NA
+146,"Mulher","B",NA,NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","Não sei",NA,"Maria",NA
+147,"Mulher","A",NA,NA,"Não sei",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","1","2","3","Não sei",NA,"Carolina",NA
+148,"Homem",NA,"C",NA,"20%","Igual","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+149,"Mulher",NA,NA,"E","20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano","Maria",NA,NA
+150,"Homem","B",NA,NA,"Não sei",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","3","2","1 ano","Maria",NA,NA
+151,"Homem",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,"Carolina",NA
+152,"Mulher",NA,NA,"F","20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","2","1","3","2 anos","Maria",NA,NA
+153,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+154,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+155,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+156,"Mulher","B",NA,NA,"20%","Igual","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,"Carolina",NA
+157,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+158,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,"1","2","3",NA,NA,"Carolina",NA
+159,"Mulher",NA,"C",NA,"20%","Mais suscetível","Igual",NA,NA,"Não sei","3","2","1","Não sei",NA,"Maria",NA
+162,"Homem",NA,"D",NA,"30%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+163,"Mulher","A",NA,NA,"20%","Igual","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+164,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+165,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+166,"Mulher",NA,NA,"F","Não sei",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,NA,"Carolina"
+167,"Homem","B",NA,NA,"20%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,"Carolina",NA
+168,"Mulher",NA,NA,"E","Não sei",NA,NA,"Igual","Menos suscetível","Aumentou","2","3","1","1 ano","Maria",NA,NA
+169,"Mulher","A",NA,NA,"10%",NA,NA,"Mais suscetível","Igual","Aumentou","3","2","1","1 ano","Carolina",NA,NA
+171,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+172,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+173,"Mulher",NA,NA,"F","20%",NA,NA,"Igual","Igual","Aumentou","3","2","1","2 anos",NA,"Maria",NA
+174,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+175,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+176,"Mulher",NA,NA,"E","Não sei",NA,NA,"Igual","Menos suscetível","Aumentou","2","1","3","Não sei",NA,NA,"Maria"
+177,"Homem","A",NA,NA,"20%",NA,NA,"Igual","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Maria",NA
+178,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+179,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Menos suscetível","Aumentou","1","2","3","2 anos",NA,NA,"Carolina"
+180,"Mulher","B",NA,NA,"20%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano","Maria",NA,NA
+181,"Mulher",NA,NA,NA,NA,NA,NA,"Menos suscetível","Igual","Aumentou","3","1","2","1 ano",NA,"Maria",NA
+182,"Mulher",NA,"C",NA,"Não sei","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano","Maria",NA,NA
+183,"Homem",NA,"C",NA,"20%","Mais suscetível","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano","Maria",NA,NA
+184,"Mulher",NA,NA,"F","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano","Maria",NA,NA
+185,"Mulher","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","1","2","1 ano",NA,"Carolina",NA
+186,"Mulher",NA,"D",NA,"20%","Igual","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+187,"Mulher","A",NA,NA,"20%","Mais suscetível","Igual",NA,NA,"Permaneceu o mesmo","2","3","1","1 ano",NA,"Carolina",NA
+188,"Homem","B",NA,NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","2","3","1","1 ano",NA,NA,"Maria"
+189,"Mulher",NA,NA,"F","Não sei",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","Não sei","Maria",NA,NA
+190,"Homem",NA,"C",NA,"Não sei",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","1","2","3","1 ano",NA,"Carolina",NA
+191,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+192,"Mulher",NA,NA,"F","20%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,NA,"Carolina"
+193,"Homem",NA,NA,"E","20%",NA,NA,"Igual","Menos suscetível","Aumentou","1","2","3","2 anos",NA,NA,"Maria"
+194,"Mulher","B",NA,NA,"Não sei","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+195,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+196,"Homem",NA,"C",NA,"40%",NA,NA,"Mais suscetível","Igual","Aumentou","2","1","3","1 ano",NA,"Maria",NA
+197,"Mulher",NA,"C",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","1","2","1 ano",NA,"Maria",NA
+198,"Mulher",NA,"D",NA,"10%","Igual","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+199,"Mulher","B",NA,NA,"Não sei","Igual","Igual",NA,NA,"Aumentou","1","2","3","Não sei",NA,"Maria",NA
+200,"Mulher",NA,NA,"F","20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","1","2","1 ano","Maria",NA,NA
+201,"Homem",NA,"D",NA,"Não sei","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Maria"
+202,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+203,"Mulher",NA,NA,"F","20%","Menos suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Carolina"
+204,"Mulher",NA,NA,NA,NA,"Mais suscetível","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+205,"Homem",NA,"C",NA,"Não sei",NA,NA,"Mais suscetível","Igual","Aumentou","2","3","1","2 anos","Maria",NA,NA
+206,"Mulher",NA,NA,"F","30%","Igual","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+207,"Homem",NA,"D",NA,"30%","Mais suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,"Maria",NA
+208,"Mulher","B",NA,NA,"20%",NA,NA,"Mais suscetível","Igual","Aumentou","3","1","2","1 ano",NA,"Carolina",NA
+209,"Mulher",NA,NA,"E","Não sei","Igual","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,"Maria",NA
+210,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+211,"Mulher",NA,"D",NA,"20%","Menos suscetível","Menos suscetível",NA,NA,"Não sei","3","2","1","1 ano",NA,NA,"Maria"
+212,"Mulher","B",NA,NA,"20%","Menos suscetível","Igual",NA,NA,"Aumentou","1","2","3","Não sei",NA,"Maria",NA
+213,"Homem",NA,NA,"F","20%",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Maria"
+214,"Mulher",NA,"D",NA,"20%","Menos suscetível","Menos suscetível",NA,NA,"Aumentou","3","1","2","1 ano",NA,"Maria",NA
+215,"Homem",NA,NA,"F","20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+216,"Mulher","B",NA,NA,"20%","Igual","Igual",NA,NA,"Aumentou","2","1","3","1 ano","Maria",NA,NA
+217,"Homem",NA,"C",NA,"20%","Mais suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Maria"
+218,"Mulher",NA,NA,"F","10%","Igual","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Maria",NA
+219,"Mulher",NA,NA,"E","Não sei",NA,NA,"Igual","Menos suscetível","Aumentou","2","1","3","1 ano","Maria",NA,NA
+220,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Carolina"
+221,"Homem",NA,NA,"F","10%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano","Carolina",NA,NA
+222,"Mulher",NA,"C",NA,"30%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+224,"Mulher",NA,NA,"E","Não sei","Menos suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","Não sei","Carolina",NA,NA
+225,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+226,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+228,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+231,"Mulher",NA,NA,"E","20%",NA,NA,"Igual","Igual","Aumentou","3","1","2","1 ano","Maria",NA,NA
+232,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+233,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+234,"Homem","B",NA,NA,"20%",NA,NA,"Igual","Igual","Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+238,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+239,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+240,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+241,"Homem","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","Não sei",NA,"Maria",NA
+242,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+243,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina"
+244,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+245,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+246,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+247,"Mulher",NA,"C",NA,"Não sei",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","3","2","1","Não sei","Maria",NA,NA
+248,"Mulher","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Carolina"
+249,"Mulher",NA,"D",NA,"30%","Menos suscetível","Menos suscetível",NA,NA,"Aumentou","2","1","3","1 ano",NA,NA,"Maria"
+250,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+252,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+253,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA,NA
+255,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+256,"Mulher","A",NA,NA,"20%","Igual","Menos suscetível",NA,NA,"Não sei","3","2","1","1 ano",NA,"Carolina",NA
+257,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina"
+258,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+259,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+260,"Homem",NA,"C",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Maria"
+261,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+263,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,"3","2","1","1 ano","Maria",NA,NA
+264,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+267,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+268,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+270,"Homem",NA,"D",NA,"20%","Mais suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","2","1","3","Não sei",NA,"Maria",NA
+271,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+272,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA,NA
+273,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+274,"Mulher","B",NA,NA,"20%",NA,NA,"Mais suscetível","Mais suscetível","Aumentou","2","3","1","1 ano",NA,NA,"Carolina"
+275,"Mulher",NA,NA,"F","20%","Igual","Menos suscetível",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,"Maria",NA
+276,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+277,"Mulher","B",NA,NA,"20%","Igual","Igual",NA,NA,"Aumentou","3","2","1","1 ano","Maria",NA,NA
+278,"Homem",NA,NA,"E","20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","3","1","2","1 ano",NA,"Carolina",NA
+279,"Homem",NA,"C",NA,"Não sei","Mais suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,"Carolina",NA
+280,"Mulher","B",NA,NA,"Não sei",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Carolina"
+281,"Homem",NA,NA,"E","Não sei",NA,NA,"Igual","Igual","Aumentou","1","3","2","1 ano",NA,NA,"Carolina"
+282,"Mulher","B",NA,NA,"Não sei","Mais suscetível","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+283,"Mulher",NA,"C",NA,"Não sei",NA,NA,"Mais suscetível","Igual","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+284,"Mulher",NA,NA,"E","10%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+285,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","2","1","Não sei",NA,NA,"Carolina"
+286,"Mulher",NA,NA,"E","Não sei",NA,NA,"Igual","Igual","Aumentou","1","2","3","Não sei",NA,NA,"Carolina"
+287,"Mulher",NA,"D",NA,"20%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","Não sei","Maria",NA,NA
+288,"Homem","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+289,"Mulher",NA,NA,"F","30%","Mais suscetível","Mais suscetível",NA,NA,"Aumentou","3","2","1","Não sei","Carolina",NA,NA
+290,"Mulher","B",NA,NA,"20%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","Não sei",NA,NA,"Maria"
+291,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+292,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+293,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+294,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+295,"Homem",NA,NA,"E","20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+296,"Mulher",NA,"D",NA,"20%",NA,NA,"Menos suscetível","Menos suscetível","Diminuiu","3","2","1","Não sei",NA,"Carolina",NA
+297,"Mulher",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano","Carolina",NA,NA
+298,"Homem",NA,NA,"E","10%","Mais suscetível","Mais suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+299,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+300,"Homem","B",NA,NA,"Não sei",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","Não sei",NA,NA,"Carolina"
+301,"Homem",NA,"D",NA,"Não sei","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","Não sei","Maria",NA,NA
+302,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+303,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+304,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+305,"Mulher","A",NA,NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","2","1","3","Não sei","Maria",NA,NA
+306,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+308,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA,NA
+311,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina"
+312,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+315,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+317,"Mulher",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano","Carolina",NA,NA
+319,"Homem","B",NA,NA,"20%","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+320,"Mulher",NA,NA,"F","10%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","1","2","1 ano",NA,"Maria",NA
+321,"Mulher",NA,"C",NA,"30%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+322,"Mulher",NA,NA,"E","20%",NA,NA,"Menos suscetível","Mais suscetível","Aumentou","1","3","2","1 ano","Maria",NA,NA
+323,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","1","2","1 ano",NA,NA,"Carolina"
+324,"Mulher","A",NA,NA,"10%","Igual","Menos suscetível",NA,NA,"Aumentou","2","1","3","1 ano",NA,"Carolina",NA
+325,"Homem",NA,NA,"E","20%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","1","3","2","1 ano",NA,NA,"Maria"
+326,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Menos suscetível","Aumentou","1","2","3","1 ano","Maria",NA,NA
+327,"Mulher","B",NA,NA,"20%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,"Carolina",NA
+328,"Mulher",NA,"C",NA,"20%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+329,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Menos suscetível","Aumentou","3","1","2","Não sei",NA,NA,"Carolina"
+330,"Mulher",NA,NA,"F","30%","Menos suscetível","Menos suscetível",NA,NA,"Diminuiu","2","3","1","1 ano",NA,NA,"Maria"
+331,"Mulher",NA,NA,NA,NA,NA,NA,"Igual","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+333,"Mulher","A",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","2","3","1","1 ano","Maria",NA,NA
+337,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+339,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+340,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","3","1","2","1 ano",NA,NA,"Carolina"
+341,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+346,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+347,"Homem",NA,NA,"F","20%",NA,NA,"Igual","Menos suscetível","Aumentou","2","1","3","1 ano","Maria",NA,NA
+349,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+350,"Mulher","B",NA,NA,"Não sei",NA,NA,"Igual","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Maria",NA
+351,"Homem",NA,NA,"E","20%","Mais suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+353,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+354,"Homem",NA,"D",NA,"20%","Menos suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Maria"
+355,"Mulher","A",NA,NA,"20%",NA,NA,"Igual","Mais suscetível","Aumentou","3","2","1","1 ano",NA,"Maria",NA
+358,"Mulher",NA,"C",NA,"Não sei",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","3","1","2","2 anos",NA,NA,"Maria"
+359,"Mulher","B",NA,NA,"10%","Mais suscetível","Mais suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+360,"Mulher",NA,NA,"F","20%",NA,NA,"Igual","Menos suscetível","Aumentou","3","1","2","1 ano",NA,"Maria",NA
+361,"Mulher",NA,"C",NA,"20%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+362,"Mulher","A",NA,NA,"20%",NA,NA,"Igual","Menos suscetível","Permaneceu o mesmo","1","2","3","Não sei","Maria",NA,NA
+363,"Mulher",NA,NA,"E","20%","Menos suscetível","Menos suscetível",NA,NA,"Permaneceu o mesmo","2","1","3","1 ano",NA,NA,"Maria"
+364,"Mulher",NA,NA,"E","Não sei","Igual","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Maria",NA
+365,"Mulher",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","2","1","3","1 ano","Maria",NA,NA
+366,"Mulher",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Igual","Aumentou","3","2","1","1 ano",NA,NA,"Carolina"
+367,"Mulher",NA,NA,"E","20%",NA,NA,"Menos suscetível","Menos suscetível","Aumentou","1","2","3","1 ano",NA,"Maria",NA
+368,"Mulher","B",NA,NA,"20%","Mais suscetível","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano","Maria",NA,NA
+369,"Homem",NA,"D",NA,"30%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Carolina"
+370,"Mulher",NA,NA,"F","30%",NA,NA,"Menos suscetível","Igual","Diminuiu","3","2","1","1 ano",NA,NA,"Maria"
+371,"Mulher","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Permaneceu o mesmo","2","1","3","1 ano",NA,"Maria",NA
+372,"Mulher","B",NA,NA,"Não sei","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,"Maria",NA
+373,"Mulher",NA,NA,"F","20%","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Carolina"
+374,"Mulher",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,"Maria",NA
+375,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Menos suscetível","Aumentou","3","1","2","1 ano","Maria",NA,NA
+376,"Mulher",NA,NA,"F","30%","Menos suscetível","Menos suscetível",NA,NA,"Aumentou","1","2","3","Não sei",NA,NA,"Maria"
+377,"Mulher","B",NA,NA,"30%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,"Maria",NA
+378,"Homem","B",NA,NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","2","1","3","Não sei","Maria",NA,NA
+379,"Homem",NA,NA,"F","20%","Igual","Menos suscetível",NA,NA,"Aumentou","1","3","2","1 ano",NA,NA,"Carolina"
+380,"Mulher",NA,"D",NA,"20%","Menos suscetível","Menos suscetível",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Carolina"
+381,"Homem",NA,NA,"F","20%",NA,NA,"Igual","Igual","Aumentou","1","3","2","1 ano",NA,"Maria",NA
+382,"Mulher","B",NA,NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano",NA,"Carolina",NA
+383,"Mulher",NA,"D",NA,"20%","Igual","Menos suscetível",NA,NA,"Permaneceu o mesmo","3","1","2","1 ano",NA,NA,"Carolina"
+384,"Homem",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Carolina"
+385,"Mulher","A",NA,NA,"Não sei",NA,NA,"Mais suscetível","Mais suscetível","Permaneceu o mesmo","2","1","3","1 ano",NA,"Maria",NA
+386,"Homem",NA,NA,"E","20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Carolina"
+387,"Homem",NA,NA,"E","Não sei",NA,NA,"Igual","Menos suscetível","Aumentou","3","2","1","Não sei","Carolina",NA,NA
+388,"Mulher","B",NA,NA,"20%","Mais suscetível","Mais suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","1 ano","Maria",NA,NA
+389,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+390,"Mulher",NA,NA,"F","30%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano","Maria",NA,NA
+391,"Homem","B",NA,NA,"20%","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Carolina"
+392,"Homem","B",NA,NA,"20%",NA,NA,"Igual","Menos suscetível","Aumentou","1","2","3","1 ano",NA,"Carolina",NA
+393,"Mulher",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Aumentou","2","1","3","1 ano","Maria",NA,NA
+395,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+396,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+397,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+400,"Mulher","B",NA,NA,"30%","Menos suscetível","Menos suscetível",NA,NA,"Aumentou","2","3","1","1 ano",NA,"Maria",NA
+401,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+403,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+404,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina"
+405,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA,NA
+407,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+410,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,"1","3","2","1 ano",NA,"Maria",NA
+412,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+413,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA,NA
+415,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+416,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+417,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+418,"Homem",NA,NA,NA,NA,"Igual","Igual",NA,NA,"Aumentou","2","3","1","1 ano",NA,"Maria",NA
+419,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,"3","1","2","6 meses",NA,NA,"Maria"
+420,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+421,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+422,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria"
+423,"Mulher",NA,NA,NA,NA,NA,NA,"Mais suscetível","Mais suscetível","Aumentou","2","1","3","1 ano","Maria",NA,NA
+424,"Mulher",NA,"D",NA,"20%","Igual","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+425,"Mulher",NA,NA,"F","20%",NA,NA,"Menos suscetível","Menos suscetível","Permaneceu o mesmo","1","2","3","1 ano",NA,NA,"Maria"
+427,"Mulher","B",NA,NA,"20%","Mais suscetível","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","Não sei","Maria",NA,NA
+428,"Mulher","A",NA,NA,"10%",NA,NA,"Igual","Menos suscetível","Aumentou","1","2","3","1 ano",NA,"Carolina",NA
+429,"Homem",NA,"D",NA,"20%","Igual","Menos suscetível",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano","Maria",NA,NA
+430,"Mulher",NA,NA,"E","20%",NA,NA,"Igual","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+431,"Mulher",NA,NA,"E","20%","Igual","Menos suscetível",NA,NA,"Aumentou","2","1","3","1 ano","Maria",NA,NA
+432,"Mulher","A",NA,NA,"20%",NA,NA,"Igual","Igual","Aumentou","1","3","2","1 ano",NA,"Maria",NA
+433,"Homem",NA,NA,"F","20%","Igual","Igual",NA,NA,"Aumentou","1","2","3","1 ano",NA,NA,"Maria"
+434,"Homem",NA,NA,"E","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano","Maria",NA,NA
+435,"Mulher","B",NA,NA,"20%","Igual","Igual",NA,NA,"Aumentou","3","1","2","1 ano",NA,NA,"Carolina"
+436,"Mulher","A",NA,NA,"20%",NA,NA,"Menos suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+437,"Homem",NA,"D",NA,"Não sei","Igual","Igual",NA,NA,"Aumentou","2","1","3","1 ano","Maria",NA,NA
+438,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
+439,"Outro",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
+440,"Homem",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Diminuiu","3","1","2","6 meses",NA,NA,"Maria"
+442,"Mulher","B",NA,NA,"10%",NA,NA,"Mais suscetível","Igual","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
+443,"Mulher",NA,NA,NA,NA,"Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
+444,"Homem",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Carolina",NA
+445,"Mulher",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano","Carolina",NA,NA
+446,"Mulher",NA,NA,"F","20%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
