@@ -54,7 +54,7 @@ The raw dataset for our study, derived from the replication of the "Money Illusi
 
 ```{r include=FALSE, message=FALSE}
 # read the data file and store it in the 'data' variable
-data <- readxl::read_excel(here("inputs", "data", "money_data_raw.xlsx"))
+data <- read_csv(here("outputs", "data", "cleaned_money_data.csv"))
 ```
 
 ### Dataset Description
@@ -78,17 +78,247 @@ The data analysis was performed using R [@r], a powerful open-source statistical
 ### Data Sample
 
 ```{r table1, echo=FALSE}
-knitr::kable(head(data, 6), 
-             caption = "Sample of the Cleaned TTC Subway Delay Data",
+selected_data <- data %>%
+  select(1:2, (ncol(data)-2):ncol(data))
+
+knitr::kable(head(selected_data, 6), 
+             caption = "Sample of the Cleaned Money Illusion Data for Question 1",
+             format = "markdown")
+```
+```{r table2, echo=FALSE}
+selected_data <- data %>%
+  select(1:2, 12:14)
+
+knitr::kable(head(selected_data, 6), 
+             caption = "Sample of the Cleaned Money Illusion Data for Question 2",
+             format = "markdown")
+```
+
+```{r table3, echo=FALSE}
+selected_data <- data %>%
+  select(1:2, 7:9)
+
+knitr::kable(head(selected_data, 6), 
+             caption = "Sample of the Cleaned Money Illusion Data for Question 3",
+             format = "markdown")
+```
+
+```{r table4, echo=FALSE}
+selected_data <- data %>%
+  select(1:5)
+
+knitr::kable(head(selected_data, 6), 
+             caption = "Sample of the Cleaned Money Illusion Data for Question 4",
              format = "markdown")
 ```
 
 ### Measurement
 
+\newpage
+
 ## Results
 
 ### Problem 1: 
-```{r fig-problem1, echo=FALSE, fig.cap=""}
+```{r echo=FALSE}
+# Function to create plot based on gender
+create_gender_plot <- function(gender, data) {
+  # Translate 'gênero' to English and filter data for the specific gender
+  gender_data <- data %>%
+    mutate(gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male')) %>%
+    filter(gênero == gender) %>%
+    gather(key = "category", value = "choice", economicam, felicidade, atratividade_trab) %>%
+    filter(!is.na(choice))
+
+  # Calculate the percentage of non-NA responses for each category
+  freq_data <- gender_data %>%
+    count(category, choice) %>%
+    group_by(category) %>%
+    mutate(Percentage = n / sum(n) * 100) %>%
+    ungroup()
+
+  # Modify the category names to translate to English
+  freq_data$category <- recode(freq_data$category,
+                               "economicam" = "Economic Terms",
+                               "felicidade" = "Happiness",
+                               "atratividade_trab" = "Job Attractiveness")
+
+  # Creating the plot with ggplot2
+  plot <- ggplot(data = freq_data, aes(x = category, y = Percentage, fill = choice)) +
+    geom_bar(stat = "identity", position = position_dodge(), color = "black") +
+    scale_fill_brewer(palette = "Pastel1") +
+    labs(
+         title = paste("Choices Distribution for", gender, "in Money Illusion Experiment 1"),
+         x = "Condition",
+         y = "Percentage"
+    ) +
+    theme(
+          legend.position = "bottom",
+          axis.text.x = element_text(angle = 45, hjust = 1),
+          plot.title = element_text(hjust = 0.5),
+          plot.caption = element_text(hjust = 0.5)
+    ) +
+    ylim(0, 100)
+
+  # Return the plot
+  return(plot)
+}
+```
+
+```{r fig-problem1-female, echo=FALSE, fig.cap="The percentage of female participants' choices within each condition in problem 1."}
+# Create plots for 'Female'
+plot_female <- create_gender_plot("Female", data)
+# Display the plots
+print(plot_female)
+```
+\newpage
+```{r fig-problem1-male, echo=FALSE, fig.cap="The percentage of male participants' choices within each condition in problem 1."}
+# Create plots for 'Female'
+plot_male <- create_gender_plot("Male", data)
+# Display the plots
+print(plot_male)
+```
+\newpage
+
+### Problem 2:
+
+```{r echo=FALSE}
+# Translate 'gênero' to English and remove rows with NA choices
+data2 <- data %>%
+  mutate(gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male')) %>%
+  filter(!is.na(`A casa_1`), !is.na(`A casa_2`), !is.na(`A casa_3`))
+
+# Reshape the data for plotting
+Prob2_data <- data2 %>%
+  pivot_longer(cols = c(`A casa_1`, `A casa_2`, `A casa_3`),
+               names_to = "Seller_Rank",
+               values_to = "Choice") %>%
+  mutate(Seller_Rank = recode(Seller_Rank,
+                               `A casa_1` = "Andre",
+                               `A casa_2` = "Bento",
+                               `A casa_3` = "Marcelo"),
+         Choice = factor(Choice, levels = c(1, 2, 3), labels = c("First Choice", "Second Choice", "Third Choice"))) %>%
+  group_by(gênero, Seller_Rank, Choice) %>%
+  summarise(Count = n(), .groups = 'drop')
+
+# Calculate the percentages without NA values
+Prob2_data <- Prob2_data %>%
+  group_by(gênero, Choice) %>%
+  mutate(Percentage = Count / sum(Count) * 100) %>%
+  ungroup()
+
+# Function to create plot for each gender
+create_plot <- function(gender, data) {
+  gender_data <- data %>%
+    filter(gênero == gender)
+  
+  # Plot
+  ggplot(gender_data, aes(x = Choice, y = Percentage, fill = Seller_Rank)) +
+    geom_bar(stat = "identity", position = position_dodge(), color = "black") +
+    scale_fill_brewer(palette = "Pastel1") +
+    labs(
+      title = paste("Choice Distribution for", gender, "in Money Illusion Experiment 2"),
+      x = "Rank",
+      y = "Percentage",
+      fill = "Seller"
+    ) +
+    theme(legend.position = "bottom") +
+    ylim(0, 100)
+}
+```
+
+
+```{r fig-problem2-female, echo=FALSE, fig.cap="The percentage of female participants' choices ranking each seller in problem 2"}
+# Create plots for 'Female'
+plot_female2 <- create_plot("Female", Prob2_data)
+# Display the plots
+print(plot_female2)
+```
+\newpage
+```{r fig-problem2-male, echo=FALSE, fig.cap="The percentage of male participants' choices ranking each seller in problem 2"}
+# Create plots for 'Female'
+plot_male2 <- create_plot("Male", Prob2_data)
+# Display the plots
+print(plot_male2)
+```
+\newpage
+### Problem 3
+
+```{r echo=FALSE}
+# Translate the terms to English and filter out NA values selectively
+data3 <- data %>%
+  mutate(
+    across(
+      .cols = c("poltrona_venda_reais", "poltrona_compra_reai", "poltrona_venda_porce"),
+      .fns = ~ case_when(
+        . == "Menos suscetível" ~ "Less",
+        . == "Mais suscetível" ~ "More",
+        . == "Igual" ~ "Same",
+        TRUE ~ NA_character_
+      )
+    ),
+    gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male')
+  )
+
+
+# Reshape the data for plotting
+Prob3_data <- data3 %>%
+  pivot_longer(
+    cols = c("poltrona_venda_reais", "poltrona_compra_reai", "poltrona_venda_porce"),
+    names_to = "Condition",
+    values_to = "Likelihood"
+  ) %>%
+  filter(!is.na(Likelihood)) %>%
+  mutate(
+    Decision = case_when(
+      str_detect(Condition, "compra") ~ "Buy",
+      str_detect(Condition, "venda") ~ "Sell"
+    ),
+    Likelihood = factor(Likelihood, levels = c("More", "Same", "Less"))
+  )
+
+
+# Counting and percentage calculation
+Prob3_data <- Prob3_data %>%
+  count(gênero, Decision, Likelihood) %>%
+  group_by(gênero, Decision) %>%
+  mutate(Percentage = n / sum(n) * 100) %>%
+  ungroup()
+
+# Function to create plot for each gender
+create_plot <- function(gender, data) {
+  gender_data <- data %>%
+    filter(gênero == gender)
+  # Plot
+  ggplot(gender_data, aes(x = Decision, y = Percentage, fill = Likelihood)) +
+    geom_bar(stat = "identity", position = position_dodge(), color = "black") +
+    scale_fill_brewer(palette = "Pastel1") +
+    labs(
+      title = paste("Choice Distribution for", gender, "in Money Illusion Experiment"),
+      x = "Decision",
+      y = "Percentage",
+      fill = "Likelihood"
+    ) +
+    theme(legend.position = "bottom") +
+    ylim(0, 100)
+}
+```
+
+```{r fig-problem3-female, echo=FALSE, fig.cap="The percentage of female participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"}
+# Create plots for 'Female'
+plot_female3 <- create_plot("Female", Prob3_data)
+# Display the plots
+print(plot_female3)
+```
+\newpage
+```{r fig-problem3-male, echo=FALSE, fig.cap="The percentage of male participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"}
+# Create plots for 'Female'
+plot_male3 <- create_plot("Male", Prob3_data)
+# Display the plots
+print(plot_male3)
+```
+\newpage
+### Problem 4
+```{r echo=FALSE}
 
 ```
 

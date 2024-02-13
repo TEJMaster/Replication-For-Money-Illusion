@@ -11,7 +11,7 @@ library(here)
 # These variables are used to store the file path to get the file before data cleaning
 # and save the file after data cleaning
 input_file_path <- here("inputs", "data", "money_data_raw.xlsx")
-output_file_path <- here("outputs", "data", "cleaned_money_data_raw.csv")
+output_file_path <- here("outputs", "data", "cleaned_money_data.csv")
 
 # Read the raw dataset
 raw_data <- readxl::read_excel(input_file_path)
