@@ -293,7 +293,7 @@ create_plot <- function(gender, data) {
     geom_bar(stat = "identity", position = position_dodge(), color = "black") +
     scale_fill_brewer(palette = "Pastel1") +
     labs(
-      title = paste("Choice Distribution for", gender, "in Money Illusion Experiment"),
+      title = paste("Choice Distribution for", gender, "in Money Illusion Experiment 3"),
       x = "Decision",
       y = "Percentage",
       fill = "Likelihood"
@@ -319,9 +319,69 @@ print(plot_male3)
 \newpage
 ### Problem 4
 ```{r echo=FALSE}
+data4 <- data %>%
+  mutate(gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male'))
 
+# Pivot the data to long format, ensure columns start with 'contrato'
+long_data <- data4 %>%
+  pivot_longer(
+    cols = starts_with("contrato"), # This assumes column names start with 'contrato'
+    names_to = "Contract",
+    values_to = "Choice",
+    values_drop_na = TRUE
+  ) %>%
+  mutate(
+    Term = case_when(
+      Contract == "contrato_AB" ~ "Real Terms",
+      Contract == "contrato_CD" ~ "Nominal Terms",
+      Contract == "contrato_EF" ~ "Neutral Terms"
+    ),
+    Choice = case_when(
+      Choice %in% c("A", "C", "E") ~ "Risky",
+      Choice %in% c("B", "D", "F") ~ "Riskless"
+    ),
+    Term = fct_relevel(Term, "Real Terms", "Nominal Terms", "Neutral Terms") # Order the terms
+  ) %>%
+  drop_na(Choice) # Drop NA values to avoid them being plotted
+
+# Calculate the counts and percentages
+data_counts <- long_data %>%
+  count(gênero, Term, Choice) %>%
+  group_by(gênero, Term) %>%
+  mutate(Percentage = n / sum(n) * 100)
+
+# Plotting function
+create_plot <- function(gender, data) {
+  gender_data <- data %>%
+    filter(gênero == gender)
+  
+  ggplot(gender_data, aes(x = Term, y = Percentage, fill = Choice)) +
+    geom_bar(stat = "identity", position = position_dodge()) +
+    scale_fill_brewer(palette = "Pastel1") +
+    labs(
+      title = paste("Choice Distribution for", gender, "in Money Illusion Experiment 4"),
+      x = "Terms",
+      y = "Percentage",
+      fill = "Choice"
+    ) +
+    theme_minimal() +
+    ylim(0, 100)
+}
 ```
 
+```{r fig-problem4-female, echo=FALSE, fig.cap="The percentage of female participants' choices of contract types across frames(real, nominal and neutral) in problem 4"}
+# Create plots for 'Female'
+plot_female4 <- create_plot("Female", data_counts)
+# Display the plots
+print(plot_female4)
+```
+\newpage
+```{r fig-problem4-male, echo=FALSE, fig.cap="The percentage of male participants' choices of contract types across frames(real, nominal and neutral) in problem 4"}
+# Create plots for 'Male'
+plot_male4 <- create_plot("Male", data_counts)
+# Display the plots
+print(plot_male4)
+```
 
 ## Conclusion
 
