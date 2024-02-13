@@ -16,16 +16,13 @@ link-citations: true
 
 ```{r setup, include=FALSE, message=FALSE}
 # Un-comment these lines for missing packages
-# install.packages("lubridate")
 # install.packages("dplyr")
 # install.packages("ggplot2")
 # install.packages("here")
 # install.packages("readr")
 # install.packages("tidyverse")
-# install.packages("readxl")
 
 ## Import nessasay libraries
-library(readxl)
 library(ggplot2)
 library(dplyr)
 library(tidyverse)
@@ -75,6 +72,8 @@ The data analysis was performed using R [@r], a powerful open-source statistical
 
 ### Data Cleaning
 
+Data cleaning is a critical step in ensuring the accuracy and reliability of the analysis. The detailed procedure and the R script used for data cleaning are available in `scripts/01_cleanup_data.R`. The script elucidates the steps taken to refine the dataset by filtering out incomplete records and unnecessary columns for this study. The steps are: 1. Remove the first row in the dataset, since it is used to store the description to the column name. 2. Remove unnecessary columns for this study, by only keep the gender and responses columns. 3. Remove all gender rows with 'na' since this study is focusing on the behavior for money illusion for male and female participants. The cleaned dataset is conveniently saved at `outputs/data/cleaned_money_data.csv`, ready for in-depth analysis.
+
 ### Data Sample
 
 ```{r table1, echo=FALSE}
@@ -119,6 +118,11 @@ knitr::kable(head(selected_data, 6),
 ## Results
 
 ### Problem 1: 
+
+**Hypothetical Analysis:**
+Gender Perspectives on Economic Decisions: The graph suggests that men favored "Carolina" in economic terms and "Maria" in job attractiveness. This could hypothetically indicate that men associate the concept of "Carolina" with economic stability and "Maria" with professional opportunities. Analyzing this alongside gender could reveal whether women make similar associations or have a contrasting view.
+
+
 ```{r echo=FALSE}
 # Function to create plot based on gender
 create_gender_plot <- function(gender, data) {
@@ -145,7 +149,6 @@ create_gender_plot <- function(gender, data) {
   # Creating the plot with ggplot2
   plot <- ggplot(data = freq_data, aes(x = category, y = Percentage, fill = choice)) +
     geom_bar(stat = "identity", position = position_dodge(), color = "black") +
-    scale_fill_brewer(palette = "Pastel1") +
     labs(
          title = paste("Choices Distribution for", gender, "in Money Illusion Experiment 1"),
          x = "Condition",
@@ -170,16 +173,56 @@ plot_female <- create_gender_plot("Female", data)
 # Display the plots
 print(plot_female)
 ```
-\newpage
+Observations from @fig-problem1-female for female participants' choices:
+
+Economic Terms: A significant majority of female participants chose "Carolina" over "Maria" in economic terms. This choice distribution is similar to that of the male participants, suggesting a consensus across genders regarding economic choices tied to "Carolina".
+
+Happiness: Female participants seem evenly split between "Carolina" and "Maria" when it comes to happiness, which differs from male participants, who showed a slight preference for "Maria" in this condition. This could suggest that women see both "Carolina" and "Maria" as equally viable options for emotional fulfillment or that happiness is not as strongly associated with either choice as it is with economic terms.
+
+Job Attractiveness: The choices for job attractiveness among female participants are also evenly distributed between "Carolina" and "Maria", whereas male participants had a preference for "Maria". This could imply that for women, the qualities or opportunities represented by "Carolina" and "Maria" are equally attractive in a professional setting.
+
 ```{r fig-problem1-male, echo=FALSE, fig.cap="The percentage of male participants' choices within each condition in problem 1."}
 # Create plots for 'Female'
 plot_male <- create_gender_plot("Male", data)
 # Display the plots
 print(plot_male)
 ```
+Observations from @fig-problem1-male for male participants' choices:
+
+Economic Terms: A significant majority of male participants chose "Carolina" over "Maria" in economic terms. This indicates a strong preference for the economic implications associated with "Carolina" among male participants, suggesting they may perceive "Carolina" as a more stable or profitable economic choice.
+
+Happiness: The male participants' choices for happiness are nearly evenly split, with a slight preference for "Carolina." This distribution shows that men do not strongly associate either "Carolina" or "Maria" with happiness or that they see both options as similarly capable of providing emotional satisfaction.
+
+Job Attractiveness: Male participants displayed a clear preference for "Maria" in terms of job attractiveness. This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path.
+
+**Gender Comparison Analysis:**
+Economic Rationality: Both genders show a strong preference for "Carolina" in economic terms, which might suggest that "Carolina" represents a more financially beneficial or stable option. This similarity indicates that both men and women may prioritize financial stability in their decision-making processes.
+
+Emotional Considerations: The contrast in happiness choices between genders is subtle but present. Men's slight preference for "Maria" might suggest that they associate "Maria" with emotional well-being slightly more than women do. However, women's even split could indicate a balanced view or a lesser degree of differentiation between "Carolina" and "Maria" in terms of happiness.
+
+Professional Preferences: The difference in job attractiveness choices is more pronounced, with men preferring "Maria" and women showing no clear preference. This may suggest that men and women have different criteria for what makes a job attractive or that they value different aspects of a job.
+
+**Hypothetical Narrative:**
+Given these observations, we might theorize that both men and women in this experiment view "Carolina" as the more economically sound choice. This could reflect a societal consensus on certain financial principles or values.
+
+In terms of happiness and job attractiveness, women's even split between "Carolina" and "Maria" contrasts with men's preferences, potentially indicating that women have a more holistic approach, valuing multiple aspects equally when it comes to job satisfaction and emotional well-being.
+
+**Conclusion:**
+The data from both genders in the Money Illusion Experiment 1 seems to suggest that while there may be common ground in economic decisions, there are nuanced differences in how happiness and job attractiveness are perceived. These differences could be due to various factors, including societal roles, individual experiences, or inherent biases in the experiment design.
+
+It's important to note that these interpretations are speculative and based on limited information. In reality, a thorough analysis would require more context about the experiment, including how "Carolina" and "Maria" were presented to the participants and what they represent, as well as a deeper statistical analysis to validate any conclusions drawn. Additionally, a more nuanced understanding of "rationality" and "emotion" in economic decisions would be necessary to make more definitive claims about gender differences in financial perspectives.
+
+
 \newpage
 
 ### Problem 2:
+
+**Hypothetical Analysis:**
+
+Gender Perspectives on Seller Choices: The graphs for Money Illusion Experiment 2 show distinct patterns in how male and female participants rank sellers—Andre, Bento, and Marcelo. Hypothetically, this could indicate that male participants associate Andre with immediate value or appeal, as evidenced by his high ranking as the first choice, while Bento and Marcelo may represent longer-term benefits or stability, which becomes more apparent in the subsequent choices. On the other hand, female participants show a strong initial preference for Marcelo, suggesting they may perceive Marcelo as a symbol of immediate trustworthiness or value. Bento's consistent middle-ground ranking among females could indicate a perception of balanced or average appeal.
+
+The preference dynamics could be interpreted as men being more likely to revise their initial judgments, while women might be consistent in their preferences. Analyzing these choices alongside gender could reveal whether men and women apply different criteria when evaluating the options presented to them, possibly due to differing risk assessments, values, or expectations in economic decisions. The shift in preferences for both genders as they move from first to third choice could suggest a complex decision-making process where initial impressions are adjusted upon further reflection or comparison.
+
 
 ```{r echo=FALSE}
 # Translate 'gênero' to English and remove rows with NA choices
@@ -214,7 +257,6 @@ create_plot <- function(gender, data) {
   # Plot
   ggplot(gender_data, aes(x = Choice, y = Percentage, fill = Seller_Rank)) +
     geom_bar(stat = "identity", position = position_dodge(), color = "black") +
-    scale_fill_brewer(palette = "Pastel1") +
     labs(
       title = paste("Choice Distribution for", gender, "in Money Illusion Experiment 2"),
       x = "Rank",
@@ -233,15 +275,76 @@ plot_female2 <- create_plot("Female", Prob2_data)
 # Display the plots
 print(plot_female2)
 ```
-\newpage
+Observations from @fig-problem2-female for female participants' choices:
+First Choice:
+
+Andre appears to be the least favored as the first choice among female participants.
+Bento has a moderate preference as the first choice.
+Marcelo is the most preferred seller for the first choice.
+Second Choice:
+
+Andre sees a significant increase in preference from the first to the second choice.
+Bento is the most selected as the second choice.
+Marcelo's preference drops, making him the least favored for the second choice.
+Third Choice:
+
+Andre is again the least preferred as the third choice.
+Bento's preference decreases compared to the second choice.
+Marcelo's preference increases, making him the most favored for the third choice.
+
 ```{r fig-problem2-male, echo=FALSE, fig.cap="The percentage of male participants' choices ranking each seller in problem 2"}
 # Create plots for 'Female'
 plot_male2 <- create_plot("Male", Prob2_data)
 # Display the plots
 print(plot_male2)
 ```
+Observations from @fig-problem2-male Male Participants' Choices:
+
+First Choice:
+Andre has the highest preference as the first choice among male participants.
+Bento is the least preferred as the first choice.
+Marcelo has a moderate preference as the first choice.
+
+Second Choice:
+Andre's preference decreases significantly from the first to the second choice.
+Bento is the most preferred as the second choice, showing a substantial increase from the first choice.
+Marcelo's preference remains relatively stable across the first and second choices.
+
+Third Choice:
+Andre has a moderate increase in preference as the third choice.
+Bento's preference drops slightly from the second choice.
+Marcelo sees a significant increase and is the most favored as the third choice.
+
+**Gender Comparison Analysis:**
+First Choice Dynamics:
+
+Male participants show a clear preference for Andre as their first choice, while female participants favor Marcelo. This difference could reflect varying criteria or perceptions of value between genders.
+Bento is the least favored first choice by males but holds a moderate preference among females, suggesting different initial impressions based on gender.
+Evolution of Preferences:
+
+Both genders show a shifting pattern in their preferences from the first to the third choice, indicating a reevaluation of the sellers as they move down the rank order.
+
+Andre's stark contrast between the first and subsequent choices in male participants could suggest a reconsideration of initial impressions after comparing all options.
+Consensus on Final Choices:
+
+Marcelo emerges as the most favored third choice for both genders, suggesting a commonality in the eventual perception of value or appeal.
+
+**Hypothetical Narrative:**
+
+The divergent first choices between genders could imply that male and female participants have different priorities or strategies in initial decision-making. As the ranking progresses, both genders adjust their preferences, which could suggest a nuanced evaluation process where certain qualities or offers become more or less important as comparison occurs. This pattern of preference change might reflect a complex decision-making process influenced by a variety of factors, including risk assessment, perceived value, or even seller presentation.
+
+**Conclusion:**
+
+While male and female participants show different initial preferences, there is a convergence in choices by the third rank, with Marcelo being the favored seller for both. This could indicate that while initial assessments may vary between genders, there is potential for a shared consensus to emerge as more information is considered. It is important to recognize that these interpretations are based on limited data from the bar graphs provided and the actual reasons behind these choices could be multifaceted and would benefit from further qualitative insights.
+
+
 \newpage
 ### Problem 3
+
+**Hypothetical Analysis:**
+
+Gender Perspectives on Financial Decisions: The graphs for Money Illusion Experiment 3 display the decision-making tendencies of male and female participants when faced with the option to buy or sell under varying conditions of likelihood ('More', 'Same', 'Less'). Analyzing this alongside gender can reveal nuanced approaches to market engagement. This hypothetical analysis could be pointing to underlying gender differences in economic decision-making, where men might prioritize growth or investment maintenance, and women might prioritize financial security and opportunistic gains. However, it's crucial to approach these assumptions critically, as individual decisions are influenced by a range of personal, social, and economic factors beyond gender.
+
 
 ```{r echo=FALSE}
 # Translate the terms to English and filter out NA values selectively
@@ -291,7 +394,6 @@ create_plot <- function(gender, data) {
   # Plot
   ggplot(gender_data, aes(x = Decision, y = Percentage, fill = Likelihood)) +
     geom_bar(stat = "identity", position = position_dodge(), color = "black") +
-    scale_fill_brewer(palette = "Pastel1") +
     labs(
       title = paste("Choice Distribution for", gender, "in Money Illusion Experiment 3"),
       x = "Decision",
@@ -309,15 +411,42 @@ plot_female3 <- create_plot("Female", Prob3_data)
 # Display the plots
 print(plot_female3)
 ```
-\newpage
+Observations from @fig-problem3-female for female participants' choices:
+
+Buy Decisions: Females show the least likelihood to buy more and a similar inclination to buy less or the same. This could indicate a cautious or conservative approach to purchasing decisions, possibly prioritizing stability or risk aversion.
+
+Sell Decisions: The tendency to sell more is considerably higher than to sell less, with selling the same as an intermediate option. This pattern might suggest a greater openness to divesting or capitalizing on assets when conditions are favorable, or it could reflect a strategic approach to managing investments.
+
+
 ```{r fig-problem3-male, echo=FALSE, fig.cap="The percentage of male participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"}
 # Create plots for 'Female'
 plot_male3 <- create_plot("Male", Prob3_data)
 # Display the plots
 print(plot_male3)
 ```
+Observations from @fig-problem3-male for male participants' choices:
+
+Buy Decisions: Males show a balanced approach between buying more and the same, with less likelihood to buy less. This distribution could imply a more assertive or optimistic strategy toward acquiring assets or a greater confidence in market conditions.
+
+Sell Decisions: There is a strong preference for selling the same, followed by selling more, and the least for selling less. This could suggest a preference for maintaining the status quo or a calculated approach to selling, where changes in market conditions are considered but not reacted to hastily.
+
+**Gender Comparison**
+
+Buying Behavior: Females appear more conservative, potentially weighing the risks more heavily, while males seem to demonstrate a readiness to invest, indicating a possible difference in risk tolerance.
+Selling Behavior: Females are more likely to sell more, which might suggest a strategy to capitalize on gains or avoid losses. In contrast, males' preference for selling the same amount could indicate a long-term investment strategy or a less reactive approach to market fluctuations.
+
+**Conclusion:**
+
+The observed differences in the buying and selling behaviors of male and female participants in Money Illusion Experiment 3 may reflect underlying gender-specific financial strategies or risk preferences. While females may exhibit cautious purchasing behavior and a proactive selling stance, males seem to lean toward balanced buying and less reactive selling. These insights, while hypothetical, could inform further investigation into gender-based economic decision-making patterns. It's important to acknowledge that these interpretations are speculative and that actual decision-making processes are complex and influenced by a myriad of factors beyond gender.
+
+
 \newpage
 ### Problem 4
+
+**Hypothetical Analysis:**
+Gender Perspectives on Financial Risk Decisions: The graphs for Money Illusion Experiment 4 reveal the choices of male and female participants regarding different contract types characterized as riskless and risky across real, nominal, and neutral terms.
+
+
 ```{r echo=FALSE}
 data4 <- data %>%
   mutate(gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male'))
@@ -357,7 +486,6 @@ create_plot <- function(gender, data) {
   
   ggplot(gender_data, aes(x = Term, y = Percentage, fill = Choice)) +
     geom_bar(stat = "identity", position = position_dodge()) +
-    scale_fill_brewer(palette = "Pastel1") +
     labs(
       title = paste("Choice Distribution for", gender, "in Money Illusion Experiment 4"),
       x = "Terms",
@@ -375,15 +503,66 @@ plot_female4 <- create_plot("Female", data_counts)
 # Display the plots
 print(plot_female4)
 ```
-\newpage
+Observations from @fig-question4-female for female participants' choices:
+
+Real Terms: Females show a preference for riskless contracts, potentially indicating a perception of real terms as more tangible and, thus, preferring security in transactions that are adjusted for inflation or reflect actual purchasing power.
+
+Nominal Terms: A slight preference for riskless contracts over risky ones in nominal terms could suggest a cautious approach towards transactions that are not adjusted for inflation, reflecting a concern for potential value loss over time.
+
+Neutral Terms: The distribution is more balanced, but still, riskless contracts are slightly preferred, which might indicate a general tendency towards caution regardless of the framing of terms.
+
 ```{r fig-problem4-male, echo=FALSE, fig.cap="The percentage of male participants' choices of contract types across frames(real, nominal and neutral) in problem 4"}
 # Create plots for 'Male'
 plot_male4 <- create_plot("Male", data_counts)
 # Display the plots
 print(plot_male4)
 ```
+Observations from @fig-question4-male for male participants' choices:
+
+Real Terms: Males show an overwhelming preference for riskless contracts in real terms, possibly valuing the certainty of returns that account for inflation and maintain purchasing power.
+
+Nominal Terms: The preference shifts towards risky contracts, implying that men might be more willing to engage in speculative transactions when dealing with nominal values that do not account for inflation.
+
+Neutral Terms: There is a nearly even split, with a slight lean towards riskless contracts, suggesting that without specific framing, men might default to a more balanced risk approach.
+
+**Gender Comparison:**
+
+Risk Preferences in Real Terms: Both genders exhibit a strong preference for riskless contracts, possibly due to the direct impact of inflation-adjusted transactions on real-world purchasing power.
+
+Risk Preferences in Nominal Terms: A stark difference is observed; women remain cautious, whereas men become risk-takers, which could imply a gender-based divergence in responses to economic scenarios where inflation or value erosion is a factor.
+
+Risk Preferences in Neutral Terms: The slight preference for riskless contracts among both genders indicates a baseline aversion to risk when the terms are not clearly defined or when the framing is neutral.
+
+**Conclusion:**
+
+The data from Money Illusion Experiment 4 suggests that both men and women tend to prefer riskless contracts, especially in real terms, indicating a common desire for security in financially tangible scenarios. However, when the framing shifts to nominal terms, gender differences emerge, with men displaying a higher tolerance for risk. These hypothetical observations could reflect underlying gender differences in financial risk perception and economic decision-making. However, it is critical to consider these insights within the broader context of individual financial behavior, which is influenced by various personal, cultural, and situational factors beyond gender.
+
 
 ## Conclusion
+
+## Apenndix
+
+### Rough Sketch about Brainstorming
+
+For a visual depiction of the brainstorming process and the initial ideas that shaped this study, please refer to the document located at `inputs/misc/Plan-Sketch.pdf`. This sketch includes preliminary thoughts on the data structure and one potential approach to address the research questions.
+
+### Data Simulation 
+
+The simulated dataset, designed to mirror the structure of the actual "Money Illusion" dataset, can be found at `scripts/00-simulate-data_data.R`. This script meticulously generates a dataset of 100 hypothetical delay instances.
+
+### Download Data from Open Science Framework
+
+Interested researchers can access the original dataset from the Brazilian researchers for further analysis or replication studies at the following URL: https://osf.io/48pqu/
+
+### Data Cleaning Process
+
+Data cleaning is a critical step in ensuring the accuracy and reliability of the analysis. The detailed procedure and the R script used for data cleaning are available in `scripts/01_cleanup_data.R`. The script elucidates the steps taken to refine the dataset by filtering out incomplete records and unnecessary columns for this study. The steps are: 1. Remove the first row in the dataset, since it is used to store the description to the column name. 2. Remove unnecessary columns for this study, by only keep the gender and responses columns. 3. Remove all gender rows with 'na' since this study is focusing on the behavior for money illusion for male and female participants. The cleaned dataset is conveniently saved at `outputs/data/cleaned_money_data.csv`, ready for in-depth analysis.
+
+### Data Set Validity Testing
+
+To affirm the integrity and consistency of the cleaned dataset, a series of validation tests are performed using the script `scripts/03-test-data-validity.R`. This script performs three crucial checks to ensure the data set's accuracy and consistency:
+
+
 
 ## Reference
 
