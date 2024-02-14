@@ -1,7 +1,7 @@
 ---
 title: "Replicating the \"Money Illusion\" Effect: Exploring Gender Influences within a Brazilian Sample"
 title-block-banner: true
-abstract: "Money illusion as the tendency to overlook the impact of inflation which  focusing on nominal values identified by Shafir, Diamond, and Tversky (1997). This study reproduce four scenarios from research where participants face financial decisions influenced by money illusion in various situations such as earnings, transactions, and contracts,under the background of Brazilian context, where in various situations such as transactions, transactions and earnings that participants face financial decisions influenced by money illusion. The cross-sectional and pre-registered research is based on 372 Brazilian participants in mobile phones or computers by using chi-square tests assessed money illusion. The results indicate that participants' tend to choose financially advantages opportunities which  influenced by the framing of terms (real, nominal, or neutral). After we replicate across all four scenarios, the findings suggest that the money illusion effect  transcend cultural boundaries, supported by replication within a different background of cultural context."
+abstract: "Money illusion as the tendency to overlook the impact of inflation which focusing on nominal values identified by Shafir, Diamond, and Tversky (1997). This study reproduce four scenarios from research where participants face financial decisions influenced by money illusion in various situations such as earnings, transactions, and contracts,under the background of Brazilian context, where in various situations such as transactions, transactions and earnings that participants face financial decisions influenced by money illusion. The cross-sectional and pre-registered research is based on 372 Brazilian participants in mobile phones or computers by using chi-square tests assessed money illusion. The results indicate that participants' tend to choose financially advantages opportunities which  influenced by the framing of terms (real, nominal, or neutral). We invetigate the money illusion across gender , we found that male is more rational than female in different aspects of money illusion. After we replicate across all four scenarios, the findings suggest that the money illusion effect  transcend cultural boundaries, supported by replication within a different background of cultural context."
 thanks: "Code and data supporting this analysis are available at https://github.com/TEJMaster/Student-Replication-For-Money-Illusion.git"
 author: "Terry Tu, Jingyi Shen, Yaning Jin "
 date: today
@@ -39,11 +39,13 @@ The influential 1997 study by Shafir and colleagues[@shafir1997money] has signif
 
 When shopping, people often ignore information that is clearly distorted by inflation and impulsively raise the psychological price above the actual price, which is the money illusion. Money illusions can lead potential buyers to believe that house prices will always rise, and thus that real estate is a good investment. Robert J. Shiller, a professor of economics at Yale University in the United States, believes that it is the false logic caused by the monetary illusion that led to the real estate bubble, "people mostly only remember the price of a few years ago when they bought a house, but often forget the price of other goods, andmistakenly believe that house prices have risen more than other prices." Thus exaggerating the investment potential of real estate"[@Shiller].
 
+From a stereotypical perspective, women is more emotional than men in the aspect of luxury consumptions, despite similar functional value to non-luxury brands, luxury brands command higher prices, especially among female consumers[@stokburger2013luxury].
+
 For decades, economists have debated whether the money illusion is real or, more generally, whether there are irrational influences in economic transactions. Milton Friedman, the famous monetary theorist, assumed that employers and consumers were rational, paying wages or buying goods with inflation in mind. In other words, they can accurately judge the true value of a commodity[@friedman2010milton].
 
 Recognizing the importance of testing theories in different contexts for generalizability, our study aims to investigate the presence of the money illusion effect in a Brazilian cultural setting. Specifically, we aim to replicate four problems proposed by Shafir and colleagues [@shafir1997money]and examine if Brazilians exhibit money illusion biases.
 
-In this paper, our hypothesis are across all four problems: in problem 1, individuals inclined to perceive wage increases significantly in real term even if it is small in nominal terms; In problem 2, individuals will evaluate house deals based on nominal gains rather than real gains; In problem 3, participants will be less likely to purchase new items rather than second hand items when prices increase nominally; In problem 4, individuals might prefer riskier contracts in real terms over safer options presented in nominal terms.
+The original paper has 4 research problems: in problem 1, individuals inclined to perceive wage increases significantly in real term even if it is small in nominal terms; In problem 2, individuals will evaluate house deals based on nominal gains rather than real gains; In problem 3, participants will be less likely to purchase new items rather than second hand items when prices increase nominally; In problem 4, individuals might prefer riskier contracts in real terms over safer options presented in nominal terms. In this paper, we will focus on the relationship between gender and money illusion in the four research problems mentioned above. 
 
 ## Data
 
@@ -503,7 +505,7 @@ plot_female4 <- create_plot("Female", data_counts)
 # Display the plots
 print(plot_female4)
 ```
-Observations from @fig-question4-female for female participants' choices:
+Observations from @fig-problem4-female for female participants' choices:
 
 Real Terms: Females show a preference for riskless contracts, potentially indicating a perception of real terms as more tangible and, thus, preferring security in transactions that are adjusted for inflation or reflect actual purchasing power.
 
@@ -517,7 +519,7 @@ plot_male4 <- create_plot("Male", data_counts)
 # Display the plots
 print(plot_male4)
 ```
-Observations from @fig-question4-male for male participants' choices:
+Observations from @fig-problem4-male for male participants' choices:
 
 Real Terms: Males show an overwhelming preference for riskless contracts in real terms, possibly valuing the certainty of returns that account for inflation and maintain purchasing power.
 
