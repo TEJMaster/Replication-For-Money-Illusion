@@ -29,6 +29,6 @@ The repository is organized as follows to ensure easy navigation and accessibili
 
 ## Devision of Work
 
-- Terry Tu: Project manangement, Script, Data section, Plots, Appendix, Bibilography
+- Terry Tu: Project manangement, R Scripts, Data section, Plots, Appendix, Bibilography
 - Yaning jin: Results, Discussion, Conlusion, Sketch, Simulation
 - Jingyi Shen: Abstract, Introduction, SSRP, Measurement
