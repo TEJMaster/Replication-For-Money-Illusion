@@ -27,3 +27,8 @@ The repository is organized as follows to ensure easy navigation and accessibili
 
 3. **Dataset**: To access the raw data, check the `inputs/data/` directory. To access the cleaned dataset, check the `outputs/data` directory.
 
+## Devision of Work
+
+- Terry Tu: Project manangement, Script, Data section, Plots, Appendix, Bibilography
+- Yaning jin: Results, Discussion, Conlusion, Sketch, Simulation
+- Jingyi Shen: Abstract, Introduction, SSRP, Measurement
