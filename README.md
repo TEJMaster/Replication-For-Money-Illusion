@@ -1,4 +1,4 @@
-# Student Replication For Money Illusion
+# Replication For Money Illusion
 
 This repository contains the project "Student Replication For Money Illusion" focusing on exploring 'gender influences' within a Brazilian sample of 372 participants. This paper conducts a comprehensive analysis of gender-based economic decision-making differences through a series of money illusion experiments. The research aims to explore how men and women perceive and deal with financial risks when faced with different economic scenarios and terms. By analyzing choices under various conditions "the likelihood of buying and selling", "preferences for seller attributes", and "contract terms (real, nominal, neutral)" this paper attempts to uncover potential factors that may influence gender-specific financial behaviors.
 
