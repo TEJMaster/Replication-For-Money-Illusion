@@ -45,7 +45,7 @@ test_poltrona_values <- all(sapply(data[c("poltrona_venda_reais", "poltrona_comp
   all(x %in% c('Igual', 'Menos suscetível', 'Mais suscetível', NA))
 }))
 
-# Test 7: 
+# Test 7: Testing question 4 response contains all valid responses
 # "contrato_AB" contains only "A", "B", or NA; "contrato_CD" contains only "C", "D", or NA; "contrato_EF" contains only "E", "F", or NA
 test_contrato_values <- all(data$contrato_AB %in% c("A", "B", NA)) &&
   all(data$contrato_CD %in% c("C", "D", NA)) &&
