@@ -1,7 +1,7 @@
 # Install necessary packages
-# install.packages("dplyr")
-# install.packages("readr")
-# install.packages("here")
+install.packages("dplyr")
+install.packages("readr")
+install.packages("here")
 
 # Load necessary packages
 library(readr)

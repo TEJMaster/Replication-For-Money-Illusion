@@ -2,7 +2,7 @@
 title: "Gender Dynamics in Financial Decision-Making: Unveiling the Money Illusion Effect in Brazil"
 title-block-banner: true
 abstract: "Money illusion is a cognitive bias where individuals focus on nominal rather than real values, a concept initially highlighted by Shafir, Diamond, and Tversky (1997). In this study, we replicated four scenarios from their research within the Brazilian context, involving 372 participants making financial decisions impacted by money illusion in contexts of earnings and transactions. Through our analysis, we found that decision-making was significantly influenced by the framing of information, with notable differences in rationality between genders. Our findings highlight that the effects of money illusion may also vary by gender, showcasing distinct patterns of financial behavior between males and females."
-thanks: "Code and data supporting this analysis are available at https://github.com/TEJMaster/Replication-For-Money-Illusion.git; Replication on Social Science Reproduction platform available at: "
+thanks: "Code and data supporting this analysis are available at https://github.com/TEJMaster/Replication-For-Money-Illusion.git; Replication on Social Science Reproduction platform available at: https://www.socialsciencereproduction.org/reproductions/1671/published/index"
 author: "Terry Tu, Jingyi Shen, Yaning Jin "
 date: today
 date-format: long
@@ -146,9 +146,7 @@ The survey gathered socio-demographic information and responses to four problems
 
 ### Problem 1: Gender and Preference in Economic Decision-Making
 
-**Hypothetical Analysis:** Gender Perspectives on Economic Decisions: The graph suggests that men favored "Carolina" in economic terms and "Maria" in job attractiveness.
-This could hypothetically indicate that men associate the concept of "Carolina" with economic stability and "Maria" with professional opportunities.
-Analyzing this alongside gender could reveal whether women make similar associations or have a contrasting view.
+The first analysis, we explored gender perspectives on economic decisions, focusing on preferences for "Carolina" and "Maria" in terms of economic advantage and job attractiveness. The indication of money illusion would be suggested if, for instance, male participants showed a preference for "Carolina" for economic stability and "Maria" for professional opportunities, while female participants exhibited similar or contrasting preferences, thereby revealing gender-specific biases in economic decision-making.
 
 ```{r echo=FALSE}
 # Function to create plot based on gender
@@ -202,14 +200,7 @@ print(plot_female)
 
 Observations from @fig-problem1-female for female participants' choices:
 
-Economic Terms: A significant majority of female participants chose "Carolina" over "Maria" in economic terms.
-This choice distribution is similar to that of the male participants, suggesting a consensus across genders regarding economic choices tied to "Carolina".
-
-Happiness: Female participants seem evenly split between "Carolina" and "Maria" when it comes to happiness, which differs from male participants, who showed a slight preference for "Maria" in this condition.
-This could suggest that women see both "Carolina" and "Maria" as equally viable options for emotional fulfillment or that happiness is not as strongly associated with either choice as it is with economic terms.
-
-Job Attractiveness: The choices for job attractiveness among female participants are also evenly distributed between "Carolina" and "Maria", whereas male participants had a preference for "Maria".
-This could imply that for women, the qualities or opportunities represented by "Carolina" and "Maria" are equally attractive in a professional setting.
+For the economic terms, a significant majority of female participants chose "Maria" over "Carolina" in economic terms. This choice distribution is similar to that of the male participants, suggesting a consensus across genders regarding economic choices tied to "Maria". For the happiness, female participants seem evenly split between "Carolina" and "Maria" when it comes to happiness, which differs from male participants, who showed a slight preference for "Carolina" in this condition. This could suggest that women see both "Carolina" and "Maria" as equally viable options for emotional fulfillment or that happiness is not as strongly associated with either choice as it is with economic terms. For the job Attractiveness, the choices for job attractiveness among female participants had a preference for "Maria".
 
 ```{r fig-problem1-male, echo=FALSE, fig.cap="The percentage of male participants' choices within each condition in problem 1."}
 # Create plots for 'Female'
@@ -220,40 +211,17 @@ print(plot_male)
 
 Observations from @fig-problem1-male for male participants' choices:
 
-Economic Terms: A significant majority of male participants chose "Carolina" over "Maria" in economic terms.
-This indicates a strong preference for the economic implications associated with "Carolina" among male participants, suggesting they may perceive "Carolina" as a more stable or profitable economic choice.
-
-Happiness: The male participants' choices for happiness are nearly evenly split, with a slight preference for "Carolina." This distribution shows that men do not strongly associate either "Carolina" or "Maria" with happiness or that they see both options as similarly capable of providing emotional satisfaction.
-
-Job Attractiveness: Male participants displayed a clear preference for "Maria" in terms of job attractiveness.
-This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path.
+For the economic terms, a significant majority of male participants chose "Maria" over "Carolina" in economic terms. This indicates a strong preference for the economic implications associated with "Maria" among male participants, suggesting they may perceive "Maria" as a more stable or profitable economic choice. For the happiness, the male participants' choices for happiness are nearly evenly split, with a slight preference for "Maria." This distribution shows that men do not strongly associate either "Maria" or "Carolina" with happiness or that they see both options as similarly capable of providing emotional satisfaction. For the job Attractiveness, male participants displayed a clear preference for "Maria" in terms of job attractiveness. This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path.
 
 **Gender Comparison Analysis:**
 
-Economic Rationality: Both genders show a strong preference for "Carolina" in economic terms, which might suggest that "Carolina" represents a more financially beneficial or stable option.
-This similarity indicates that both men and women may prioritize financial stability in their decision-making processes.
-
-Emotional Considerations: The contrast in happiness choices between genders is subtle but present.
-Men's slight preference for "Maria" might suggest that they associate "Maria" with emotional well-being slightly more than women do.
-However, women's even split could indicate a balanced view or a lesser degree of differentiation between "Carolina" and "Maria" in terms of happiness.
-
-Professional Preferences: The difference in job attractiveness choices is more pronounced, with men preferring "Maria" and women showing no clear preference.
-This may suggest that men and women have different criteria for what makes a job attractive or that they value different aspects of a job.
+In the problem 1 we examining gender perspectives on economic decisions, specifically preferences between "Carolina" and "Maria" across economic advantage, happiness, and job attractiveness, we found intriguing differences and similarities between genders. Analysis revealed a consensus among both male and female participants, with a strong preference for "Maria" in economic terms, indicating a shared prioritization of financial stability. Interestingly, while men showed a slight preference for "Carolina" in the context of happiness, suggesting a nuanced difference in emotional satisfaction, women were evenly split between "Carolina" and "Maria," implying a more balanced view towards emotional fulfillment. Job attractiveness presented are the same; males and females both favored "Maria," suggesting a more good valuation of the professional attributes offered by "Maria." This gender comparison underscores the complexity of economic decision-making influenced by gender, with both shared views on economic rationality and distinct approaches to emotional and professional considerations. The results point towards a societal consensus on certain financial principles and happiness while also highlighting nuanced differences in how job attractiveness are perceived, potentially shaped by societal roles, individual experiences, or inherent biases. Such findings stress the importance of understanding gender perspectives in economic decisions, suggesting that while there may be common ground in economic choices and emotional satisfaction, there are significant differences in the valuation of job attractiveness. This analysis, however, is based on the specific context of our study and requires further exploration to understand the broader implications of these gender differences in economic decision-making.
 
 \newpage
 
 ### Problem 2: Gender and Seller Choice
 
-**Hypothetical Analysis:**
-
-Gender Perspectives on Seller Choices: The graphs for Money Illusion Experiment 2 show distinct patterns in how male and female participants rank sellers—Andre, Bento, and Marcelo.
-Hypothetically, this could indicate that male participants associate Andre with immediate value or appeal, as evidenced by his high ranking as the first choice, while Bento and Marcelo may represent longer-term benefits or stability, which becomes more apparent in the subsequent choices.
-On the other hand, female participants show a strong initial preference for Marcelo, suggesting they may perceive Marcelo as a symbol of immediate trustworthiness or value.
-Bento's consistent middle-ground ranking among females could indicate a perception of balanced or average appeal.
-
-The preference dynamics could be interpreted as men being more likely to revise their initial judgments, while women might be consistent in their preferences.
-Analyzing these choices alongside gender could reveal whether men and women apply different criteria when evaluating the options presented to them, possibly due to differing risk assessments, values, or expectations in economic decisions.
-The shift in preferences for both genders as they move from first to third choice could suggest a complex decision-making process where initial impressions are adjusted upon further reflection or comparison.
+The second analysis, we examined gender perspectives on seller choices, evaluating preferences among "Andre," "Bento," and "Marcelo" based on their appeal and perceived value. The manifestation of the bias would be clear if male and female participants diverged in their rankings, perhaps preferring Marcelo for immediate trustworthiness or value, Andre for immediate appeal, and Bento for balanced appeal, indicating nuanced gender differences in evaluating seller attributes.
 
 ```{r echo=FALSE}
 # Translate 'gênero' to English and remove rows with NA choices
@@ -307,19 +275,7 @@ print(plot_female2)
 
 Observations from @fig-problem2-female for female participants' choices: First Choice:
 
-Andre appears to be the least favored as the first choice among female participants.
-Bento has a moderate preference as the first choice.
-Marcelo is the most preferred seller for the first choice.
-Second Choice:
-
-Andre sees a significant increase in preference from the first to the second choice.
-Bento is the most selected as the second choice.
-Marcelo's preference drops, making him the least favored for the second choice.
-Third Choice:
-
-Andre is again the least preferred as the third choice.
-Bento's preference decreases compared to the second choice.
-Marcelo's preference increases, making him the most favored for the third choice.
+For the first Choice, Bento appears to be the least favored as the first choice among female participants. Andre has a moderate preference as the first choice. Marcelo is the most preferred seller for the first choice. For the second Choice, Andre sees a decrease in preference from the first to the second choice. Bento is the most selected as the second choice. Marcelo's preference drops, making him the least favored for the second choice. For the third Choice, Bento is again the least preferred as the third choice. Andre's and  Marcelo's preference increases compared to the second choice.  Andre became the most favored for the third choice.
 
 ```{r fig-problem2-male, echo=FALSE, fig.cap="The percentage of male participants' choices ranking each seller in problem 2"}
 # Create plots for 'Female'
@@ -330,44 +286,17 @@ print(plot_male2)
 
 Observations from @fig-problem2-male Male Participants' Choices:
 
-First Choice: Andre has the highest preference as the first choice among male participants.
-Bento is the least preferred as the first choice.
-Marcelo has a moderate preference as the first choice.
-
-Second Choice: Andre's preference decreases significantly from the first to the second choice.
-Bento is the most preferred as the second choice, showing a substantial increase from the first choice.
-Marcelo's preference remains relatively stable across the first and second choices.
-
-Third Choice: Andre has a moderate increase in preference as the third choice.
-Bento's preference drops slightly from the second choice.
-Marcelo sees a significant increase and is the most favored as the third choice.
+For the first Choice, Andre has the highest preference as the first choice among male participants. Bento is the least preferred as the first choice. Marcelo has a moderate preference as the first choice. For the second Choice, Andre's preference decreases significantly from the first to the second choice. Bento is the most preferred as the second choice, showing a substantial increase from the first choice. Marcelo's preference remains relatively stable across the first and second choices. For the third Choice, Andre has a moderate increase in preference as the third choice. Bento's preference drops from the second choice. Marcelo sees a significant increase and is the most favored as the third choice.
 
 **Gender Comparison Analysis:**
 
-First Choice Dynamics:
-
-Male participants show a clear preference for Andre as their first choice, while female participants favor Marcelo.
-This difference could reflect varying criteria or perceptions of value between genders.
-Bento is the least favored first choice by males but holds a moderate preference among females, suggesting different initial impressions based on gender.
-Evolution of Preferences:
-
-Both genders show a shifting pattern in their preferences from the first to the third choice, indicating a reevaluation of the sellers as they move down the rank order.
-
-Andre's stark contrast between the first and subsequent choices in male participants could suggest a reconsideration of initial impressions after comparing all options.
-Consensus on Final Choices:
-
-Marcelo emerges as the most favored third choice for both genders, suggesting a commonality in the eventual perception of value or appeal.
+In our problem 2, investigation into gender dynamics within economic decision-making, particularly examining preferences for "Andre," "Bento," and "Marcelo" across first, second, and third choices, a detailed pattern of gender-based differences and evolving preferences emerged. The analysis disclosed a shared yet shifting perspective among male and female participants in their selection sequence. Initially, male participants predominantly favored "Andre" as their first choice, suggesting a distinct preference aligned with specific attributes or perceived benefits associated with "Andre." Conversely, female participants demonstrated a significant preference for "Marcelo," indicating differing priorities or perceived advantages. As participants progressed to their second and third choices, notable shifts in preferences were observed, reflecting a complex evaluative process. "Bento" emerged as a common preference across genders for the second choice, highlighting a reassessment of value or appeal. By the third choice, "Marcelo" gaining favor among males, and "Andre" gains favor among females. This analysis illuminates the nuanced nature of gender influences on economic decisions, revealing both shared and distinct patterns of preference evolution. The initial gender-specific choices evolve through a dynamic process of reevaluation, leading to a shared recognition of value in the final choice. This highlights the complexity of decision-making processes, influenced by a blend of societal roles, individual experiences, and perhaps inherent biases. These findings underscore the importance of acknowledging gender perspectives in understanding economic decision preferences, suggesting that while there may be commonalities in final choices, the journey to these decisions can significantly differ between genders. This exploration, rooted in the specific context of our study, calls for further investigation into the broader implications of gender differences in economic decision-making processes.
 
 \newpage
 
 ### Problem 3: Gender and Market Participation Decisions
 
-**Hypothetical Analysis:**
-
-Gender Perspectives on Financial Decisions: The graphs for Money Illusion Experiment 3 display the decision-making tendencies of male and female participants when faced with the option to buy or sell under varying conditions of likelihood ('More', 'Same', 'Less').
-Analyzing this alongside gender can reveal nuanced approaches to market engagement.
-This hypothetical analysis could be pointing to underlying gender differences in economic decision-making, where men might prioritize growth or investment maintenance, and women might prioritize financial security and opportunistic gains.
-However, it's crucial to approach these assumptions critically, as individual decisions are influenced by a range of personal, social, and economic factors beyond gender.
+The third analysis delved into gender perspectives on financial decisions, with participants choosing to buy or sell under conditions of varying likelihoods ('More', 'Same', 'Less'). The presence of money illusion would be inferred if there were a gender-based pattern in the willingness to engage in financial transactions, reflecting underlying gender differences in risk tolerance and investment strategy.
 
 ```{r echo=FALSE}
 # Translate the terms to English and filter out NA values selectively
@@ -436,11 +365,7 @@ print(plot_female3)
 
 Observations from @fig-problem3-female for female participants' choices:
 
-Buy Decisions: Females show the least likelihood to buy more and a similar inclination to buy less or the same.
-This could indicate a cautious or conservative approach to purchasing decisions, possibly prioritizing stability or risk aversion.
-
-Sell Decisions: The tendency to sell more is considerably higher than to sell less, with selling the same as an intermediate option.
-This pattern might suggest a greater openness to divesting or capitalizing on assets when conditions are favorable, or it could reflect a strategic approach to managing investments.
+For the buy decisions, females show the least likelihood to buy more and a similar inclination to buy less or the same. For the sell decisions, the tendency to sell more is considerably higher than to sell less, with selling the "same" is the first choose.
 
 ```{r fig-problem3-male, echo=FALSE, fig.cap="The percentage of male participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"}
 # Create plots for 'Female'
@@ -451,24 +376,17 @@ print(plot_male3)
 
 Observations from @fig-problem3-male for male participants' choices:
 
-Buy Decisions: Males show a balanced approach between buying more and the same, with less likelihood to buy less.
-This distribution could imply a more assertive or optimistic strategy toward acquiring assets or a greater confidence in market conditions.
-
-Sell Decisions: There is a strong preference for selling the same, followed by selling more, and the least for selling less.
-This could suggest a preference for maintaining the status quo or a calculated approach to selling, where changes in market conditions are considered but not reacted to hastily.
+For the buy decisions, males show a balanced approach between buying more and the same, with less likelihood to buy less. For the sell decisions, there is a strong preference for selling the same, followed by selling more, and the least for selling less.
 
 **Gender Comparison**
 
-Buying Behavior: Females appear more conservative, potentially weighing the risks more heavily, while males seem to demonstrate a readiness to invest, indicating a possible difference in risk tolerance.
-
-Selling Behavior: Females are more likely to sell more, which might suggest a strategy to capitalize on gains or avoid losses.
-In contrast, males' preference for selling the same amount could indicate a long-term investment strategy or a less reactive approach to market fluctuations.
+In our investigation into problem 3, focusing on gender dynamics within buying and selling decisions, we unveiled compelling gender-specific preferences that significantly enrich our understanding of economic behavior. The study meticulously examined the differences and similarities in how males and females approach financial transactions, particularly through the lens of risk tolerance and strategic financial planning. Our findings highlighted a shared emphasis on cautious financial management, yet revealed distinct gender-based strategies when delving deeper into the specifics of buying and selling actions. The analysis demonstrated a notable consensus in prioritizing financial prudence, with both genders exhibiting a strategic approach to economic transactions. However, the nuances in behavior became apparent when dissecting the data further. Females displayed a tendency towards conservatism in buying decisions, showing a lesser likelihood to increase their purchasing volume. This cautious approach suggests a higher degree of risk aversion, possibly rooted in a desire for financial stability or influenced by broader societal or individual factors. In contrast, males presented a more balanced buying strategy, showing an openness to both increasing and maintaining their purchase levels, which might indicate a more optimistic outlook on financial growth or a greater confidence in navigating market conditions. When analyzing selling behaviors, the Same choices for men and women. females and males both demonstrated a preference for maintaining their current asset levels, suggesting a long-term investment perspective or a cautious approach to market fluctuations. This gender comparison underscores the complexity of financial decision-making processes, revealing that while there is a shared foundation of financial caution, the methods and motivations driving these decisions diverge significantly between genders. The findings suggest that societal norms, personal experiences, and possibly inherent biases influence these economic behaviors, highlighting the importance of incorporating gender perspectives in financial decision-making studies. Such insights into buying and selling behaviors not only contribute to our understanding of economic dynamics but also suggest that gender differences in risk tolerance and financial strategy are crucial factors in economic decision-making.
 
 \newpage
 
 ### Problem 4: Gender and Financial Risk Decision-Making
 
-**Hypothetical Analysis:** Gender Perspectives on Financial Risk Decisions: The graphs for Money Illusion Experiment 4 reveal the choices of male and female participants regarding different contract types characterized as riskless and risky across real, nominal, and neutral terms.
+The fourth analysis, we focused on gender perspectives on financial risk decisions, where participants were asked to choose between riskier and less risky contracts in nominal, real, or neutral terms. The evidence of the illusion would be apparent if participants, influenced by gender perspectives, showed distinct preferences for certain contracts, revealing a gendered approach to risk assessment in different economic scenarios.
 
 ```{r echo=FALSE}
 data4 <- data %>%
@@ -528,11 +446,7 @@ print(plot_female4)
 
 Observations from @fig-problem4-female for female participants' choices:
 
-Real Terms: Females show a preference for riskless contracts, potentially indicating a perception of real terms as more tangible and, thus, preferring security in transactions that are adjusted for inflation or reflect actual purchasing power.
-
-Nominal Terms: A slight preference for riskless contracts over risky ones in nominal terms could suggest a cautious approach towards transactions that are not adjusted for inflation, reflecting a concern for potential value loss over time.
-
-Neutral Terms: The distribution is more balanced, but still, riskless contracts are slightly preferred, which might indicate a general tendency towards caution regardless of the framing of terms.
+For the real terms, females show a preference for riskless contracts.  For the nominal terms, a slight preference for riskless contracts over risky ones. For the neutral terms, the distribution is more balanced, but still, riskless contracts are slightly preferred.
 
 ```{r fig-problem4-male, echo=FALSE, fig.cap="The percentage of male participants' choices of contract types across frames(real, nominal and neutral) in problem 4"}
 # Create plots for 'Male'
@@ -543,19 +457,11 @@ print(plot_male4)
 
 Observations from @fig-problem4-male for male participants' choices:
 
-Real Terms: Males show an overwhelming preference for riskless contracts in real terms, possibly valuing the certainty of returns that account for inflation and maintain purchasing power.
-
-Nominal Terms: The preference shifts towards risky contracts, implying that men might be more willing to engage in speculative transactions when dealing with nominal values that do not account for inflation.
-
-Neutral Terms: There is a nearly even split, with a slight lean towards riskless contracts, suggesting that without specific framing, men might default to a more balanced risk approach.
+For the real terms, males show an overwhelming preference for riskless contracts in real terms. For the nominal terms, the preference shifts towards riskless contracts. For the neutral terms, there is a nearly even split, with a slight lean towards risky contracts.
 
 **Gender Comparison:**
 
-Risk Preferences in Real Terms: Both genders exhibit a strong preference for riskless contracts, possibly due to the direct impact of inflation-adjusted transactions on real-world purchasing power.
-
-Risk Preferences in Nominal Terms: A stark difference is observed; women remain cautious, whereas men become risk-takers, which could imply a gender-based divergence in responses to economic scenarios where inflation or value erosion is a factor.
-
-Risk Preferences in Neutral Terms: The slight preference for riskless contracts among both genders indicates a baseline aversion to risk when the terms are not clearly defined or when the framing is neutral.
+In our study examining gender perspectives on economic decisions, particularly in the context of contract preferences under different terms (real, nominal, and neutral), we observed distinct patterns between male and female participants. Females consistently demonstrated a preference for riskless contracts across all terms, with their preference being strongest in real terms and slightly less pronounced but still evident in nominal and neutral terms. This indicates a general female inclination towards financial stability and aversion to risk, regardless of the framing of the economic conditions. Males, on the other hand, showed a significant preference for riskless contracts in real terms, mirroring the strong aversion to risk seen in female preferences. However, when considering nominal terms, this preference, while still leaning towards riskless contracts, becomes less overwhelming, suggesting a somewhat greater tolerance for risk under conditions where the economic framing is less directly tied to tangible outcomes. Interestingly, in neutral terms, males displayed a nearly even split in their preferences, with a slight tendency towards risky contracts, indicating a nuanced shift towards risk acceptance when the economic decision-making context is perceived as more abstract or balanced. These findings highlight the complexity of economic decision-making influenced by gender, revealing both shared and divergent attitudes towards risk under varying economic framings. The gender comparison underscores a societal trend towards risk aversion, particularly in contexts closely associated with real-world financial stability, but also points to nuanced differences in how risk is approached under different conceptual framings. This suggests that while there may be common ground in economic choices, especially in scenarios with clear, real-world implications, significant differences emerge in how risk is valued and managed, potentially shaped by societal roles, individual experiences, or inherent biases. This analysis calls for a deeper understanding of gender perspectives in economic decisions, emphasizing the importance of context in shaping preferences towards risk and stability. 
 
 ## Discussion
 
