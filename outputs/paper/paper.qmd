@@ -277,6 +277,7 @@ Observations from @fig-problem2-female for female participants' choices: First C
 
 For the first Choice, Bento appears to be the least favored as the first choice among female participants. Andre has a moderate preference as the first choice. Marcelo is the most preferred seller for the first choice. For the second Choice, Andre sees a decrease in preference from the first to the second choice. Bento is the most selected as the second choice. Marcelo's preference drops, making him the least favored for the second choice. For the third Choice, Bento is again the least preferred as the third choice. Andre's and  Marcelo's preference increases compared to the second choice.  Andre became the most favored for the third choice.
 
+\newpage
 ```{r fig-problem2-male, echo=FALSE, fig.cap="The percentage of male participants' choices ranking each seller in problem 2"}
 # Create plots for 'Female'
 plot_male2 <- create_plot("Male", Prob2_data)
@@ -367,6 +368,7 @@ Observations from @fig-problem3-female for female participants' choices:
 
 For the buy decisions, females show the least likelihood to buy more and a similar inclination to buy less or the same. For the sell decisions, the tendency to sell more is considerably higher than to sell less, with selling the "same" is the first choose.
 
+\newpage
 ```{r fig-problem3-male, echo=FALSE, fig.cap="The percentage of male participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"}
 # Create plots for 'Female'
 plot_male3 <- create_plot("Male", Prob3_data)
@@ -455,6 +457,7 @@ plot_male4 <- create_plot("Male", data_counts)
 print(plot_male4)
 ```
 
+\newpage
 Observations from @fig-problem4-male for male participants' choices:
 
 For the real terms, males show an overwhelming preference for riskless contracts in real terms. For the nominal terms, the preference shifts towards riskless contracts. For the neutral terms, there is a nearly even split, with a slight lean towards risky contracts.
