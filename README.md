@@ -3,7 +3,7 @@
 This repository contains the project "Replicating the 'Money Illusion' Effect: Exploring Gender Influences within a Brazilian Sample" focusing on exploring 'gender influences for money illusion from the original paper' within a Brazilian sample of 372 participants. This paper conducts a comprehensive analysis of gender-based economic decision-making differences through a series of money illusion experiments. The research aims to explore how men and women perceive and deal with financial risks when faced with different economic scenarios and terms. By analyzing choices under various conditions "the likelihood of buying and selling", "preferences for seller attributes", and "contract terms (real, nominal, neutral)" this paper attempts to uncover potential factors that may influence gender-specific financial behaviors.
 
 
-In the creation of this project, OpenAI's ChatGPT was used to enhance the paragraphs, as well as assist in generating the plots. You can check the input/misc/chat_with_chatGPT.txt for a complete conversation of my usage of ChatGPT in this project.
+In the creation of this project, OpenAI's ChatGPT was used to enhance the paragraphs, as well as assist in generating the plots. You can check the `input/misc/chat_with_chatGPT.txt` for a complete conversation of my usage of ChatGPT in this project.
 
 ## Repository Structure
 
