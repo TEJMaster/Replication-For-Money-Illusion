@@ -35,36 +35,17 @@ library(readr)
 
 ## Introduction
 
-Money illusion refers to a cognitive bias where individuals tend to assess the valueof money solely based on its nominal value.
-The real value of money is the nominal value of money plus the inlation rate.
-thereby overlooking the impact of inflation.This bias can lead to various consequences, such as reluctance to sell assets due to perceived nominal losses, misunderstanding wage increases, and more.
+Money illusion refers to the cognitive bias where individuals assess the value of money based on its nominal value, overlooking the impact of inflation. This bias can lead to various economic consequences, such as reluctance to sell assets due to perceived nominal losses or misunderstanding wage increases. Our study aims to investigate the presence of money illusion in a Brazilian cultural setting, with a particular focus on its relationship with gender. This research addresses a gap in the literature by exploring gender-specific responses to money illusion in a Brazilian context, which has not been extensively studied before.
 
-The influential 1997 study by Shafir and colleagues[@shafir1997money] has significantly impacted on economic psychology and behavioral economics which introduced the concept of money illusion.
-The authors argued that money illusion could explain phenomena like inflexible wages and contracts which contrary to traditional economic theories assuming rationality in decision-making.
+In this paper, we emphasize the relationship between gender and money illusion across four problems originally proposed by Shafir and colleagues [@shafir1997money], and then replicated by the Brazilian researchers [@Ferreira_Santiago_Batistuzzo_Seda_Borborema_Fatori_Bastos]. From a stereotypical perspective, women are often considered more emotional than men in the aspect of luxury consumptions, despite similar functional value to non-luxury brands, luxury brands command higher prices, especially among female consumers[@stokburger2013luxury]. We hypothesize that gender differences may influence susceptibility to money illusion in various economic scenarios.
 
-When shopping, people often ignore information that is clearly distorted by inflation and impulsively raise the psychological price above the actual price, which is the money illusion.
-Money illusions can lead potential buyers to believe that house prices will always rise, and thus that real estate is a good investment.
-Robert J. Shiller, a professor of economics at Yale University in the United States, believes that it is the false logic caused by the monetary illusion that led to the real estate bubble, "people mostly only remember the price of a few years ago when they bought a house, but often forget the price of other goods, andmistakenly believe that house prices have risen more than other prices." Thus exaggerating the investment potential of real estate"[@Shiller_2014].
+Our study's estimand is the effect of gender on susceptibility to money illusion within a Brazilian cultural context. We investigate how gender differences influence economic decision-making when individuals are presented with scenarios that typically induce money illusion, such as perceptions of wage increases, real estate transactions, purchasing and selling decisions, and choices between risky and risk-free contracts. By replicating four problems originally proposed by Shafir and colleagues [@shafir1997money], we aim to quantify the magnitude of these gender differences and understand their implications for economic behavior.
 
-For decades, economists have debated whether the money illusion is real or, more generally, whether there are irrational influences in economic transactions.Milton Friedman, the famous monetary theorist, assumed that employers and consumers were rational, paying wages or buying goods with inflation in mind.
-In other words, they can accurately judge the true value of a commodity[@friedman2010milton].
+Our findings reveal distinct gender differences in economic decision-making across various scenarios related to money illusion in the Brazilian context. Both men and women demonstrated a consensus on economic terms, with a preference for "Carolina," indicating a shared focus on financial stability. However, differences emerged in job attractiveness and seller preferences, suggesting gender-specific strategies and priorities in economic exchanges. Women exhibited a cautious approach to purchasing and a proactive selling strategy, reflecting a risk-averse attitude, while men showed a balanced approach to buying and selling decisions. In terms of contract preferences, both genders favored risk-free contracts in real terms, but men displayed a greater willingness to take risks under nominal terms. These findings highlight the multifaceted nature of economic decision-making, where financial stability intersects with career aspirations and risk tolerance in gender-specific ways.
 
-Recognizing the importance of testing theories in different contexts for generalizability, our study aims to investigate the presence of the money illusion effect in a Brazilian cultural setting.
-Specifically, we aim to replicate four problems proposed by Shafir and colleagues [@shafir1997money]and examine if Brazilians exhibit money illusion biases.
+Understanding these gender differences is important as it can inform policymakers and economists about the varying impacts of economic policies and market conditions on different segments of the population. It can also contribute to the development of more inclusive and effective financial education programs that address the specific needs and biases of both men and women. Overall, our study confirms the presence of money illusion in the Brazilian context and highlights gender differences in economic decision-making across various scenarios. This research contributes to a deeper understanding of the complex interplay between cognitive biases, gender, and economic behavior in a culturally diverse setting.
 
-In this paper, we focus on the relationship between sex and money illusion in the four problems.
-According to the references we have found, women is more emotional than men in the aspect of luxury consumptions, despite similar functional value to non-luxury brands, luxury brands command higher prices, especially among female consumers[@stokburger2013luxury].
-
-Our hypothesis are across all four problems: Problem 1, gender and preference in economic decision making; Problem 2, Gender and seller choice; Problem 3, gender and market participation decisions; Problem 4, Gender and financial risk decision making.
-First of all, we choose the dataset from one replication of “Money Illusion”, then we cleaned the dataset and removed all unnecessary variables in dataset.
-We plot the graphs of among four problems for male and female respectively.
-Then we make analysis of it and verify whether we have evidence to against the hypothesis.
-Then we draw the conclusion and list the limitations of our study.
-
-The findings from experiments investigating gender differences in economic decision-making, highlighting distinct behaviors between men and women acrossvarious contexts, such as job attractiveness, seller selection, buying and selling strategies, and preferences for risky or risk-free contracts.
-It reveals that both genders show common concerns for economic stability, yet differ in their evaluation of career opportunities, decision-making strategies, and risk preferences.
-The discussion emphasizes the nuanced role of gender in economic decisions, suggesting further research to explore socio-economic factors, cross-cultural impacts, and psychological dynamics behind these decisions.
-The study acknowledges limitations due to its experimental design and calls for future research employing more comprehensive and realistic approaches to better understand gender influences in economic behavior.
+The paper is structured as follows: Section 2 provides a review of the literature on money illusion and gender differences in economic decision-making. Section 3 describes the methodology used in our study, including the replication of the four problems and the data collection process. Section 4 presents the results of our analysis, and Section 5 discusses the implications of our findings for theory and practice. Finally, Section 6 concludes with a summary of our main contributions and suggestions for future research.
 
 ## Data
 
@@ -211,7 +192,7 @@ print(plot_male)
 
 Observations from @fig-problem1-male for male participants' choices:
 
-For the economic terms, a significant majority of male participants chose "Maria" over "Carolina" in economic terms. This indicates a strong preference for the economic implications associated with "Maria" among male participants, suggesting they may perceive "Maria" as a more stable or profitable economic choice. For the happiness, the male participants' choices for happiness are nearly evenly split, with a slight preference for "Maria." This distribution shows that men do not strongly associate either "Maria" or "Carolina" with happiness or that they see both options as similarly capable of providing emotional satisfaction. For the job Attractiveness, male participants displayed a clear preference for "Maria" in terms of job attractiveness. This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path.
+For the economic terms, a significant majority of male participants chose "Maria" over "Carolina" in economic terms. This indicates a strong preference for the economic implications associated with "Maria" among male participants, suggesting they may perceive "Maria" as a more stable or profitable economic choice. For the economic terms, a significant majority of male participants chose "Maria" over "Carolina" in economic terms. This indicates a strong preference for the economic implications associated with "Maria" among male participants, suggesting they may perceive "Maria" as a more stable or profitable economic choice. For the happiness, the male participants' choices for happiness shows a slight preference for "Carolina." This distribution shows that men strongly associate with "Carolina" with happiness which is more capable to provide emotional satisfaction. For the job Attractiveness, male participants displayed a clear preference for "Maria" in terms of job attractiveness. This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path. For the job Attractiveness, male participants displayed a clear preference for "Maria" in terms of job attractiveness. This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path.
 
 **Gender Comparison Analysis:**
 
@@ -378,7 +359,7 @@ print(plot_male3)
 
 Observations from @fig-problem3-male for male participants' choices:
 
-For the buy decisions, males show a balanced approach between buying more and the same, with less likelihood to buy less. For the sell decisions, there is a strong preference for selling the same, followed by selling more, and the least for selling less.
+For the buy decisions, males show a balanced approach between buying less and the same, with less likelihood to buy more. For the sell decisions, there is a strong preference for selling the same, followed by selling more, and the least for selling less.
 
 **Gender Comparison**
 
@@ -470,19 +451,7 @@ In our study examining gender perspectives on economic decisions, particularly i
 
 ### Findings
 
-The first experiment focused on exploring how gender affects individuals' decision-making preferences when faced with economic terms and job attractiveness choices.
-The analysis showed that both men and women agreed on their choices regarding economic terms, generally preferring "Carolina," which may reflect a common concern for economic stability across genders.
-However, differences between genders became evident in terms of job attractiveness, with men preferring "Maria," suggesting they have different evaluations of career opportunities and potential for development compared to women.
-The second experiment examined how men and women make choices based on different characteristics of sellers.
-The results indicated that men and women initially preferred different sellers, with men choosing Andre and women choosing Marcelo.
-This finding may reflect different strategies and priorities in economic decision-making between genders.
-As the choices progressed, preferences for sellers converged, especially in the final choice, where Marcelo became the most popular seller.
-The third experiment focused on how gender affects buying and selling decisions, especially under different probability conditions.
-It was observed that women showed a lower likelihood in purchasing decisions and a greater tendency to increase sales, possibly indicating a cautious attitude towards buying and an active strategy towards selling.
-In contrast, men exhibited a more balanced approach to both buying and selling decisions, suggesting a preference for maintaining the status quo rather than making radical adjustments in changing market conditions.
-The fourth experiment delved into how gender influences individual preferences for different types of contracts (risky and risk-free) and different economic terms (real, nominal, neutral).
-Results showed that both men and women preferred risk-free contracts when it came to contracts adjusted for real terms, possibly indicating a common preference to protect purchasing power against inflation.
-However, under nominal terms, men were relatively more inclined to choose risky contracts, revealing a willingness to take risks for higher returns without inflation adjustment.
+The first problem revealed a gender consensus in prioritizing "Maria" for economic advantage, indicating a universal valuation of financial stability. However, the divergence in job attractiveness preferences—with men favoring "Maria" for career opportunities—suggests differing gender perspectives on professional development. This contrast highlights the multifaceted nature of economic decision-making, where financial stability intersects with career aspirations in gender-specific ways. Our second problem delved into seller preferences, uncovering an initial gender disparity with men preferring Andre and women Marcelo. This divergence may illustrate distinct gendered strategies or priorities in economic exchanges. Remarkably, as the decision process evolved, preferences converged towards Marcelo, suggesting a dynamic reassessment of value and trustworthiness across genders. The third problem focused on buying and selling decisions under varying probabilities, where a cautious approach to purchasing and a proactive selling strategy were more pronounced among women. This could reflect a gendered risk aversion and a strategic orientation towards asset management. Conversely, men's balanced approach to buying and selling decisions hints at a preference for stability over speculative adjustments, indicating a nuanced understanding of market dynamics. In our fourth problem, examining preferences for riskier versus risk-free contracts under different economic terms, we observed a shared gender preference for risk-free contracts in real terms. This consensus underscores a collective concern for preserving purchasing power. However, under nominal terms, men displayed a relative openness to risk, suggesting a gendered divergence in risk tolerance and financial optimism.
 
 ### Another Understanding of the World
 
