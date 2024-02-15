@@ -1,27 +1,29 @@
-# Load necessary libraries
-# install.packages("dplyr")
-# install.packages("readxl")
-# install.packages("here")
+# install necessary libraries
+install.packages("dplyr")
+install.packages("readxl")
+install.packages("here")
 
+# Load necessary libraries
 library(readxl)
 library(dplyr)
 library(here)
 
 # Use the `here` function to specify file paths relative to the project root
-# These variables are used to store the file path to get the file before data cleaning
-# and save the file after data cleaning
+# These variables are used to store the file path to get the file before 
+# data cleaning and save the file after data cleaning
 input_file_path <- here("inputs", "data", "money_data_raw.xlsx")
 output_file_path <- here("outputs", "data", "cleaned_money_data.csv")
 
-# Read the raw dataset
+# Read the raw data-set
 raw_data <- readxl::read_excel(input_file_path)
 
-# Remove the first row from the dataset
+# Remove the first row from the data-set
+# This row is used to store the description about the column name
 cleaned_data <- raw_data %>% 
   slice(-1)
 
-# Remove unessasay columns for this study
-# We only want the gender and choices columns
+# Remove unnecessary columns for this study
+# We only want the gender column and response choices columns
 cleaned_data <- cleaned_data %>%
   select(
     -idade, 
@@ -41,7 +43,7 @@ cleaned_data <- cleaned_data %>%
 
 # Remove rows where gender is NA
 cleaned_data <- cleaned_data %>%
-  filter(!is.na(gênero))
+  filter(!is.na(gênero) & gênero != 'Outro')
 
-# Optionally, save the cleaned dataset to a CSV file
+# Save the cleaned dataset to a CSV file
 write.csv(cleaned_data, output_file_path, row.names = FALSE)

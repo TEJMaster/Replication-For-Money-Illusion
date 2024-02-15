@@ -29,7 +29,6 @@
 28,"Mulher","B",NA,NA,"30%",NA,NA,"Menos suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
 29,"Mulher","B",NA,NA,"30%","Menos suscetível","Mais suscetível",NA,NA,"Permaneceu o mesmo","3","1","2","2 anos","Maria",NA,NA
 30,"Mulher",NA,NA,"F","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,"Carolina",NA
-31,"Outro",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano","Carolina",NA,NA
 32,"Mulher",NA,NA,"F","20%","Igual","Igual",NA,NA,"Permaneceu o mesmo","3","2","1","1 ano",NA,NA,"Carolina"
 33,"Homem",NA,"D",NA,"20%",NA,NA,"Mais suscetível","Menos suscetível","Diminuiu","3","2","1","Não sei",NA,NA,"Carolina"
 34,"Mulher","A",NA,NA,"Não sei","Igual","Igual",NA,NA,"Permaneceu o mesmo","2","1","3","1 ano",NA,"Maria",NA
@@ -41,7 +40,6 @@
 40,"Homem",NA,NA,"F","20%",NA,NA,"Igual","Igual","Aumentou","1","2","3","1 ano",NA,NA,"Carolina"
 41,"Homem",NA,"D",NA,"20%","Igual","Menos suscetível",NA,NA,"Permaneceu o mesmo","1","2","3","2 anos","Maria",NA,NA
 42,"Homem",NA,"D",NA,"20%",NA,NA,"Igual","Igual","Permaneceu o mesmo","1","2","3","1 ano",NA,"Maria",NA
-43,"Outro","B",NA,NA,"20%","Igual","Menos suscetível",NA,NA,"Aumentou","3","2","1","1 ano","Maria",NA,NA
 44,"Mulher",NA,NA,"E","20%",NA,NA,"Mais suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
 45,"Mulher","B",NA,NA,"Não sei","Menos suscetível","Menos suscetível",NA,NA,"Não sei","1","2","3","1 ano","Maria",NA,NA
 46,"Mulher",NA,"D",NA,"30%","Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
@@ -374,7 +372,6 @@
 436,"Mulher","A",NA,NA,"20%",NA,NA,"Menos suscetível","Menos suscetível","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
 437,"Homem",NA,"D",NA,"Não sei","Igual","Igual",NA,NA,"Aumentou","2","1","3","1 ano","Maria",NA,NA
 438,"Mulher",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA
-439,"Outro",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maria",NA,NA
 440,"Homem",NA,"D",NA,"20%","Igual","Igual",NA,NA,"Diminuiu","3","1","2","6 meses",NA,NA,"Maria"
 442,"Mulher","B",NA,NA,"10%",NA,NA,"Mais suscetível","Igual","Aumentou","3","2","1","1 ano",NA,NA,"Maria"
 443,"Mulher",NA,NA,NA,NA,"Mais suscetível","Igual",NA,NA,"Aumentou","3","2","1","1 ano",NA,"Carolina",NA
