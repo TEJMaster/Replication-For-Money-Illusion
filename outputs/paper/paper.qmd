@@ -12,6 +12,9 @@ toc-depth: 1
 number-sections: true
 bibliography: references.bib
 link-citations: true
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{r setup, include=FALSE, message=FALSE}
@@ -30,26 +33,44 @@ library(here)
 library(readr)
 ```
 
-
 ## Introduction
 
-Money illusion refers to a cognitive bias where individuals tend to assess the value of money solely based on its nominal value. The real value of money is the nominal value of money plus the inlation rate. thereby overlooking the impact of inflation. This bias can lead to various consequences, such as reluctance to sell assets due to perceived nominal losses, misunderstanding wage increases, and more.
+Money illusion refers to a cognitive bias where individuals tend to assess the valueof money solely based on its nominal value.
+The real value of money is the nominal value of money plus the inlation rate.
+thereby overlooking the impact of inflation.This bias can lead to various consequences, such as reluctance to sell assets due to perceived nominal losses, misunderstanding wage increases, and more.
 
-The influential 1997 study by Shafir and colleagues[@shafir1997money] has significantly impacted on economic psychology and behavioral economics which introduced the concept of money illusion. The authors argued that money illusion could explain phenomena like inflexible wages and contracts which contrary to traditional economic theories assuming rationality in decision-making.
+The influential 1997 study by Shafir and colleagues[@shafir1997money] has significantly impacted on economic psychology and behavioral economics which introduced the concept of money illusion.
+The authors argued that money illusion could explain phenomena like inflexible wages and contracts which contrary to traditional economic theories assuming rationality in decision-making.
 
-When shopping, people often ignore information that is clearly distorted by inflation and impulsively raise the psychological price above the actual price, which is the money illusion. Money illusions can lead potential buyers to believe that house prices will always rise, and thus that real estate is a good investment. Robert J. Shiller, a professor of economics at Yale University in the United States, believes that it is the false logic caused by the monetary illusion that led to the real estate bubble, "people mostly only remember the price of a few years ago when they bought a house, but often forget the price of other goods, andmistakenly believe that house prices have risen more than other prices." Thus exaggerating the investment potential of real estate"[@Shiller].
+When shopping, people often ignore information that is clearly distorted by inflation and impulsively raise the psychological price above the actual price, which is the money illusion.
+Money illusions can lead potential buyers to believe that house prices will always rise, and thus that real estate is a good investment.
+Robert J. Shiller, a professor of economics at Yale University in the United States, believes that it is the false logic caused by the monetary illusion that led to the real estate bubble, "people mostly only remember the price of a few years ago when they bought a house, but often forget the price of other goods, andmistakenly believe that house prices have risen more than other prices." Thus exaggerating the investment potential of real estate"[@shiller2014].
 
-From a stereotypical perspective, women is more emotional than men in the aspect of luxury consumptions, despite similar functional value to non-luxury brands, luxury brands command higher prices, especially among female consumers[@stokburger2013luxury].
+For decades, economists have debated whether the money illusion is real or, more generally, whether there are irrational influences in economic transactions.Milton Friedman, the famous monetary theorist, assumed that employers and consumers were rational, paying wages or buying goods with inflation in mind.
+In other words, they can accurately judge the true value of a commodity[@friedman2010milton].
 
-For decades, economists have debated whether the money illusion is real or, more generally, whether there are irrational influences in economic transactions. Milton Friedman, the famous monetary theorist, assumed that employers and consumers were rational, paying wages or buying goods with inflation in mind. In other words, they can accurately judge the true value of a commodity[@friedman2010milton].
+Recognizing the importance of testing theories in different contexts for generalizability, our study aims to investigate the presence of the money illusion effect in a Brazilian cultural setting.
+Specifically, we aim to replicate four problems proposed by Shafir and colleagues [@shafir1997money]and examine if Brazilians exhibit money illusion biases.
 
-Recognizing the importance of testing theories in different contexts for generalizability, our study aims to investigate the presence of the money illusion effect in a Brazilian cultural setting. Specifically, we aim to replicate four problems proposed by Shafir and colleagues [@shafir1997money]and examine if Brazilians exhibit money illusion biases.
+In this paper, we focus on the relationship between sex and money illusion in the four problems.
+According to the references we have found, women is more emotional than men in the aspect of luxury consumptions, despite similar functional value to non-luxury brands, luxury brands command higher prices, especially among female consumers[@stokburger2013luxury].
 
-The original paper has 4 research problems: in problem 1, individuals inclined to perceive wage increases significantly in real term even if it is small in nominal terms; In problem 2, individuals will evaluate house deals based on nominal gains rather than real gains; In problem 3, participants will be less likely to purchase new items rather than second hand items when prices increase nominally; In problem 4, individuals might prefer riskier contracts in real terms over safer options presented in nominal terms. In this paper, we will focus on the relationship between gender and money illusion in the four research problems mentioned above. 
+Our hypothesis are across all four problems: Problem 1, gender and preference in economic decision making; Problem 2, Gender and seller choice; Problem 3, gender and market participation decisions; Problem 4, Gender and financial risk decision making.
+First of all, we choose the dataset from one replication of “Money Illusion”, then we cleaned the dataset and removed all unnecessary variables in dataset.
+We plot the graphs of among four problems for male and female respectively.
+Then we make analysis of it and verify whether we have evidence to against the hypothesis.
+Then we draw the conclusion and list the limitations of our study.
+
+The findings from experiments investigating gender differences in economic decision-making, highlighting distinct behaviors between men and women acrossvarious contexts, such as job attractiveness, seller selection, buying and selling strategies, and preferences for risky or risk-free contracts.
+It reveals that both genders show common concerns for economic stability, yet differ in their evaluation of career opportunities, decision-making strategies, and risk preferences.
+The discussion emphasizes the nuanced role of gender in economic decisions, suggesting further research to explore socio-economic factors, cross-cultural impacts, and psychological dynamics behind these decisions.
+The study acknowledges limitations due to its experimental design and calls for future research employing more comprehensive and realistic approaches to better understand gender influences in economic behavior.
 
 ## Data
 
-The raw dataset for our study, derived from the replication of the "Money Illusion" effect among Brazilian researchers [@Santiago_Feldman_Ferreira_Batistuzzo_Fatori_Seda_Bastos_2023], is archived and accessible through the Open Science Framework (OSF). This dataset encompasses the complete set of responses collected through our online survey, including socio-demographic information, responses to the money illusion problems, and verification question answers. Interested researchers can access the dataset for further analysis or replication studies at the following URL: https://osf.io/48pqu/.
+The raw dataset for our study, derived from the replication of the "Money Illusion" effect among Brazilian researchers [@Santiago_Feldman_Ferreira_Batistuzzo_Fatori_Seda_Bastos_2023], is archived and accessible through the Open Science Framework (OSF).
+This dataset encompasses the complete set of responses collected through our online survey, including socio-demographic information, responses to the money illusion problems, and verification question answers.
+Interested researchers can access the dataset for further analysis or replication studies at the following URL: https://osf.io/48pqu/.
 
 ```{r include=FALSE, message=FALSE}
 # read the data file and store it in the 'data' variable
@@ -62,25 +83,35 @@ The data were collected via an online survey platform and include a range of var
 
 **Socio-demographic Information**: Participants provided details about their educational background, area of study (if applicable), average monthly family income, and the number of people living off this income.
 
-**Economic Decision-Making Scenarios**: The core of the dataset revolves around responses to hypothetical scenarios designed to assess susceptibility to the money illusion. These scenarios include decisions about signing contracts under inflation uncertainty, and buying or selling items after an inflation increase, reflecting real-life economic decisions that people might face.
+**Economic Decision-Making Scenarios**: The core of the dataset revolves around responses to hypothetical scenarios designed to assess susceptibility to the money illusion.
+These scenarios include decisions about signing contracts under inflation uncertainty, and buying or selling items after an inflation increase, reflecting real-life economic decisions that people might face.
 
 **Temporal and Response Details**: Each record includes timestamps for the start and end of the survey, the type of response, progress through the survey, duration in seconds, and completion status.
 
-**Verification Questions**: To ensure participants understood the scenarios accurately, verification questions were included. These serve as a quality control measure, filtering for data quality and comprehension.
+**Verification Questions**: To ensure participants understood the scenarios accurately, verification questions were included.
+These serve as a quality control measure, filtering for data quality and comprehension.
 
 ### Data Analysis Tools
 
-The data analysis was performed using R [@r], a powerful open-source statistical programming language. Key packages from the tidyverse collection [@rTidyverse] were employed to streamline data manipulation, visualization, and analysis processes. These packages include ggplot2 [@rGgplot2] for creating advanced graphics, dplyr [@rDplyr] for data manipulation, readr [@rReadr] for its robust data reading functionalities, here [@R-here] is used to avoid file path issue, and knitr [@rKnitr] for dynamic report generation. 
-
+The data analysis was performed using R [@r], a powerful open-source statistical programming language.
+Key packages from the tidyverse collection [@rTidyverse] were employed to streamline data manipulation, visualization, and analysis processes.
+These packages include ggplot2 [@rGgplot2] for creating advanced graphics, dplyr [@rDplyr] for data manipulation, readr [@rReadr] for its robust data reading functionalities, here [@R-here] is used to avoid file path issue, and knitr [@rKnitr] for dynamic report generation.
 
 ### Measurement
 
-Some specific adjustments have been made in order to ensure the relevance of questionnaire to the Brazilian context. The data of this paper collected by an online survey with 18 years or older participants who are consenting to participate. The Research Ethics Committee of the Pontifical Catholic University of São Paulo (PUC-SP) in 2021 approved this study(Certificate of Presentation for EthicalEvaluation [CAAE]: 44181621.8.0000.5482, approval number 4.681.515).
+Some specific adjustments have been made in order to ensure the relevance of questionnaire to the Brazilian context.
+The data of this paper collected by an online survey with 18 years or older participants who are consenting to participate.
+The Research Ethics Committee of the Pontifical Catholic University of São Paulo (PUC-SP) in 2021 approved this study(Certificate of Presentation for EthicalEvaluation \[CAAE\]: 44181621.8.0000.5482, approval number 4.681.515).
 
-There are no extra financial compensation for the involvement of Participants. It is not mandatory for participants to complete all problems, even if they completing one problem will also contributed to the analysis. The self-administered questionnaire was created by Qualtrics XM platform which adapting the structure from a previous research by Ziano et al. (2021). Researchers hand out the questionnaire link through social networks. From December 2021 to July 2022, data were collected online through 8 months.
+There are no extra financial compensation for the involvement of Participants.
+It is not mandatory for participants to complete all problems, even if they completing one problem will also contributed to the analysis.
+The self-administered questionnaire was created by Qualtrics XM platform which adapting the structure from a previous research by Ziano et al. (2021).
+Researchers hand out the questionnaire link through social networks.
+From December 2021 to July 2022, data were collected online through 8 months.
 
-Researchers documented both the plan of research and data analysis on the Open Science Framework (OSF) before data collection 
-(accessible at: https://osf.io/2gkxf) in order to inherting the principles of reproducible research. The plan outlined the concept ofesearch objectives, money illusion, power analysis, hypotheses, relevant literature, methodology for result analysis, translated and adapted problem statements and other pertinent details. All datasets, statistical analyses and materials are available on the OSF platform (https://osf.io/48pqu/).
+Researchers documented both the plan of research and data analysis on the Open Science Framework (OSF) before data collection (accessible at: https://osf.io/2gkxf) in order to inherting the principles of reproducible research.
+The plan outlined the concept ofesearch objectives, money illusion, power analysis, hypotheses, relevant literature, methodology for result analysis, translated and adapted problem statements and other pertinent details.
+All datasets, statistical analyses and materials are available on the OSF platform (https://osf.io/48pqu/).
 
 \newpage
 
@@ -88,9 +119,9 @@ Researchers documented both the plan of research and data analysis on the Open S
 
 ### Problem 1: Gender and Preference in Economic Decision-Making
 
-**Hypothetical Analysis:**
-Gender Perspectives on Economic Decisions: The graph suggests that men favored "Carolina" in economic terms and "Maria" in job attractiveness. This could hypothetically indicate that men associate the concept of "Carolina" with economic stability and "Maria" with professional opportunities. Analyzing this alongside gender could reveal whether women make similar associations or have a contrasting view.
-
+**Hypothetical Analysis:** Gender Perspectives on Economic Decisions: The graph suggests that men favored "Carolina" in economic terms and "Maria" in job attractiveness.
+This could hypothetically indicate that men associate the concept of "Carolina" with economic stability and "Maria" with professional opportunities.
+Analyzing this alongside gender could reveal whether women make similar associations or have a contrasting view.
 
 ```{r echo=FALSE}
 # Function to create plot based on gender
@@ -141,13 +172,17 @@ plot_female <- create_gender_plot("Female", data)
 # Display the plots
 print(plot_female)
 ```
+
 Observations from @fig-problem1-female for female participants' choices:
 
-Economic Terms: A significant majority of female participants chose "Carolina" over "Maria" in economic terms. This choice distribution is similar to that of the male participants, suggesting a consensus across genders regarding economic choices tied to "Carolina".
+Economic Terms: A significant majority of female participants chose "Carolina" over "Maria" in economic terms.
+This choice distribution is similar to that of the male participants, suggesting a consensus across genders regarding economic choices tied to "Carolina".
 
-Happiness: Female participants seem evenly split between "Carolina" and "Maria" when it comes to happiness, which differs from male participants, who showed a slight preference for "Maria" in this condition. This could suggest that women see both "Carolina" and "Maria" as equally viable options for emotional fulfillment or that happiness is not as strongly associated with either choice as it is with economic terms.
+Happiness: Female participants seem evenly split between "Carolina" and "Maria" when it comes to happiness, which differs from male participants, who showed a slight preference for "Maria" in this condition.
+This could suggest that women see both "Carolina" and "Maria" as equally viable options for emotional fulfillment or that happiness is not as strongly associated with either choice as it is with economic terms.
 
-Job Attractiveness: The choices for job attractiveness among female participants are also evenly distributed between "Carolina" and "Maria", whereas male participants had a preference for "Maria". This could imply that for women, the qualities or opportunities represented by "Carolina" and "Maria" are equally attractive in a professional setting.
+Job Attractiveness: The choices for job attractiveness among female participants are also evenly distributed between "Carolina" and "Maria", whereas male participants had a preference for "Maria".
+This could imply that for women, the qualities or opportunities represented by "Carolina" and "Maria" are equally attractive in a professional setting.
 
 ```{r fig-problem1-male, echo=FALSE, fig.cap="The percentage of male participants' choices within each condition in problem 1."}
 # Create plots for 'Female'
@@ -155,32 +190,43 @@ plot_male <- create_gender_plot("Male", data)
 # Display the plots
 print(plot_male)
 ```
+
 Observations from @fig-problem1-male for male participants' choices:
 
-Economic Terms: A significant majority of male participants chose "Carolina" over "Maria" in economic terms. This indicates a strong preference for the economic implications associated with "Carolina" among male participants, suggesting they may perceive "Carolina" as a more stable or profitable economic choice.
+Economic Terms: A significant majority of male participants chose "Carolina" over "Maria" in economic terms.
+This indicates a strong preference for the economic implications associated with "Carolina" among male participants, suggesting they may perceive "Carolina" as a more stable or profitable economic choice.
 
 Happiness: The male participants' choices for happiness are nearly evenly split, with a slight preference for "Carolina." This distribution shows that men do not strongly associate either "Carolina" or "Maria" with happiness or that they see both options as similarly capable of providing emotional satisfaction.
 
-Job Attractiveness: Male participants displayed a clear preference for "Maria" in terms of job attractiveness. This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path.
+Job Attractiveness: Male participants displayed a clear preference for "Maria" in terms of job attractiveness.
+This could suggest that the attributes or opportunities associated with "Maria" resonate more with men when considering the attractiveness of a job or career path.
 
 **Gender Comparison Analysis:**
 
-Economic Rationality: Both genders show a strong preference for "Carolina" in economic terms, which might suggest that "Carolina" represents a more financially beneficial or stable option. This similarity indicates that both men and women may prioritize financial stability in their decision-making processes.
+Economic Rationality: Both genders show a strong preference for "Carolina" in economic terms, which might suggest that "Carolina" represents a more financially beneficial or stable option.
+This similarity indicates that both men and women may prioritize financial stability in their decision-making processes.
 
-Emotional Considerations: The contrast in happiness choices between genders is subtle but present. Men's slight preference for "Maria" might suggest that they associate "Maria" with emotional well-being slightly more than women do. However, women's even split could indicate a balanced view or a lesser degree of differentiation between "Carolina" and "Maria" in terms of happiness.
+Emotional Considerations: The contrast in happiness choices between genders is subtle but present.
+Men's slight preference for "Maria" might suggest that they associate "Maria" with emotional well-being slightly more than women do.
+However, women's even split could indicate a balanced view or a lesser degree of differentiation between "Carolina" and "Maria" in terms of happiness.
 
-Professional Preferences: The difference in job attractiveness choices is more pronounced, with men preferring "Maria" and women showing no clear preference. This may suggest that men and women have different criteria for what makes a job attractive or that they value different aspects of a job.
+Professional Preferences: The difference in job attractiveness choices is more pronounced, with men preferring "Maria" and women showing no clear preference.
+This may suggest that men and women have different criteria for what makes a job attractive or that they value different aspects of a job.
 
 \newpage
-### Problem 2: Gender and Seller Choice
 
+### Problem 2: Gender and Seller Choice
 
 **Hypothetical Analysis:**
 
-Gender Perspectives on Seller Choices: The graphs for Money Illusion Experiment 2 show distinct patterns in how male and female participants rank sellers—Andre, Bento, and Marcelo. Hypothetically, this could indicate that male participants associate Andre with immediate value or appeal, as evidenced by his high ranking as the first choice, while Bento and Marcelo may represent longer-term benefits or stability, which becomes more apparent in the subsequent choices. On the other hand, female participants show a strong initial preference for Marcelo, suggesting they may perceive Marcelo as a symbol of immediate trustworthiness or value. Bento's consistent middle-ground ranking among females could indicate a perception of balanced or average appeal.
+Gender Perspectives on Seller Choices: The graphs for Money Illusion Experiment 2 show distinct patterns in how male and female participants rank sellers—Andre, Bento, and Marcelo.
+Hypothetically, this could indicate that male participants associate Andre with immediate value or appeal, as evidenced by his high ranking as the first choice, while Bento and Marcelo may represent longer-term benefits or stability, which becomes more apparent in the subsequent choices.
+On the other hand, female participants show a strong initial preference for Marcelo, suggesting they may perceive Marcelo as a symbol of immediate trustworthiness or value.
+Bento's consistent middle-ground ranking among females could indicate a perception of balanced or average appeal.
 
-The preference dynamics could be interpreted as men being more likely to revise their initial judgments, while women might be consistent in their preferences. Analyzing these choices alongside gender could reveal whether men and women apply different criteria when evaluating the options presented to them, possibly due to differing risk assessments, values, or expectations in economic decisions. The shift in preferences for both genders as they move from first to third choice could suggest a complex decision-making process where initial impressions are adjusted upon further reflection or comparison.
-
+The preference dynamics could be interpreted as men being more likely to revise their initial judgments, while women might be consistent in their preferences.
+Analyzing these choices alongside gender could reveal whether men and women apply different criteria when evaluating the options presented to them, possibly due to differing risk assessments, values, or expectations in economic decisions.
+The shift in preferences for both genders as they move from first to third choice could suggest a complex decision-making process where initial impressions are adjusted upon further reflection or comparison.
 
 ```{r echo=FALSE}
 # Translate 'gênero' to English and remove rows with NA choices
@@ -225,15 +271,14 @@ create_plot <- function(gender, data) {
 }
 ```
 
-
 ```{r fig-problem2-female, echo=FALSE, fig.cap="The percentage of female participants' choices ranking each seller in problem 2"}
 # Create plots for 'Female'
 plot_female2 <- create_plot("Female", Prob2_data)
 # Display the plots
 print(plot_female2)
 ```
-Observations from @fig-problem2-female for female participants' choices:
-First Choice:
+
+Observations from @fig-problem2-female for female participants' choices: First Choice:
 
 Andre appears to be the least favored as the first choice among female participants.
 Bento has a moderate preference as the first choice.
@@ -249,27 +294,24 @@ Andre is again the least preferred as the third choice.
 Bento's preference decreases compared to the second choice.
 Marcelo's preference increases, making him the most favored for the third choice.
 
-
 ```{r fig-problem2-male, echo=FALSE, fig.cap="The percentage of male participants' choices ranking each seller in problem 2"}
 # Create plots for 'Female'
 plot_male2 <- create_plot("Male", Prob2_data)
 # Display the plots
 print(plot_male2)
 ```
+
 Observations from @fig-problem2-male Male Participants' Choices:
 
-First Choice:
-Andre has the highest preference as the first choice among male participants.
+First Choice: Andre has the highest preference as the first choice among male participants.
 Bento is the least preferred as the first choice.
 Marcelo has a moderate preference as the first choice.
 
-Second Choice:
-Andre's preference decreases significantly from the first to the second choice.
+Second Choice: Andre's preference decreases significantly from the first to the second choice.
 Bento is the most preferred as the second choice, showing a substantial increase from the first choice.
 Marcelo's preference remains relatively stable across the first and second choices.
 
-Third Choice:
-Andre has a moderate increase in preference as the third choice.
+Third Choice: Andre has a moderate increase in preference as the third choice.
 Bento's preference drops slightly from the second choice.
 Marcelo sees a significant increase and is the most favored as the third choice.
 
@@ -277,7 +319,8 @@ Marcelo sees a significant increase and is the most favored as the third choice.
 
 First Choice Dynamics:
 
-Male participants show a clear preference for Andre as their first choice, while female participants favor Marcelo. This difference could reflect varying criteria or perceptions of value between genders.
+Male participants show a clear preference for Andre as their first choice, while female participants favor Marcelo.
+This difference could reflect varying criteria or perceptions of value between genders.
 Bento is the least favored first choice by males but holds a moderate preference among females, suggesting different initial impressions based on gender.
 Evolution of Preferences:
 
@@ -288,15 +331,16 @@ Consensus on Final Choices:
 
 Marcelo emerges as the most favored third choice for both genders, suggesting a commonality in the eventual perception of value or appeal.
 
-
-
 \newpage
+
 ### Problem 3: Gender and Market Participation Decisions
 
 **Hypothetical Analysis:**
 
-Gender Perspectives on Financial Decisions: The graphs for Money Illusion Experiment 3 display the decision-making tendencies of male and female participants when faced with the option to buy or sell under varying conditions of likelihood ('More', 'Same', 'Less'). Analyzing this alongside gender can reveal nuanced approaches to market engagement. This hypothetical analysis could be pointing to underlying gender differences in economic decision-making, where men might prioritize growth or investment maintenance, and women might prioritize financial security and opportunistic gains. However, it's crucial to approach these assumptions critically, as individual decisions are influenced by a range of personal, social, and economic factors beyond gender.
-
+Gender Perspectives on Financial Decisions: The graphs for Money Illusion Experiment 3 display the decision-making tendencies of male and female participants when faced with the option to buy or sell under varying conditions of likelihood ('More', 'Same', 'Less').
+Analyzing this alongside gender can reveal nuanced approaches to market engagement.
+This hypothetical analysis could be pointing to underlying gender differences in economic decision-making, where men might prioritize growth or investment maintenance, and women might prioritize financial security and opportunistic gains.
+However, it's crucial to approach these assumptions critically, as individual decisions are influenced by a range of personal, social, and economic factors beyond gender.
 
 ```{r echo=FALSE}
 # Translate the terms to English and filter out NA values selectively
@@ -362,12 +406,14 @@ plot_female3 <- create_plot("Female", Prob3_data)
 # Display the plots
 print(plot_female3)
 ```
+
 Observations from @fig-problem3-female for female participants' choices:
 
-Buy Decisions: Females show the least likelihood to buy more and a similar inclination to buy less or the same. This could indicate a cautious or conservative approach to purchasing decisions, possibly prioritizing stability or risk aversion.
+Buy Decisions: Females show the least likelihood to buy more and a similar inclination to buy less or the same.
+This could indicate a cautious or conservative approach to purchasing decisions, possibly prioritizing stability or risk aversion.
 
-Sell Decisions: The tendency to sell more is considerably higher than to sell less, with selling the same as an intermediate option. This pattern might suggest a greater openness to divesting or capitalizing on assets when conditions are favorable, or it could reflect a strategic approach to managing investments.
-
+Sell Decisions: The tendency to sell more is considerably higher than to sell less, with selling the same as an intermediate option.
+This pattern might suggest a greater openness to divesting or capitalizing on assets when conditions are favorable, or it could reflect a strategic approach to managing investments.
 
 ```{r fig-problem3-male, echo=FALSE, fig.cap="The percentage of male participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"}
 # Create plots for 'Female'
@@ -375,25 +421,27 @@ plot_male3 <- create_plot("Male", Prob3_data)
 # Display the plots
 print(plot_male3)
 ```
+
 Observations from @fig-problem3-male for male participants' choices:
 
-Buy Decisions: Males show a balanced approach between buying more and the same, with less likelihood to buy less. This distribution could imply a more assertive or optimistic strategy toward acquiring assets or a greater confidence in market conditions.
+Buy Decisions: Males show a balanced approach between buying more and the same, with less likelihood to buy less.
+This distribution could imply a more assertive or optimistic strategy toward acquiring assets or a greater confidence in market conditions.
 
-Sell Decisions: There is a strong preference for selling the same, followed by selling more, and the least for selling less. This could suggest a preference for maintaining the status quo or a calculated approach to selling, where changes in market conditions are considered but not reacted to hastily.
+Sell Decisions: There is a strong preference for selling the same, followed by selling more, and the least for selling less.
+This could suggest a preference for maintaining the status quo or a calculated approach to selling, where changes in market conditions are considered but not reacted to hastily.
 
 **Gender Comparison**
 
 Buying Behavior: Females appear more conservative, potentially weighing the risks more heavily, while males seem to demonstrate a readiness to invest, indicating a possible difference in risk tolerance.
 
-Selling Behavior: Females are more likely to sell more, which might suggest a strategy to capitalize on gains or avoid losses. In contrast, males' preference for selling the same amount could indicate a long-term investment strategy or a less reactive approach to market fluctuations.
-
+Selling Behavior: Females are more likely to sell more, which might suggest a strategy to capitalize on gains or avoid losses.
+In contrast, males' preference for selling the same amount could indicate a long-term investment strategy or a less reactive approach to market fluctuations.
 
 \newpage
+
 ### Problem 4: Gender and Financial Risk Decision-Making
 
-**Hypothetical Analysis:**
-Gender Perspectives on Financial Risk Decisions: The graphs for Money Illusion Experiment 4 reveal the choices of male and female participants regarding different contract types characterized as riskless and risky across real, nominal, and neutral terms.
-
+**Hypothetical Analysis:** Gender Perspectives on Financial Risk Decisions: The graphs for Money Illusion Experiment 4 reveal the choices of male and female participants regarding different contract types characterized as riskless and risky across real, nominal, and neutral terms.
 
 ```{r echo=FALSE}
 data4 <- data %>%
@@ -450,6 +498,7 @@ plot_female4 <- create_plot("Female", data_counts)
 # Display the plots
 print(plot_female4)
 ```
+
 Observations from @fig-problem4-female for female participants' choices:
 
 Real Terms: Females show a preference for riskless contracts, potentially indicating a perception of real terms as more tangible and, thus, preferring security in transactions that are adjusted for inflation or reflect actual purchasing power.
@@ -464,6 +513,7 @@ plot_male4 <- create_plot("Male", data_counts)
 # Display the plots
 print(plot_male4)
 ```
+
 Observations from @fig-problem4-male for male participants' choices:
 
 Real Terms: Males show an overwhelming preference for riskless contracts in real terms, possibly valuing the certainty of returns that account for inflation and maintain purchasing power.
@@ -484,19 +534,69 @@ Risk Preferences in Neutral Terms: The slight preference for riskless contracts 
 
 ### Findings
 
-The first experiment focused on exploring how gender affects individuals' decision-making preferences when faced with economic terms and job attractiveness choices. The analysis showed that both men and women agreed on their choices regarding economic terms, generally preferring "Carolina," which may reflect a common concern for economic stability across genders. However, differences between genders became evident in terms of job attractiveness, with men preferring "Maria," suggesting they have different evaluations of career opportunities and potential for development compared to women. The second experiment examined how men and women make choices based on different characteristics of sellers. The results indicated that men and women initially preferred different sellers, with men choosing Andre and women choosing Marcelo. This finding may reflect different strategies and priorities in economic decision-making between genders. As the choices progressed, preferences for sellers converged, especially in the final choice, where Marcelo became the most popular seller. The third experiment focused on how gender affects buying and selling decisions, especially under different probability conditions. It was observed that women showed a lower likelihood in purchasing decisions and a greater tendency to increase sales, possibly indicating a cautious attitude towards buying and an active strategy towards selling. In contrast, men exhibited a more balanced approach to both buying and selling decisions, suggesting a preference for maintaining the status quo rather than making radical adjustments in changing market conditions. The fourth experiment delved into how gender influences individual preferences for different types of contracts (risky and risk-free) and different economic terms (real, nominal, neutral). Results showed that both men and women preferred risk-free contracts when it came to contracts adjusted for real terms, possibly indicating a common preference to protect purchasing power against inflation. However, under nominal terms, men were relatively more inclined to choose risky contracts, revealing a willingness to take risks for higher returns without inflation adjustment.
+The first experiment focused on exploring how gender affects individuals' decision-making preferences when faced with economic terms and job attractiveness choices.
+The analysis showed that both men and women agreed on their choices regarding economic terms, generally preferring "Carolina," which may reflect a common concern for economic stability across genders.
+However, differences between genders became evident in terms of job attractiveness, with men preferring "Maria," suggesting they have different evaluations of career opportunities and potential for development compared to women.
+The second experiment examined how men and women make choices based on different characteristics of sellers.
+The results indicated that men and women initially preferred different sellers, with men choosing Andre and women choosing Marcelo.
+This finding may reflect different strategies and priorities in economic decision-making between genders.
+As the choices progressed, preferences for sellers converged, especially in the final choice, where Marcelo became the most popular seller.
+The third experiment focused on how gender affects buying and selling decisions, especially under different probability conditions.
+It was observed that women showed a lower likelihood in purchasing decisions and a greater tendency to increase sales, possibly indicating a cautious attitude towards buying and an active strategy towards selling.
+In contrast, men exhibited a more balanced approach to both buying and selling decisions, suggesting a preference for maintaining the status quo rather than making radical adjustments in changing market conditions.
+The fourth experiment delved into how gender influences individual preferences for different types of contracts (risky and risk-free) and different economic terms (real, nominal, neutral).
+Results showed that both men and women preferred risk-free contracts when it came to contracts adjusted for real terms, possibly indicating a common preference to protect purchasing power against inflation.
+However, under nominal terms, men were relatively more inclined to choose risky contracts, revealing a willingness to take risks for higher returns without inflation adjustment.
 
 ### Another Understanding of the World
 
-The results from the first experiment further revealed the impact of gender perspectives on preferences for economic stability and career development. Specifically, the even distribution of choices among women regarding job attractiveness may indicate they consider a more diverse set of factors in career choices, including but not limited to economic benefits, perhaps placing more emphasis on job satisfaction and other aspects of career development. The dynamic change in gender decision-making observed in the second experiment suggests significant gender differences in initial choices, which may diminish as more information is processed. This may illustrate a complex evaluation process individuals undergo before making final economic decisions, where initial impressions may be revised. The third experiment's results further reinforced our understanding of gender differences in economic risk assessment. Women's more conservative buying behavior and more aggressive selling tendency may reflect their strategy of balancing financial security and opportunities. Men's balanced buying and selling behavior may represent a more robust long-term investment perspective. The findings of the fourth experiment further emphasized differences in financial risk tolerance between genders. Particularly under nominal terms, men's higher risk preference may reflect a pursuit of potential high returns, while women's conservative choices may more reflect a focus on capital preservation. These differences are significant for understanding how gender affects investment decisions and financial planning. Overall, these four experiments have taught us that gender plays a complex and multidimensional role in economic decision-making. Gender not only influences individuals' views on economic stability, career opportunities, market behavior, and risk preferences but also affects the processing of information and the formation of final choices during the decision-making process.
+The results from the first experiment further revealed the impact of gender perspectives on preferences for economic stability and career development.
+Specifically, the even distribution of choices among women regarding job attractiveness may indicate they consider a more diverse set of factors in career choices, including but not limited to economic benefits, perhaps placing more emphasis on job satisfaction and other aspects of career development.
+The dynamic change in gender decision-making observed in the second experiment suggests significant gender differences in initial choices, which may diminish as more information is processed.
+This may illustrate a complex evaluation process individuals undergo before making final economic decisions, where initial impressions may be revised.
+The third experiment's results further reinforced our understanding of gender differences in economic risk assessment.
+Women's more conservative buying behavior and more aggressive selling tendency may reflect their strategy of balancing financial security and opportunities.
+Men's balanced buying and selling behavior may represent a more robust long-term investment perspective.
+The findings of the fourth experiment further emphasized differences in financial risk tolerance between genders.
+Particularly under nominal terms, men's higher risk preference may reflect a pursuit of potential high returns, while women's conservative choices may more reflect a focus on capital preservation.
+These differences are significant for understanding how gender affects investment decisions and financial planning.
+Overall, these four experiments have taught us that gender plays a complex and multidimensional role in economic decision-making.
+Gender not only influences individuals' views on economic stability, career opportunities, market behavior, and risk preferences but also affects the processing of information and the formation of final choices during the decision-making process.
 
 ### Limitations of the Study:
 
-The first experiment provided insights into gender differences in economic decision-making but also had limitations. For example, it might not have captured all relevant factors influencing economic decisions, such as individuals' economic background, education level, and expectations of future economic conditions. Moreover, the experimental design might have been too simplistic to fully reflect the complexity of real-life decision-making processes. Despite the second experiment offering insights into how gender affects preferences for sellers, it had limitations. For instance, it might not have fully considered other factors influencing decisions, such as individual experience, market conditions, and specific information provided by sellers. Additionally, the artificial setting of the experimental environment might limit the generalizability of the results. The analysis of the third experiment, although revealing potential gender impacts on economic decisions, might not have fully considered other influencing factors, such as individuals' financial knowledge, past experiences, and socio-economic backgrounds. Furthermore, the experimental setup might have been too simplistic, failing to capture all complexities of real-world decision-making. Despite the valuable insights provided by the fourth experiment regarding the relationship between gender and risk preferences, it too had limitations. First, the experimental setting might not have adequately simulated the complex decision-making environment of the real world, especially in financial market investment decisions. Second, the experiment might not have considered individuals' financial knowledge, experience, and other socio-economic factors that could affect risk preferences. Overall, while these experiments provided valuable insights into the role of gender in economic decision-making, they also had limitations, including the possibility that the simplified experimental settings might not fully simulate the complexity of the real world and the lack of consideration for individual experiences, socio-economic backgrounds, and other factors.
+The first experiment provided insights into gender differences in economic decision-making but also had limitations.
+For example, it might not have captured all relevant factors influencing economic decisions, such as individuals' economic background, education level, and expectations of future economic conditions.
+Moreover, the experimental design might have been too simplistic to fully reflect the complexity of real-life decision-making processes.
+Despite the second experiment offering insights into how gender affects preferences for sellers, it had limitations.
+For instance, it might not have fully considered other factors influencing decisions, such as individual experience, market conditions, and specific information provided by sellers.
+Additionally, the artificial setting of the experimental environment might limit the generalizability of the results.
+The analysis of the third experiment, although revealing potential gender impacts on economic decisions, might not have fully considered other influencing factors, such as individuals' financial knowledge, past experiences, and socio-economic backgrounds.
+Furthermore, the experimental setup might have been too simplistic, failing to capture all complexities of real-world decision-making.
+Despite the valuable insights provided by the fourth experiment regarding the relationship between gender and risk preferences, it too had limitations.
+First, the experimental setting might not have adequately simulated the complex decision-making environment of the real world, especially in financial market investment decisions.
+Second, the experiment might not have considered individuals' financial knowledge, experience, and other socio-economic factors that could affect risk preferences.
+Overall, while these experiments provided valuable insights into the role of gender in economic decision-making, they also had limitations, including the possibility that the simplified experimental settings might not fully simulate the complexity of the real world and the lack of consideration for individual experiences, socio-economic backgrounds, and other factors.
 
 ### Future Directions and How to Continue:
-For Experiment 1, to further understand the role of gender in economic decision-making, future research needs to adopt a more comprehensive approach that considers a broader range of socio-economic factors and individual differences. Additionally, studies can explore how gender affects individuals' perceptions of and strategies for dealing with economic risks, and how these differences impact individuals' long-term economic well-being. Cross-cultural studies could further investigate how gender impacts economic decision-making across different socio-cultural backgrounds. Moreover, qualitative research methods such as in-depth interviews and case studies will help reveal the psychological dynamics and social influences behind decisions, providing richer insights for developing more effective economic policies and educational programs. For Experiment 2, future research should explore more factors influencing the choice of sellers, such as the dynamics between sellers and buyers, the impact of marketing strategies, and how personal characteristics of sellers affect buyers' choices. By using a more diverse sample of participants, increasing the complexity of scenarios, and applying mixed-methods research designs, our understanding of how gender influences economic decisions can be enhanced. Furthermore, considering how cultural and socio-economic factors shape gender roles is also an important direction for future research. For Experiment 3, future research needs to explore other variables beyond gender that affect economic decisions and attempt to replicate these findings under more realistic conditions. Additionally, studies should consider how cultural differences and social structures shape economic behavior and how education and policy interventions can mitigate the adverse effects of gender differences. Through more in-depth quantitative and qualitative research, a more comprehensive understanding of how individuals make decisions in different economic contexts can be achieved. For Experiment 4, future research should investigate gender differences across more dimensions, including how education and policy interventions can balance these differences. Studies could be extended to individuals across different cultural and social backgrounds to explore how cultural factors influence the relationship between gender and economic decisions. Furthermore, using qualitative methods to delve into the motivations and emotional factors behind individual decisions is also an important direction for future research. By combining quantitative data and qualitative insights, a more comprehensive understanding of the role of gender in economic decision-making can be developed, providing a basis for designing more effective financial planning and educational strategies. Overall, future research needs to take a more holistic approach to explore how factors beyond gender affect economic decisions and how these decisions change over time and across contexts. Cross-cultural comparative studies can reveal how gender roles in different socio-cultural backgrounds shape economic behavior. At the same time, in-depth qualitative research will help understand the psychological motivations behind decisions, offering richer insights for designing targeted economic policies and educational plans.
 
+For Experiment 1, to further understand the role of gender in economic decision-making, future research needs to adopt a more comprehensive approach that considers a broader range of socio-economic factors and individual differences.
+Additionally, studies can explore how gender affects individuals' perceptions of and strategies for dealing with economic risks, and how these differences impact individuals' long-term economic well-being.
+Cross-cultural studies could further investigate how gender impacts economic decision-making across different socio-cultural backgrounds.
+Moreover, qualitative research methods such as in-depth interviews and case studies will help reveal the psychological dynamics and social influences behind decisions, providing richer insights for developing more effective economic policies and educational programs.
+For Experiment 2, future research should explore more factors influencing the choice of sellers, such as the dynamics between sellers and buyers, the impact of marketing strategies, and how personal characteristics of sellers affect buyers' choices.
+By using a more diverse sample of participants, increasing the complexity of scenarios, and applying mixed-methods research designs, our understanding of how gender influences economic decisions can be enhanced.
+Furthermore, considering how cultural and socio-economic factors shape gender roles is also an important direction for future research.
+For Experiment 3, future research needs to explore other variables beyond gender that affect economic decisions and attempt to replicate these findings under more realistic conditions.
+Additionally, studies should consider how cultural differences and social structures shape economic behavior and how education and policy interventions can mitigate the adverse effects of gender differences.
+Through more in-depth quantitative and qualitative research, a more comprehensive understanding of how individuals make decisions in different economic contexts can be achieved.
+For Experiment 4, future research should investigate gender differences across more dimensions, including how education and policy interventions can balance these differences.
+Studies could be extended to individuals across different cultural and social backgrounds to explore how cultural factors influence the relationship between gender and economic decisions.
+Furthermore, using qualitative methods to delve into the motivations and emotional factors behind individual decisions is also an important direction for future research.
+By combining quantitative data and qualitative insights, a more comprehensive understanding of the role of gender in economic decision-making can be developed, providing a basis for designing more effective financial planning and educational strategies.
+Overall, future research needs to take a more holistic approach to explore how factors beyond gender affect economic decisions and how these decisions change over time and across contexts.
+Cross-cultural comparative studies can reveal how gender roles in different socio-cultural backgrounds shape economic behavior.
+At the same time, in-depth qualitative research will help understand the psychological motivations behind decisions, offering richer insights for designing targeted economic policies and educational plans.
 
 ## Apenndix
 
@@ -519,9 +619,16 @@ knitr::kable(head(selected_data, 6),
              format = "markdown",
              booktabs = TRUE)
 ```
-As shown in Table @tbl-table1, the data illus
 
-```{r table2, echo=FALSE}
+In this @tbl-table1 which reflects responses to a study on money illusion in Brazil, participants were asked to consider scenarios involving two workers, Maria and Carolina.
+Maria is the worker who received a real salary increase, which is an important detail for interpreting the Economic Term and Job Attractiveness columns. Respondents chose between "Maria" or "Carolina" for the person more likely to leave her job.
+The column "Happiness" is not filled in this excerpt, and "NA" indicates no choice was made by some respondents for certain questions. The Gender column distinguishes between "Mulher" (female) and "Homem" (male).
+
+```{r}
+#| label: tbl-table2
+#| tbl-cap: Sample of the Cleaned Data for Money Illusion Study - Question 2
+#| echo: false
+#| 
 # Select the required columns
 selected_data <- data %>%
   select(1:2, 12:14)
@@ -531,11 +638,16 @@ colnames(selected_data) <- c("ID", "Gender", "Andre", "Bento", "Marcelo")
 
 # Create a table with the selected data for the first 6 rows with an English caption
 knitr::kable(head(selected_data, 6), 
-             caption = "Sample of the Cleaned Data for Money Illusion Study - Question 2",
              format = "markdown")
 ```
 
-```{r table3, echo=FALSE}
+This @tbl-table2 represents a subset of data from a study examining money illusion, specifically focusing on Question 2 where participants ranked three house sellers—André, Bento, and Marcelo—according to the perceived success of their transactions. A response with ranking of "1" signifies the best deal, suggesting the most favorable outcome for the seller, whereas a "3" indicates the least favorable or worst deal. The table lists the participant's gender as "Mulher" for female and "Homem" for male, followed by their rankings for each seller. The actual ranking is: Marcelo as the top seller (1), Bento in the middle (2), and André as the least successful (3).
+
+```{r}
+#| label: tbl-table3
+#| tbl-cap: Sample of the Cleaned Data for Money Illusion Study - Question 3
+#| echo: false
+#| 
 # Select the desired columns for the table
 selected_data <- data %>%
   select(1:2, 7:8)
@@ -545,11 +657,15 @@ colnames(selected_data) <- c("ID", "Gender", "Selling Chair - Real", "Buying Cha
 
 # Create a table with the selected data for the first 6 rows with an English caption
 knitr::kable(head(selected_data, 6), 
-             caption = "Sample of the Cleaned Data for Money Illusion Study - Question 3",
              format = "markdown")
 ```
+The @tbl-table3 represents data from a study examining the concept of money illusion in decision-making, specifically regarding the perceived value of buying and selling under inflationary conditions. The participants, identified by gender and denoted as 'Mulher' for female and 'Homem' for male, were asked to evaluate their propensity to buy or sell a chair given changes in real value. The terms "Menos suscetível" (Less susceptible), "Igual" (Same), and "Mais suscetível" (More susceptible) indicate the participants' likelihood of buying or selling the chair, with 'NA' representing a lack of response. This part of the study probes whether inflationary illusions affect individuals' willingness to engage in transactions, contrasting their readiness to sell against their inclination to buy.
 
-```{r table4, echo=FALSE}
+```{r}
+#| label: tbl-table4
+#| tbl-cap: Sample of the Cleaned Data for Money Illusion Study - Question 4
+#| echo: false
+#| 
 selected_data <- data %>%
   select(1:5)
 
@@ -558,32 +674,37 @@ colnames(selected_data) <- c("ID", "Gender", "Contract Type AB", "Contract Type 
 
 # Create a table with the selected data for the first 6 rows with an English caption
 knitr::kable(head(selected_data, 6), 
-             caption = "Sample of the Cleaned Data for Money Illusion Study - Question 4",
              format = "markdown")
 ```
 
+The @tbl-table4 displays a subset of responses from a study exploring the influence of money illusion on contract selection. Participants, differentiated by gender as 'Mulher' for female and 'Homem' for male, had to choose between contracts labeled A, B, C, D, E, and F under varying conditions reflecting different levels of risk. Contract types AB, CD, and EF correspond to different framing conditions: nominal, real, or neutral. Contracts A, C, and E represent riskier options with certain nominal returns but uncertain real returns, capturing the essence of money illusion if chosen. The responses marked 'NA' indicate where participants did not make a selection. This component of the study aimed to determine whether participants' contract choices were swayed by nominal versus real terms, signifying the presence of money illusion.
 
 ### Rough Sketch about Brainstorming
 
-For a visual depiction of the brainstorming process and the initial ideas that shaped this study, please refer to the document located at `inputs/misc/Plan-Sketch.pdf`. This sketch includes preliminary thoughts on the data structure and one potential approach to address the research questions.
+For a visual depiction of the brainstorming process and the initial ideas that shaped this study, please refer to the document located at `inputs/misc/Plan-Sketch.pdf`.
+This sketch includes preliminary thoughts on the data structure and one potential approach to address the research questions.
 
-### Data Simulation 
+### Data Simulation
 
-The simulated dataset, designed to mirror the structure of the actual "Money Illusion" dataset, can be found at `scripts/00-simulate-data_data.R`. This script meticulously generates a dataset of 100 hypothetical delay instances.
-
-### Download Data from Open Science Framework
-
-Interested researchers can access the original dataset from the Brazilian researchers for further analysis or replication studies at the following URL: https://osf.io/48pqu/
+The simulated dataset, designed to mirror the structure of the actual "Money Illusion" dataset, can be found at `scripts/00-simulate-data_data.R`.
+This script meticulously generates a dataset of 1000 hypothetical survey response instances.
 
 ### Data Cleaning Process
 
-Data cleaning is a critical step in ensuring the accuracy and reliability of the analysis. The detailed procedure and the R script used for data cleaning are available in `scripts/01_cleanup_data.R`. The script elucidates the steps taken to refine the dataset by filtering out incomplete records and unnecessary columns for this study. The steps are: 1. Remove the first row in the dataset, since it is used to store the description to the column name. 2. Remove unnecessary columns for this study, by only keep the gender and responses columns. 3. Remove all gender rows with 'na' since this study is focusing on the behavior for money illusion for male and female participants. The cleaned dataset is conveniently saved at `outputs/data/cleaned_money_data.csv`, ready for in-depth analysis.
+Data cleaning is a critical step in ensuring the accuracy and reliability of the analysis.
+The detailed procedure and the R script used for data cleaning are available in `scripts/01_cleanup_data.R`.
+The script elucidates the steps taken to refine the dataset by filtering out incomplete records and unnecessary columns for this study.
+The steps are: 1.
+Remove the first row in the dataset, since it is used to store the description to the column name.
+2.
+Remove unnecessary columns for this study, by only keep the gender and responses columns.
+3.
+Remove all gender rows with 'na' since this study is focusing on the behavior for money illusion for male and female participants.
+The cleaned dataset is conveniently saved at `outputs/data/cleaned_money_data.csv`, ready for in-depth analysis.
 
 ### Data Set Validity Testing
 
-To affirm the integrity and consistency of the cleaned dataset, a series of validation tests are performed using the script `scripts/03-test-data-validity.R`. This script performs three crucial checks to ensure the data set's accuracy and consistency:
-
-
+To affirm the integrity and consistency of the cleaned dataset, a series of validation tests are performed using the script `scripts/03-test-data-validity.R`.
+This script performs three crucial checks to ensure the data set's accuracy and consistency:
 
 ## Reference
-
