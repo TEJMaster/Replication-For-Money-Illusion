@@ -45,7 +45,7 @@ Our findings reveal distinct gender differences in economic decision-making acro
 
 Understanding these gender differences is important as it can inform policymakers and economists about the varying impacts of economic policies and market conditions on different segments of the population. It can also contribute to the development of more inclusive and effective financial education programs that address the specific needs and biases of both men and women. Overall, our study confirms the presence of money illusion in the Brazilian context and highlights gender differences in economic decision-making across various scenarios. This research contributes to a deeper understanding of the complex interplay between cognitive biases, gender, and economic behavior in a culturally diverse setting.
 
-The paper is structured as follows: Section 2 provides a review of the literature on money illusion and gender differences in economic decision-making. Section 3 describes the methodology used in our study, including the replication of the four problems and the data collection process. Section 4 presents the results of our analysis, and Section 5 discusses the implications of our findings for theory and practice. Finally, Section 6 concludes with a summary of our main contributions and suggestions for future research.
+The structure of the paper is organized as follows: Section 2 (Data) describes the data sources, data collection process, and the methodology used for data cleaning and preparation. Section 3 (Results) presents the results of our analysis, including the replication of the four problems and the examination of gender differences in responses. Section 4 (Discussion) discusses the implications of our findings for theory and practice, highlighting the relevance of money illusion in economic decision-making and the role of gender in shaping economic behaviors. Section 5 (Appendix) provides additional details on the methodology, data analysis, and supplementary results that support the main findings of the study, while the Reference section lists the scholarly articles, books, and other sources cited in the paper.
 
 ## Data
 
@@ -72,7 +72,7 @@ The data were collected via an online survey platform and include a range of var
 
 ### Variable Description
 
-This study serves as a reproduction and further exploration of the seminal work on the money illusion effect, particularly examining the impact of gender on financial decision-making. Utilizing identical datasets as the original paper, our analysis narrows the focus to the variable of gender. For a sample of this dataset, please refer to the appendix, which includes data tables for each research question.
+This study serves as a reproduction and further exploration of the seminal work on the money illusion effect, particularly examining the impact of gender on financial decision-making. Utilizing the same datasets as the original paper, our analysis narrows the focus to the variable gender. Data was cleaned using the script `/scripts/02-cleanup-data.R`. For data cleaning and view samples of this dataset, please refer to the appendix, which includes data tables for each research question after cleaning.
 
 Question 1 Variables:
 
