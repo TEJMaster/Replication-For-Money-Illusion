@@ -41,7 +41,7 @@ In this paper, we emphasize the relationship between gender and money illusion a
 
 Our study's estimand is the effect of gender on susceptibility to money illusion within a Brazilian cultural context. We investigate how gender differences influence economic decision-making when individuals are presented with scenarios that typically induce money illusion, such as perceptions of wage increases, real estate transactions, purchasing and selling decisions, and choices between risky and risk-free contracts. By replicating four problems originally proposed by Shafir and colleagues [@shafir1997money], we aim to quantify the magnitude of these gender differences and understand their implications for economic behavior.
 
-Our findings reveal distinct gender differences in economic decision-making across various scenarios related to money illusion in the Brazilian context. Both men and women demonstrated a consensus on economic terms, with a preference for "Carolina," indicating a shared focus on financial stability. However, differences emerged in job attractiveness and seller preferences, suggesting gender-specific strategies and priorities in economic exchanges. Women exhibited a cautious approach to purchasing and a proactive selling strategy, reflecting a risk-averse attitude, while men showed a balanced approach to buying and selling decisions. In terms of contract preferences, both genders favored risk-free contracts in real terms, but men displayed a greater willingness to take risks under nominal terms. These findings highlight the multifaceted nature of economic decision-making, where financial stability intersects with career aspirations and risk tolerance in gender-specific ways.
+Our findings reveal distinct gender differences in economic decision-making across various scenarios related to money illusion in the Brazilian context. Both men and women demonstrated a consensus on economic terms, with a preference for "Maria," indicating a shared focus on financial stability. However, differences emerged in job attractiveness and seller preferences, suggesting gender-specific strategies and priorities in economic exchanges. Women exhibited a cautious approach to purchasing and a proactive selling strategy, reflecting a risk-averse attitude, while men showed a balanced approach to buying and selling decisions. In terms of contract preferences, both genders favored risk-free contracts in real terms, but men displayed a greater willingness to take risks under nominal terms. These findings highlight the multifaceted nature of economic decision-making, where financial stability intersects with career aspirations and risk tolerance in gender-specific ways.
 
 Understanding these gender differences is important as it can inform policymakers and economists about the varying impacts of economic policies and market conditions on different segments of the population. It can also contribute to the development of more inclusive and effective financial education programs that address the specific needs and biases of both men and women. Overall, our study confirms the presence of money illusion in the Brazilian context and highlights gender differences in economic decision-making across various scenarios. This research contributes to a deeper understanding of the complex interplay between cognitive biases, gender, and economic behavior in a culturally diverse setting.
 
@@ -60,21 +60,19 @@ data <- read_csv(here("outputs", "data", "cleaned_money_data.csv"))
 
 ### Dataset Description
 
-The data were collected via an online survey platform of and include a range of variables:
+The data were collected via an online survey platform and include a range of variables that capture socio-demographic information and economic decision-making scenarios. These scenarios are designed to assess susceptibility to the money illusion, a cognitive bias where individuals assess the value of money based on its nominal value, overlooking the impact of inflation. This dataset is particularly relevant for understanding how this bias manifests in a Brazilian cultural setting and how it interacts with gender differences in economic decision-making.
 
 **Socio-demographic Information**: Participants provided details about their educational background, area of study (if applicable), average monthly family income, and the number of people living off this income.
 
-**Economic Decision-Making Scenarios**: The core of the dataset revolves around responses to hypothetical scenarios designed to assess susceptibility to the money illusion.
-These scenarios include decisions about signing contracts under inflation uncertainty, and buying or selling items after an inflation increase, reflecting real-life economic decisions that people might face.
+**Economic Decision-Making Scenarios**: The core of the dataset revolves around responses to hypothetical scenarios designed to assess susceptibility to the money illusion. These scenarios include decisions about signing contracts under inflation uncertainty, and buying or selling items after an inflation increase, reflecting real-life economic decisions that people might face.
 
 **Temporal and Response Details**: Each record includes timestamps for the start and end of the survey, the type of response, progress through the survey, duration in seconds, and completion status.
 
-**Verification Questions**: To ensure participants understood the scenarios accurately, verification questions were included.
-These serve as a quality control measure, filtering for data quality and comprehension.
+**Verification Questions**: To ensure participants understood the scenarios accurately, verification questions were included. These serve as a quality control measure, filtering for data quality and comprehension.
 
 ### Variable Description
 
-This study serves as a reproduction and further exploration of the seminal work on the money illusion effect, particularly examining the impact of gender on financial decision-making. Utilizing identical datasets as the original paper, our analysis narrows the focus to the variable of gender. 
+This study serves as a reproduction and further exploration of the seminal work on the money illusion effect, particularly examining the impact of gender on financial decision-making. Utilizing identical datasets as the original paper, our analysis narrows the focus to the variable of gender. For a sample of this dataset, please refer to the appendix, which includes data tables for each research question.
 
 Question 1 Variables:
 
@@ -115,7 +113,7 @@ These packages include ggplot2 [@rGgplot2] for creating advanced graphics, dplyr
 
 ### Measurement and Data Collection
 
-To contextualize the study within the Brazilian socio-economic environment, Brazilian researchers tailored the survey instrument while maintaining the core essence of the original study. A cross-sectional online survey was conducted with the prerequisites that participants be at least 18 years old and give their consent. The study received ethical clearance from the Pontifical Catholic University of São Paulo's Research Ethics Committee in 2021.
+To contextualize the study within the Brazilian socio-economic environment, Brazilian researchers tailored the survey instrument while maintaining the core essence of the original study. A cross-sectional online survey was conducted with the prerequisites that participants be at least 18 years old and give their consent. The study received ethical clearance from the Pontifical Catholic University of São Paulo's Research Ethics Committee in 2021 [@Santiago_Feldman_Ferreira_Batistuzzo_Fatori_Seda_Bastos_2023].
 
 Participation was voluntary and uncompensated, and participants had the option to respond to any number of the problems presented. Data were captured using the Qualtrics XM platform over eight months, from December 2021 to July 2022, and were distributed via social media.
 
