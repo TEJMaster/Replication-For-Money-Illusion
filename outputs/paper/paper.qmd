@@ -15,22 +15,22 @@ link-citations: true
 ---
 
 ```{r setup, include=FALSE, message=FALSE}
-# Un-comment these lines for missing packages
+# un-comment to install all required packages
 # install.packages("dplyr")
 # install.packages("ggplot2")
 # install.packages("here")
 # install.packages("readr")
 # install.packages("tidyverse")
 
-## Import nessasay libraries
+## Import necessary libraries
 library(ggplot2)
 library(dplyr)
 library(tidyverse)
 library(here)
 library(readr)
-knitr::opts_chunk$set(echo = FALSE)
 ```
 
+\newpage
 ## Introduction
 
 Money illusion refers to a cognitive bias where individuals tend to assess the value of money solely based on its nominal value. The real value of money is the nominal value of money plus the inlation rate. thereby overlooking the impact of inflation. This bias can lead to various consequences, such as reluctance to sell assets due to perceived nominal losses, misunderstanding wage increases, and more.
