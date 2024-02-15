@@ -44,7 +44,7 @@ The authors argued that money illusion could explain phenomena like inflexible w
 
 When shopping, people often ignore information that is clearly distorted by inflation and impulsively raise the psychological price above the actual price, which is the money illusion.
 Money illusions can lead potential buyers to believe that house prices will always rise, and thus that real estate is a good investment.
-Robert J. Shiller, a professor of economics at Yale University in the United States, believes that it is the false logic caused by the monetary illusion that led to the real estate bubble, "people mostly only remember the price of a few years ago when they bought a house, but often forget the price of other goods, andmistakenly believe that house prices have risen more than other prices." Thus exaggerating the investment potential of real estate"[@shiller2014].
+Robert J. Shiller, a professor of economics at Yale University in the United States, believes that it is the false logic caused by the monetary illusion that led to the real estate bubble, "people mostly only remember the price of a few years ago when they bought a house, but often forget the price of other goods, andmistakenly believe that house prices have risen more than other prices." Thus exaggerating the investment potential of real estate"[@Shiller_2014].
 
 For decades, economists have debated whether the money illusion is real or, more generally, whether there are irrational influences in economic transactions.Milton Friedman, the famous monetary theorist, assumed that employers and consumers were rational, paying wages or buying goods with inflation in mind.
 In other words, they can accurately judge the true value of a commodity[@friedman2010milton].
@@ -79,7 +79,7 @@ data <- read_csv(here("outputs", "data", "cleaned_money_data.csv"))
 
 ### Dataset Description
 
-The data were collected via an online survey platform and include a range of variables:
+The data were collected via an online survey platform of and include a range of variables:
 
 **Socio-demographic Information**: Participants provided details about their educational background, area of study (if applicable), average monthly family income, and the number of people living off this income.
 
@@ -90,6 +90,41 @@ These scenarios include decisions about signing contracts under inflation uncert
 
 **Verification Questions**: To ensure participants understood the scenarios accurately, verification questions were included.
 These serve as a quality control measure, filtering for data quality and comprehension.
+
+### Variable Description
+
+This study serves as a reproduction and further exploration of the seminal work on the money illusion effect, particularly examining the impact of gender on financial decision-making. Utilizing identical datasets as the original paper, our analysis narrows the focus to the variable of gender. 
+
+Question 1 Variables:
+
+- ID: Unique identifier for each participant.
+- Gender (gênero): The gender of the participant, recorded as 'Mulher' for female and 'Homem' for male.
+- Economic Term (economicam): Choice of the individual more likely to leave their job, between 'Carolina' and 'Maria'.
+- Happiness (felicidade): The happiness level, which is not filled in the provided data excerpt.
+- Job Attractiveness (atratividade_trab): The perceived job attractiveness with choices being 'Carolina' or 'Maria'.
+
+Question 2 Variables:
+
+- ID: Unique identifier for each participant.
+- Gender (gênero): The gender of the participant, recorded as 'Mulher' for female and 'Homem' for male.
+- Andre (A Casa_1): the actual least seller, recorded as 1, 2, 3 for participant's ranking with 1 represent the best.
+- Bento (A casa_2): the actual middle seller, recorded as 1, 2, 3 for participant's ranking with 1 represent the best.
+- Marcelo (A casa_3): the actual top seller, recorded as 1, 2, 3 for participant's ranking with 1 represent the best.
+
+Question 3 Variables:
+
+- ID: Unique identifier for each participant.
+- Gender (gênero): The gender of the participant, recorded as 'Mulher' for female and 'Homem' for male.
+- Selling Chair - Real (poltrona_venda_reais): The likelihood of selling a chair when considering real value changes.
+- Buying Chair - Real (poltrona_compra_reai): The likelihood of buying a chair when considering real value changes.
+
+Question 4 Variables:
+
+- ID: Unique identifier for each participant.
+- Gender (gênero): The gender of the participant, recorded as 'Mulher' for female and 'Homem' for male.
+- Contract Type AB (contrato_AB): The type of contract chosen by the participant, with 'A' indicating a risky contract and 'B' indicating a less risky contract.
+- Contract Type CD (contrato_CD): Similar to AB, with 'C' indicating a risky contract and 'D' indicating a less risky contract.
+- Contract Type EF (contrato_EF): Similar to the above, with 'E' indicating a risky contract and 'F' indicating a less risky contract.
 
 ### Data Analysis Tools
 
@@ -659,6 +694,7 @@ colnames(selected_data) <- c("ID", "Gender", "Selling Chair - Real", "Buying Cha
 knitr::kable(head(selected_data, 6), 
              format = "markdown")
 ```
+
 The @tbl-table3 represents data from a study examining the concept of money illusion in decision-making, specifically regarding the perceived value of buying and selling under inflationary conditions. The participants, identified by gender and denoted as 'Mulher' for female and 'Homem' for male, were asked to evaluate their propensity to buy or sell a chair given changes in real value. The terms "Menos suscetível" (Less susceptible), "Igual" (Same), and "Mais suscetível" (More susceptible) indicate the participants' likelihood of buying or selling the chair, with 'NA' representing a lack of response. This part of the study probes whether inflationary illusions affect individuals' willingness to engage in transactions, contrasting their readiness to sell against their inclination to buy.
 
 ```{r}
@@ -691,16 +727,7 @@ This script meticulously generates a dataset of 1000 hypothetical survey respons
 
 ### Data Cleaning Process
 
-Data cleaning is a critical step in ensuring the accuracy and reliability of the analysis.
-The detailed procedure and the R script used for data cleaning are available in `scripts/01_cleanup_data.R`.
-The script elucidates the steps taken to refine the dataset by filtering out incomplete records and unnecessary columns for this study.
-The steps are: 1.
-Remove the first row in the dataset, since it is used to store the description to the column name.
-2.
-Remove unnecessary columns for this study, by only keep the gender and responses columns.
-3.
-Remove all gender rows with 'na' since this study is focusing on the behavior for money illusion for male and female participants.
-The cleaned dataset is conveniently saved at `outputs/data/cleaned_money_data.csv`, ready for in-depth analysis.
+Data cleaning is a critical step in ensuring the accuracy and reliability of the analysis.The detailed procedure and the R script used for data cleaning are available in `scripts/01_cleanup_data.R`.The script elucidates the steps taken to refine the dataset by filtering out incomplete records and unnecessary columns for this study. The steps are: 1.Remove the first row in the dataset, since it is used to store the description to the column name.2. Remove unnecessary columns for this study, by only keep the gender and responses columns.3. Remove all gender rows with 'na' since this study is focusing on the behavior for money illusion for male and female participants. The cleaned dataset is conveniently saved at `outputs/data/cleaned_money_data.csv`, ready for in-depth analysis.
 
 ### Data Set Validity Testing
 
