@@ -8,7 +8,7 @@ date: today
 date-format: long
 format: pdf
 toc: true
-toc-depth: 2
+toc-depth: 1
 number-sections: true
 bibliography: references.bib
 link-citations: true
@@ -30,7 +30,7 @@ library(here)
 library(readr)
 ```
 
-\newpage
+
 ## Introduction
 
 Money illusion refers to a cognitive bias where individuals tend to assess the value of money solely based on its nominal value. The real value of money is the nominal value of money plus the inlation rate. thereby overlooking the impact of inflation. This bias can lead to various consequences, such as reluctance to sell assets due to perceived nominal losses, misunderstanding wage increases, and more.
@@ -72,47 +72,6 @@ The data were collected via an online survey platform and include a range of var
 
 The data analysis was performed using R [@r], a powerful open-source statistical programming language. Key packages from the tidyverse collection [@rTidyverse] were employed to streamline data manipulation, visualization, and analysis processes. These packages include ggplot2 [@rGgplot2] for creating advanced graphics, dplyr [@rDplyr] for data manipulation, readr [@rReadr] for its robust data reading functionalities, here [@R-here] is used to avoid file path issue, and knitr [@rKnitr] for dynamic report generation. 
 
-### Data Cleaning
-
-Data cleaning is a critical step in ensuring the accuracy and reliability of the analysis. The detailed procedure and the R script used for data cleaning are available in `scripts/01_cleanup_data.R`. The script elucidates the steps taken to refine the dataset by filtering out incomplete records and unnecessary columns for this study. The steps are: 1. Remove the first row in the dataset, since it is used to store the description to the column name. 2. Remove unnecessary columns for this study, by only keep the gender and responses columns. 3. Remove all gender rows with 'na' since this study is focusing on the behavior for money illusion for male and female participants. The cleaned dataset is conveniently saved at `outputs/data/cleaned_money_data.csv`, ready for in-depth analysis.
-
-### Data Sample
-
-```{r table1, echo=FALSE}
-selected_data <- data %>%
-  select(1:2, (ncol(data)-2):ncol(data))
-
-knitr::kable(head(selected_data, 6), 
-             caption = "Sample of the Cleaned Money Illusion Data for Question 1",
-             format = "markdown")
-```
-
-```{r table2, echo=FALSE}
-selected_data <- data %>%
-  select(1:2, 12:14)
-
-knitr::kable(head(selected_data, 6), 
-             caption = "Sample of the Cleaned Money Illusion Data for Question 2",
-             format = "markdown")
-```
-
-```{r table3, echo=FALSE}
-selected_data <- data %>%
-  select(1:2, 7:9)
-
-knitr::kable(head(selected_data, 6), 
-             caption = "Sample of the Cleaned Money Illusion Data for Question 3",
-             format = "markdown")
-```
-
-```{r table4, echo=FALSE}
-selected_data <- data %>%
-  select(1:5)
-
-knitr::kable(head(selected_data, 6), 
-             caption = "Sample of the Cleaned Money Illusion Data for Question 4",
-             format = "markdown")
-```
 
 ### Measurement
 
@@ -337,7 +296,7 @@ Gender Perspectives on Financial Decisions: The graphs for Money Illusion Experi
 data3 <- data %>%
   mutate(
     across(
-      .cols = c("poltrona_venda_reais", "poltrona_compra_reai", "poltrona_venda_porce"),
+      .cols = c("poltrona_venda_reais", "poltrona_compra_reai"),
       .fns = ~ case_when(
         . == "Menos suscetível" ~ "Less",
         . == "Mais suscetível" ~ "More",
@@ -352,7 +311,7 @@ data3 <- data %>%
 # Reshape the data for plotting
 Prob3_data <- data3 %>%
   pivot_longer(
-    cols = c("poltrona_venda_reais", "poltrona_compra_reai", "poltrona_venda_porce"),
+    cols = c("poltrona_venda_reais", "poltrona_compra_reai"),
     names_to = "Condition",
     values_to = "Likelihood"
   ) %>%
@@ -516,7 +475,82 @@ Risk Preferences in Neutral Terms: The slight preference for riskless contracts 
 
 ## Discussion
 
+### Findings
+
+The first experiment focused on exploring how gender affects individuals' decision-making preferences when faced with economic terms and job attractiveness choices. The analysis showed that both men and women agreed on their choices regarding economic terms, generally preferring "Carolina," which may reflect a common concern for economic stability across genders. However, differences between genders became evident in terms of job attractiveness, with men preferring "Maria," suggesting they have different evaluations of career opportunities and potential for development compared to women. The second experiment examined how men and women make choices based on different characteristics of sellers. The results indicated that men and women initially preferred different sellers, with men choosing Andre and women choosing Marcelo. This finding may reflect different strategies and priorities in economic decision-making between genders. As the choices progressed, preferences for sellers converged, especially in the final choice, where Marcelo became the most popular seller. The third experiment focused on how gender affects buying and selling decisions, especially under different probability conditions. It was observed that women showed a lower likelihood in purchasing decisions and a greater tendency to increase sales, possibly indicating a cautious attitude towards buying and an active strategy towards selling. In contrast, men exhibited a more balanced approach to both buying and selling decisions, suggesting a preference for maintaining the status quo rather than making radical adjustments in changing market conditions. The fourth experiment delved into how gender influences individual preferences for different types of contracts (risky and risk-free) and different economic terms (real, nominal, neutral). Results showed that both men and women preferred risk-free contracts when it came to contracts adjusted for real terms, possibly indicating a common preference to protect purchasing power against inflation. However, under nominal terms, men were relatively more inclined to choose risky contracts, revealing a willingness to take risks for higher returns without inflation adjustment.
+
+### Another Understanding of the World
+
+The results from the first experiment further revealed the impact of gender perspectives on preferences for economic stability and career development. Specifically, the even distribution of choices among women regarding job attractiveness may indicate they consider a more diverse set of factors in career choices, including but not limited to economic benefits, perhaps placing more emphasis on job satisfaction and other aspects of career development. The dynamic change in gender decision-making observed in the second experiment suggests significant gender differences in initial choices, which may diminish as more information is processed. This may illustrate a complex evaluation process individuals undergo before making final economic decisions, where initial impressions may be revised. The third experiment's results further reinforced our understanding of gender differences in economic risk assessment. Women's more conservative buying behavior and more aggressive selling tendency may reflect their strategy of balancing financial security and opportunities. Men's balanced buying and selling behavior may represent a more robust long-term investment perspective. The findings of the fourth experiment further emphasized differences in financial risk tolerance between genders. Particularly under nominal terms, men's higher risk preference may reflect a pursuit of potential high returns, while women's conservative choices may more reflect a focus on capital preservation. These differences are significant for understanding how gender affects investment decisions and financial planning. Overall, these four experiments have taught us that gender plays a complex and multidimensional role in economic decision-making. Gender not only influences individuals' views on economic stability, career opportunities, market behavior, and risk preferences but also affects the processing of information and the formation of final choices during the decision-making process.
+
+### Limitations of the Study:
+
+The first experiment provided insights into gender differences in economic decision-making but also had limitations. For example, it might not have captured all relevant factors influencing economic decisions, such as individuals' economic background, education level, and expectations of future economic conditions. Moreover, the experimental design might have been too simplistic to fully reflect the complexity of real-life decision-making processes. Despite the second experiment offering insights into how gender affects preferences for sellers, it had limitations. For instance, it might not have fully considered other factors influencing decisions, such as individual experience, market conditions, and specific information provided by sellers. Additionally, the artificial setting of the experimental environment might limit the generalizability of the results. The analysis of the third experiment, although revealing potential gender impacts on economic decisions, might not have fully considered other influencing factors, such as individuals' financial knowledge, past experiences, and socio-economic backgrounds. Furthermore, the experimental setup might have been too simplistic, failing to capture all complexities of real-world decision-making. Despite the valuable insights provided by the fourth experiment regarding the relationship between gender and risk preferences, it too had limitations. First, the experimental setting might not have adequately simulated the complex decision-making environment of the real world, especially in financial market investment decisions. Second, the experiment might not have considered individuals' financial knowledge, experience, and other socio-economic factors that could affect risk preferences. Overall, while these experiments provided valuable insights into the role of gender in economic decision-making, they also had limitations, including the possibility that the simplified experimental settings might not fully simulate the complexity of the real world and the lack of consideration for individual experiences, socio-economic backgrounds, and other factors.
+
+### Future Directions and How to Continue:
+For Experiment 1, to further understand the role of gender in economic decision-making, future research needs to adopt a more comprehensive approach that considers a broader range of socio-economic factors and individual differences. Additionally, studies can explore how gender affects individuals' perceptions of and strategies for dealing with economic risks, and how these differences impact individuals' long-term economic well-being. Cross-cultural studies could further investigate how gender impacts economic decision-making across different socio-cultural backgrounds. Moreover, qualitative research methods such as in-depth interviews and case studies will help reveal the psychological dynamics and social influences behind decisions, providing richer insights for developing more effective economic policies and educational programs. For Experiment 2, future research should explore more factors influencing the choice of sellers, such as the dynamics between sellers and buyers, the impact of marketing strategies, and how personal characteristics of sellers affect buyers' choices. By using a more diverse sample of participants, increasing the complexity of scenarios, and applying mixed-methods research designs, our understanding of how gender influences economic decisions can be enhanced. Furthermore, considering how cultural and socio-economic factors shape gender roles is also an important direction for future research. For Experiment 3, future research needs to explore other variables beyond gender that affect economic decisions and attempt to replicate these findings under more realistic conditions. Additionally, studies should consider how cultural differences and social structures shape economic behavior and how education and policy interventions can mitigate the adverse effects of gender differences. Through more in-depth quantitative and qualitative research, a more comprehensive understanding of how individuals make decisions in different economic contexts can be achieved. For Experiment 4, future research should investigate gender differences across more dimensions, including how education and policy interventions can balance these differences. Studies could be extended to individuals across different cultural and social backgrounds to explore how cultural factors influence the relationship between gender and economic decisions. Furthermore, using qualitative methods to delve into the motivations and emotional factors behind individual decisions is also an important direction for future research. By combining quantitative data and qualitative insights, a more comprehensive understanding of the role of gender in economic decision-making can be developed, providing a basis for designing more effective financial planning and educational strategies. Overall, future research needs to take a more holistic approach to explore how factors beyond gender affect economic decisions and how these decisions change over time and across contexts. Cross-cultural comparative studies can reveal how gender roles in different socio-cultural backgrounds shape economic behavior. At the same time, in-depth qualitative research will help understand the psychological motivations behind decisions, offering richer insights for designing targeted economic policies and educational plans.
+
+
 ## Apenndix
+
+### Data Sample
+
+```{r tbl-table1, echo=FALSE, tbl.caption="Sample of the Cleaned Data for Money Illusion Study - Question 1"}
+# Select the required columns
+selected_data <- data %>%
+  select(ID, gênero, economicam, felicidade, atratividade_trab)
+
+# Translate column names to English for the table display
+colnames(selected_data) <- c("ID", "Gender", "Economic Term", "Happiness", "Job Attractiveness")
+
+# Create a table with the selected data for the first 6 rows with an English caption
+knitr::kable(head(selected_data, 6), 
+             format = "markdown",
+             booktabs = TRUE)
+```
+As shown in Table @tbl-table1, the data illus
+
+```{r table2, echo=FALSE}
+# Select the required columns
+selected_data <- data %>%
+  select(1:2, 12:14)
+
+# Translate column names to English for the table display
+colnames(selected_data) <- c("ID", "Gender", "Andre", "Bento", "Marcelo")
+
+# Create a table with the selected data for the first 6 rows with an English caption
+knitr::kable(head(selected_data, 6), 
+             caption = "Sample of the Cleaned Data for Money Illusion Study - Question 2",
+             format = "markdown")
+```
+
+```{r table3, echo=FALSE}
+# Select the desired columns for the table
+selected_data <- data %>%
+  select(1:2, 7:8)
+
+# Translate column names to English for the table display
+colnames(selected_data) <- c("ID", "Gender", "Selling Chair - Real", "Buying Chair - Real")
+
+# Create a table with the selected data for the first 6 rows with an English caption
+knitr::kable(head(selected_data, 6), 
+             caption = "Sample of the Cleaned Data for Money Illusion Study - Question 3",
+             format = "markdown")
+```
+
+```{r table4, echo=FALSE}
+selected_data <- data %>%
+  select(1:5)
+
+# Translate column names to English for the table display
+colnames(selected_data) <- c("ID", "Gender", "Contract Type AB", "Contract Type CD", "Contract Type EF")
+
+# Create a table with the selected data for the first 6 rows with an English caption
+knitr::kable(head(selected_data, 6), 
+             caption = "Sample of the Cleaned Data for Money Illusion Study - Question 4",
+             format = "markdown")
+```
+
 
 ### Rough Sketch about Brainstorming
 

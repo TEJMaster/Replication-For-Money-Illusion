@@ -54,3 +54,76 @@ ChatGPT: To include the raw dataset from the study "Money illusion: A replicatio
 
 Data Availability
 The raw dataset for our study, derived from the replication of the "Money Illusion" effect among Brazilian volunteers, is archived and accessible through the Open Science Framework (OSF). This dataset encompasses the complete set of responses collected through our online survey, including sociodemographic information, responses to the money illusion problems, and verification question answers. Interested researchers can access the dataset for further analysis or replication studies at the following URL: https://osf.io/48pqu/.
+
+ME
+base on my code weite me a simulation 
+```{r setup, include=FALSE, message=FALSE} # un-comment to install all required packages # install.packages("dplyr") # install.packages("ggplot2") # install.packages("here") # install.packages("readr") # install.packages("tidyverse") ## Import necessary libraries library(ggplot2) library(dplyr) library(tidyverse) library(here) library(readr) ``` ```{r include=FALSE, message=FALSE} # read the data file and store it in the 'data' variable data <- read_csv(here("outputs", "data", "cleaned_money_data.csv")) `````{r table1, echo=FALSE} selected_data <- data %>% select(1:2, (ncol(data)-2):ncol(data)) knitr::kable(head(selected_data, 6), caption = "Sample of the Cleaned Money Illusion Data for Question 1", format = "markdown") ``` ```{r table2, echo=FALSE} selected_data <- data %>% select(1:2, 12:14) knitr::kable(head(selected_data, 6), caption = "Sample of the Cleaned Money Illusion Data for Question 2", format = "markdown") ``` ```{r table3, echo=FALSE} selected_data <- data %>% select(1:2, 7:9) knitr::kable(head(selected_data, 6), caption = "Sample of the Cleaned Money Illusion Data for Question 3", format = "markdown") ``` ```{r table4, echo=FALSE} selected_data <- data %>% select(1:5) knitr::kable(head(selected_data, 6), caption = "Sample of the Cleaned Money Illusion Data for Question 4", format = "markdown") ``` ```{r echo=FALSE} # Function to create plot based on gender create_gender_plot <- function(gender, data) { # Translate 'gênero' to English and filter data for the specific gender gender_data <- data %>% mutate(gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male')) %>% filter(gênero == gender) %>% gather(key = "category", value = "choice", economicam, felicidade, atratividade_trab) %>% filter(!is.na(choice)) # Calculate the percentage of non-NA responses for each category freq_data <- gender_data %>% count(category, choice) %>% group_by(category) %>% mutate(Percentage = n / sum(n) * 100) %>% ungroup() # Modify the category names to translate to English freq_data$category <- recode(freq_data$category, "economicam" = "Economic Terms", "felicidade" = "Happiness", "atratividade_trab" = "Job Attractiveness") # Creating the plot with ggplot2 plot <- ggplot(data = freq_data, aes(x = category, y = Percentage, fill = choice)) + geom_bar(stat = "identity", position = position_dodge(), color = "black") + labs( x = "Condition", y = "Percentage" ) + theme( legend.position = "bottom", axis.text.x = element_text(angle = 45, hjust = 1), plot.title = element_text(hjust = 0.5), plot.caption = element_text(hjust = 0.5) ) + ylim(0, 100) # Return the plot return(plot) } ``` ```{r fig-problem1-female, echo=FALSE, fig.cap="The percentage of female participants' choices within each condition in problem 1."} # Create plots for 'Female' plot_female <- create_gender_plot("Female", data) # Display the plots print(plot_female) ``````{r fig-problem1-male, echo=FALSE, fig.cap="The percentage of male participants' choices within each condition in problem 1."} # Create plots for 'Female' plot_male <- create_gender_plot("Male", data) # Display the plots print(plot_male) ``` ```{r echo=FALSE} # Translate 'gênero' to English and remove rows with NA choices data2 <- data %>% mutate(gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male')) %>% filter(!is.na(`A casa_1`), !is.na(`A casa_2`), !is.na(`A casa_3`)) # Reshape the data for plotting Prob2_data <- data2 %>% pivot_longer(cols = c(`A casa_1`, `A casa_2`, `A casa_3`), names_to = "Seller_Rank", values_to = "Choice") %>% mutate(Seller_Rank = recode(Seller_Rank, `A casa_1` = "Andre", `A casa_2` = "Bento", `A casa_3` = "Marcelo"), Choice = factor(Choice, levels = c(1, 2, 3), labels = c("First Choice", "Second Choice", "Third Choice"))) %>% group_by(gênero, Seller_Rank, Choice) %>% summarise(Count = n(), .groups = 'drop') # Calculate the percentages without NA values Prob2_data <- Prob2_data %>% group_by(gênero, Choice) %>% mutate(Percentage = Count / sum(Count) * 100) %>% ungroup() # Function to create plot for each gender create_plot <- function(gender, data) { gender_data <- data %>% filter(gênero == gender) # Plot ggplot(gender_data, aes(x = Choice, y = Percentage, fill = Seller_Rank)) + geom_bar(stat = "identity", position = position_dodge(), color = "black") + labs( x = "Rank", y = "Percentage", fill = "Seller" ) + theme(legend.position = "bottom") + ylim(0, 100) } ``` ```{r fig-problem2-female, echo=FALSE, fig.cap="The percentage of female participants' choices ranking each seller in problem 2"} # Create plots for 'Female' plot_female2 <- create_plot("Female", Prob2_data) # Display the plots print(plot_female2) ```# Create plots for 'Female' plot_male2 <- create_plot("Male", Prob2_data) # Display the plots print(plot_male2) ``` ```{r echo=FALSE} # Translate the terms to English and filter out NA values selectively data3 <- data %>% mutate( across( .cols = c("poltrona_venda_reais", "poltrona_compra_reai", "poltrona_venda_porce"), .fns = ~ case_when( . == "Menos suscetível" ~ "Less", . == "Mais suscetível" ~ "More", . == "Igual" ~ "Same", TRUE ~ NA_character_ ) ), gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male') ) # Reshape the data for plotting Prob3_data <- data3 %>% pivot_longer( cols = c("poltrona_venda_reais", "poltrona_compra_reai", "poltrona_venda_porce"), names_to = "Condition", values_to = "Likelihood" ) %>% filter(!is.na(Likelihood)) %>% mutate( Decision = case_when( str_detect(Condition, "compra") ~ "Buy", str_detect(Condition, "venda") ~ "Sell" ), Likelihood = factor(Likelihood, levels = c("More", "Same", "Less")) ) # Counting and percentage calculation Prob3_data <- Prob3_data %>% count(gênero, Decision, Likelihood) %>% group_by(gênero, Decision) %>% mutate(Percentage = n / sum(n) * 100) %>% ungroup() # Function to create plot for each gender create_plot <- function(gender, data) { gender_data <- data %>% filter(gênero == gender) # Plot ggplot(gender_data, aes(x = Decision, y = Percentage, fill = Likelihood)) + geom_bar(stat = "identity", position = position_dodge(), color = "black") + labs( x = "Decision", y = "Percentage", fill = "Likelihood" ) + theme(legend.position = "bottom") + ylim(0, 100) } ``` ```{r fig-problem3-female, echo=FALSE, fig.cap="The percentage of female participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"} # Create plots for 'Female' plot_female3 <- create_plot("Female", Prob3_data) # Display the plots print(plot_female3) ``` ```{r fig-problem3-male, echo=FALSE, fig.cap="The percentage of male participants' choices (more, same, less) for both 'buy' and 'sell' conditions in problem 3"} # Create plots for 'Female' plot_male3 <- create_plot("Male", Prob3_data) # Display the plots print(plot_male3) ``` ```{r echo=FALSE} data4 <- data %>% mutate(gênero = recode(gênero, 'Mulher' = 'Female', 'Homem' = 'Male')) # Pivot the data to long format, ensure columns start with 'contrato' long_data <- data4 %>% pivot_longer( cols = starts_with("contrato"), # This assumes column names start with 'contrato' names_to = "Contract", values_to = "Choice", values_drop_na = TRUE ) %>% mutate( Term = case_when( Contract == "contrato_AB" ~ "Real Terms", Contract == "contrato_CD" ~ "Nominal Terms", Contract == "contrato_EF" ~ "Neutral Terms" ), Choice = case_when( Choice %in% c("A", "C", "E") ~ "Risky", Choice %in% c("B", "D", "F") ~ "Riskless" ), Term = fct_relevel(Term, "Real Terms", "Nominal Terms", "Neutral Terms") # Order the terms ) %>% drop_na(Choice) # Drop NA values to avoid them being plotted # Calculate the counts and percentages data_counts <- long_data %>% count(gênero, Term, Choice) %>% group_by(gênero, Term) %>% mutate(Percentage = n / sum(n) * 100) # Plotting function create_plot <- function(gender, data) { gender_data <- data %>% filter(gênero == gender) ggplot(gender_data, aes(x = Term, y = Percentage, fill = Choice)) + geom_bar(stat = "identity", position = position_dodge()) + labs( x = "Terms", y = "Percentage", fill = "Choice" ) + theme_minimal() + ylim(0, 100) } ``` ```{r fig-problem4-female, echo=FALSE, fig.cap="The percentage of female participants' choices of contract types across frames(real, nominal and neutral) in problem 4"} # Create plots for 'Female' plot_female4 <- create_plot("Female", data_counts) # Display the plots print(plot_female4) ``````{r fig-problem4-male, echo=FALSE, fig.cap="The percentage of male participants' choices of contract types across frames(real, nominal and neutral) in problem 4"} # Create plots for 'Male' plot_male4 <- create_plot("Male", data_counts) # Display the plots print(plot_male4) ```
+
+
+GPT
+Given the R code you've provided, it seems you are working on a study to explore gender differences in decision-making related to economic conditions, seller choices, and risk preferences under different contractual terms. To simulate data that would fit the analyses and visualizations you're conducting, I will outline a simulation approach that mirrors the structure and intention of your study.
+
+Simulation Overview
+The simulation will create a dataset mimicking responses from a hypothetical study population of males and females. This dataset will include responses to questions about:
+
+Preferences under different economic conditions.
+Seller choices in a hypothetical scenario.
+Decision-making under buying and selling conditions.
+Choices of contract types under different terms.
+Each participant will have a gender attribute and will make choices based on the simulated conditions provided to them. The choices will be randomized but can be weighted to reflect any known biases or tendencies based on gender or other factors.
+
+Steps for Simulation
+Generate Participant Data: Simulate a dataset of participants with gender specified.
+Simulate Economic Condition Preferences: For each participant, randomly assign preferences for economic conditions.
+Simulate Seller Choices: Assign seller preferences based on hypothetical scenarios.
+Simulate Buying and Selling Decisions: Randomly generate decisions to buy or sell under various conditions.
+Simulate Contract Type Choices: Assign choices of contract types under different terms (real, nominal, neutral).
+R Code for Simulation
+# Load necessary libraries
+library(tidyverse)
+
+# Set seed for reproducibility
+set.seed(123)
+
+# Define number of participants
+n_participants <- 1000
+
+# Generate participant data
+participants <- tibble(
+  ID = 1:n_participants,
+  gender = sample(c("Female", "Male"), n_participants, replace = TRUE)
+)
+
+# Simulate Economic Condition Preferences
+economic_conditions <- tibble(
+  economicam = sample(c("Carolina", "Maria"), n_participants, replace = TRUE),
+  felicidade = sample(c("Low", "Medium", "High"), n_participants, replace = TRUE),
+  atratividade_trab = sample(c("Low", "High"), n_participants, replace = TRUE)
+)
+
+# Simulate Seller Choices
+seller_choices <- tibble(
+  A_casa_1 = sample(c("Andre", "Bento", "Marcelo"), n_participants, replace = TRUE),
+  A_casa_2 = sample(c("Andre", "Bento", "Marcelo"), n_participants, replace = TRUE),
+  A_casa_3 = sample(c("Andre", "Bento", "Marcelo"), n_participants, replace = TRUE)
+)
+
+# Simulate Buying and Selling Decisions
+buy_sell_decisions <- tibble(
+  poltrona_venda_reais = sample(c("Less", "More", "Same"), n_participants, replace = TRUE),
+  poltrona_compra_reai = sample(c("Less", "More", "Same"), n_participants, replace = TRUE),
+  poltrona_venda_porce = sample(c("Less", "More", "Same"), n_participants, replace = TRUE)
+)
+
+# Simulate Contract Type Choices
+contract_choices <- tibble(
+  contrato_AB = sample(c("A", "B"), n_participants, replace = TRUE),
+  contrato_CD = sample(c("C", "D"), n_participants, replace = TRUE),
+  contrato_EF = sample(c("E", "F"), n_participants, replace = TRUE)
+)
+
+# Combine all simulated data into one dataframe
+simulated_data <- bind_cols(participants, economic_conditions, seller_choices, buy_sell_decisions, contract_choices)
+
+# View the first few rows of the simulated data
+head(simulated_data)
