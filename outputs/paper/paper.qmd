@@ -75,6 +75,13 @@ The data analysis was performed using R [@r], a powerful open-source statistical
 
 ### Measurement
 
+Some specific adjustments have been made in order to ensure the relevance of questionnaire to the Brazilian context. The data of this paper collected by an online survey with 18 years or older participants who are consenting to participate. The Research Ethics Committee of the Pontifical Catholic University of São Paulo (PUC-SP) in 2021 approved this study(Certificate of Presentation for EthicalEvaluation [CAAE]: 44181621.8.0000.5482, approval number 4.681.515).
+
+There are no extra financial compensation for the involvement of Participants. It is not mandatory for participants to complete all problems, even if they completing one problem will also contributed to the analysis. The self-administered questionnaire was created by Qualtrics XM platform which adapting the structure from a previous research by Ziano et al. (2021). Researchers hand out the questionnaire link through social networks. From December 2021 to July 2022, data were collected online through 8 months.
+
+Researchers documented both the plan of research and data analysis on the Open Science Framework (OSF) before data collection 
+(accessible at: https://osf.io/2gkxf) in order to inherting the principles of reproducible research. The plan outlined the concept ofesearch objectives, money illusion, power analysis, hypotheses, relevant literature, methodology for result analysis, translated and adapted problem statements and other pertinent details. All datasets, statistical analyses and materials are available on the OSF platform (https://osf.io/48pqu/).
+
 \newpage
 
 ## Results
@@ -495,7 +502,11 @@ For Experiment 1, to further understand the role of gender in economic decision-
 
 ### Data Sample
 
-```{r tbl-table1, echo=FALSE, tbl.caption="Sample of the Cleaned Data for Money Illusion Study - Question 1"}
+```{r}
+#| label: tbl-table1
+#| tbl-cap: Sample of the Cleaned Data for Money Illusion Study - Question 1
+#| echo: false
+#| 
 # Select the required columns
 selected_data <- data %>%
   select(ID, gênero, economicam, felicidade, atratividade_trab)

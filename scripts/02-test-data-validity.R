@@ -19,22 +19,18 @@ data <- read_csv(file_path)
 # No NA in the 'gênero' column
 test_gênero_NA <- all(!is.na(data$gênero))
 
-
 # Test 2: Total entries are more than 300
 test_entries_over_300 <- nrow(data) > 300
-
 
 # Test 3: Gender only contains male or female 
 # 'gênero' column contains only 'Mulher' and 'Homem'
 test_gênero_values <- all(data$gênero %in% c('Mulher', 'Homem'))
-
 
 # Test 4: Testing question 1 response only contain expected values
 # "economicam", "felicidade", "atratividade_trab" columns only have values 'Carolina', 'Maria', or NA
 test_specific_values <- all(sapply(data[c("economicam", "felicidade", "atratividade_trab")], function(x) {
   all(x %in% c('Carolina', 'Maria', NA))
 }))
-
 
 # Test 5:Testing question 2 response only contain expected values 
 # Columns have values 'Igual', 'Menos suscetível', or NA
@@ -43,13 +39,11 @@ test_casa_values <- all(sapply(data[c("A casa_1", "A casa_2", "A casa_3")], func
 }))
 print(paste("Test 5 - Casa columns contain only 1, 2, 3, or NA:", test_casa_values))
 
-
 # Test 6: Testing question 3 response only contain expected values 
 # Columns "A casa_1", "A casa_2", "A casa_3" contain only values 1, 2, 3, or NA
 test_poltrona_values <- all(sapply(data[c("poltrona_venda_reais", "poltrona_compra_reai", "poltrona_venda_porce")], function(x) {
   all(x %in% c('Igual', 'Menos suscetível', 'Mais suscetível', NA))
 }))
-
 
 # Test 7: 
 # "contrato_AB" contains only "A", "B", or NA; "contrato_CD" contains only "C", "D", or NA; "contrato_EF" contains only "E", "F", or NA

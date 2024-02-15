@@ -14,15 +14,15 @@ library(here)
 input_file_path <- here("inputs", "data", "money_data_raw.xlsx")
 output_file_path <- here("outputs", "data", "cleaned_money_data.csv")
 
-# Read the raw data-set
+# Step 0: Read the raw data-set
 raw_data <- readxl::read_excel(input_file_path)
 
-# Remove the first row from the data-set
+# Step 1: Remove the first row from the data-set
 # This row is used to store the description about the column name
 cleaned_data <- raw_data %>% 
   slice(-1)
 
-# Remove unnecessary columns for this study
+# Step 2: Remove unnecessary columns for this study
 # We only want the gender column and response choices columns
 cleaned_data <- cleaned_data %>%
   select(
@@ -41,9 +41,9 @@ cleaned_data <- cleaned_data %>%
     -`setal1997-funnel`
   )
 
-# Remove rows where gender is NA
+# Step 3: Remove rows where gender is NA
 cleaned_data <- cleaned_data %>%
   filter(!is.na(gênero) & gênero != 'Outro')
 
-# Save the cleaned dataset to a CSV file
+# Step 4: Save the cleaned dataset to a CSV file
 write.csv(cleaned_data, output_file_path, row.names = FALSE)
