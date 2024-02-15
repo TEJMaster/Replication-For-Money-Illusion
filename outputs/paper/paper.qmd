@@ -2,7 +2,7 @@
 title: "Gender Dynamics in Financial Decision-Making: Unveiling the Money Illusion Effect in Brazil"
 title-block-banner: true
 abstract: "Money illusion is a cognitive bias where individuals focus on nominal rather than real values, a concept initially highlighted by Shafir, Diamond, and Tversky (1997). In this study, we replicated four scenarios from their research within the Brazilian context, involving 372 participants making financial decisions impacted by money illusion in contexts of earnings and transactions. Through our analysis, we found that decision-making was significantly influenced by the framing of information, with notable differences in rationality between genders. Our findings highlight that the effects of money illusion may also vary by gender, showcasing distinct patterns of financial behavior between males and females."
-thanks: "Code and data supporting this analysis are available at https://github.com/TEJMaster/Replication-For-Money-Illusion.git; Replication on Social Science Reproduction platform available at: https://www.socialsciencereproduction.org/reproductions/1671/published/index"
+thanks: "Code and data supporting this analysis are available at https://github.com/TEJMaster/Replication-For-Money-Illusion.git Replication on Social Science Reproduction platform available at: https://www.socialsciencereproduction.org/reproductions/1671/published/index"
 author: "Terry Tu, Jingyi Shen, Yaning Jin "
 date: today
 date-format: long
